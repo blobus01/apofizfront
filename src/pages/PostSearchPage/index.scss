@@ -1,0 +1,39 @@
+@import "../../assets/styles/variables";
+
+.post-search-page {
+  padding-bottom: $navbarBottomPadding;
+
+  &__content {
+    padding-top: 20px;
+  }
+
+  &__list {
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+    &-card {
+
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+
+
+      width: 30%;
+
+      @media (max-width: 880px) {
+        width: 45%;
+      }
+
+      @media (max-width:640px) {
+        width: 90%;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

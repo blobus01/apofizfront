@@ -1,0 +1,56 @@
+@import '../../../assets/styles/variables.scss';
+
+.post-select-card {
+  &__image {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 100%; /* 1:1 Aspect Ratio */
+    position: relative; /* If you want text inside of it */
+    border-radius: 12px;
+    margin-bottom: 8px;
+    & img {
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      height: 100%;
+      object-fit: cover;
+      &.fade-in {
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+      }
+    }
+  }
+  &__play-button {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    z-index: 1;
+  }
+  &__selected-mark {
+    position: absolute;
+    z-index: 1;
+    right: 15px;
+    top: 15px;
+    transition: 0.2s;
+  }
+  &__price {
+    display: inline-block;
+    margin-right: 6px;
+  }
+  &__subcategory-name {
+    position: relative;
+    display: inline-block;
+    color: $c-yellow-fbbc05;
+
+    &::before {
+      content: '•';
+      width: 2px;
+      height: 2px;
+      margin-right: 4px;
+      color: $c-yellow-fbbc05;
+    }
+  }
+}

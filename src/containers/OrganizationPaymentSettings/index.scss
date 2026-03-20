@@ -1,0 +1,158 @@
+@import "../../assets/styles/variables";
+
+.organization-payment-settings {
+
+  
+
+  &__option {
+    &:not(:last-of-type) {
+      margin-bottom: 1rem;
+    }
+    & .category-option__image_bg {
+      background: transparent;
+      border: none;
+      padding: 0;
+      border-radius: 0;
+    }
+    & .category-option__title {
+      font-weight: 500;
+    }
+  }
+
+  &__uppercase-title {
+    color: $textGrey;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+
+  &__row-toggle {
+    .row-toggle__label {
+      color: #007AFF;
+    }
+  }
+
+  &__main-view {
+    color: #000;
+
+    &-header {
+      margin-bottom: 1rem;
+    }
+
+    &-option {
+      &:last-of-type {
+        margin-bottom: 1rem;
+      }
+
+      & .row-button__label {
+        color: $primaryBlue;
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 500;
+      }
+    }
+
+    &-title {
+      margin-bottom: 1em;
+    }
+
+    &-paragraph {
+      margin-bottom: 1em;
+    }
+
+    &-ul {
+      list-style: initial;
+      padding-left: 1em;
+    }
+  }
+
+  &__system-selection {
+    &-header {
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__payment-connection {
+    padding-bottom: calc(#{$navBottomPadding} + 1rem);
+    font-size: 13px;
+    color: #000;
+
+    &-header {
+      margin-bottom: 1rem;
+    }
+
+    &-title {
+      display: list-item;
+      margin-left: 1.5em;
+      margin-bottom: 1rem;
+    }
+
+    &-paragraph ~ &-title {
+      margin-top: 1em;
+    }
+
+    &-paragraph:last-of-type {
+      margin-bottom: 0.8rem;
+    }
+
+    &-field {
+      margin-bottom: 1.75rem;
+      &--error {
+        color: green;
+      }
+    }
+  }
+
+  &__general-view {
+    &-header {
+      margin-bottom: 1rem;
+    }
+    &-option:last-of-type {
+      margin-bottom: 2rem;
+    }
+    &-p {
+      font-style: italic;
+      color: #979797;
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &-warning-title {
+      color: #D72C20;
+      margin-top: 1.25rem;
+    }
+  }
+
+  &__payment-system-settings {
+    &-header {
+      margin-bottom: 1rem;
+    }
+    &-title {
+      margin-bottom: 0.3rem;
+    }
+    &-p {
+      font-style: italic;
+      color: #979797;
+      margin-top: 0.3rem;
+    }
+  }
+
+  &__request-sent-view {
+    &-title {
+      margin-bottom: 2rem;
+      text-align: center;
+      color: #219653;
+    }
+    &-content {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding-bottom: 2rem;
+      &-top {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        flex-grow: 1;
+      }
+    }
+  }
+}

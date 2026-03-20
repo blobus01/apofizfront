@@ -1,0 +1,21 @@
+@import "../../assets/styles/variables";
+
+.post-complain-form {
+  &__content {
+    padding: 10px 0;
+  }
+  &__list {
+    &-item {
+      border-bottom: 1px solid $c-grey-e5e5e5;
+      height: 40px;
+      margin-top: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+  }
+  &__textarea {
+    margin-top: 30px;
+  }
+}

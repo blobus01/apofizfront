@@ -1,0 +1,223 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.organization-qr {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+
+  background: #fff;
+  z-index: 2;
+  width: 100%;
+  padding-bottom: $navBottomPadding;
+  &__org-image {
+    max-width: 100% !important;
+    height: 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px 16px 0 0;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 450px;
+    height: 100%;
+  }
+  &__wrap {
+    position: relative;
+    flex-grow: 1;
+    width: 100%;
+    max-width: 100%;
+    margin: -1rem auto 0;
+    padding: 15px 15px 75px 15px;
+    border-radius: 16px 16px 0 0;
+    background: linear-gradient(180deg, #2f84ed 0%, #000000 100%);
+    box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.25);
+    overflow-y: auto;
+  }
+
+  &__header {
+    position: relative;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    &-btn-close,
+    &-btn-share {
+      & svg {
+        width: 28px;
+        height: 28px;
+      }
+    }
+    &-btn-close {
+      left: 15px;
+    }
+    &-btn-share {
+      right: 15px;
+    }
+
+    &-title {
+      color: #fff;
+      text-shadow: 0 0 2px #000000;
+    }
+  }
+
+  &__share-image {
+    display: block;
+    margin: 0 auto;
+    padding-right: 9px;
+  }
+
+  &__code {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    margin: 7px auto 22px auto;
+    border: 0.1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+    width: 180px;
+    max-width: 180px;
+    height: 180px;
+  }
+
+  &__controls {
+    justify-content: center;
+    margin-bottom: 1.2rem;
+    &-btn {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-radius: 24px;
+      color: #fff;
+      font-size: 12px;
+      line-height: 24px;
+
+      &:not(:last-child) {
+        margin-right: 2rem;
+      }
+      &:hover {
+        & .organization-qr__controls-btn-icon-wrap {
+          background: darken(#fff, 5%);
+        }
+      }
+
+      &.active {
+        color: #007aff;
+        & .organization-qr__controls-btn-icon-wrap {
+          border: 2px solid rgba(66, 133, 244, 1);
+        }
+      }
+
+      &-icon-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0.25rem;
+        width: 60px;
+        min-height: 60px;
+        background: #fff;
+        border-radius: 50%;
+      }
+    }
+
+    &-share {
+      margin-right: 8px;
+
+      & svg {
+        width: 23px;
+        height: 28px;
+
+        & path {
+          fill: #000;
+        }
+      }
+    }
+
+    &-copy-link {
+      margin-right: 8px;
+
+      & svg path {
+        fill: #000;
+      }
+    }
+    &-business-card {
+      & svg g path {
+        transition: fill 0.3s;
+      }
+      &.active {
+        & svg g path {
+          fill: #007aff;
+        }
+      }
+    }
+  }
+
+  &__desc {
+    color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    max-width: 280px;
+    margin: 0 auto;
+    text-align: center !important;
+  }
+}
+.location-modal {
+  position: absolute;
+  width: 96%;
+  top: 150px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.location-modal__content {
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.location-modal__option,
+.location-modal__cancel {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  text-align: center;
+  font-size: 16px;
+  color: #007aff;
+  border-top: 1px solid #e0e0e0;
+  background: #fff;
+  cursor: pointer;
+}
+.location-modal__option {
+  background: #f8f8f8;
+}
+
+.location-modal__option:hover,
+.location-modal__cancel:hover {
+  background: #f0f0f0;
+}
+
+.location-modal__cancel {
+  font-weight: 600;
+  color: #007aff;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+.location-modal__option:first-child {
+  border-radius: 10px 10px 0 0;
+}
+.location-modal__option:nth-child(4) {
+  border-radius: 0 0 10px 10px;
+}

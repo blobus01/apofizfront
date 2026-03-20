@@ -1,0 +1,55 @@
+@import "../../../assets/styles/variables";
+
+.switcher {
+  margin-left: 20px;
+
+  &__label {
+    display: flex;
+    cursor: pointer;
+  }
+
+  &__icon {
+    width: 44px;
+    min-width: 44px;
+    height: 41px;
+    border: 1px solid #E6E8EB;
+    border-radius: 18px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $c-blue-4285f4;
+    margin-right: 8px;
+
+    & svg path {
+      fill: #fff;
+    }
+  }
+
+  &__radio {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #E6E8EB;
+    box-shadow: 0 1px 6px rgba(207, 218, 226, 0.25);
+
+    &--active {
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 16px;
+        height: 16px;
+        background: $c-blue-4285f4;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  input {
+    display: none;
+  }
+}

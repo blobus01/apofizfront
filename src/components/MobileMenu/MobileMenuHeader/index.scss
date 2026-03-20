@@ -1,0 +1,20 @@
+.mobile-menu-header {
+  min-height: 52px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+
+  &__center {
+    text-align: center;
+    text-transform: capitalize;
+    padding: 0 30px;
+    width: 100%;
+  }
+  &__right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

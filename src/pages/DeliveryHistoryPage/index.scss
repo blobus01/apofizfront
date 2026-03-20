@@ -1,0 +1,19 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.delivery-history-page {
+  padding-bottom: $navbarBottomPadding;
+  &__content {
+    padding-top: 20px;
+  }
+  &__list {
+    &-card {
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+  &__empty .empty-info__content {
+    flex-direction: column-reverse;
+  }
+}

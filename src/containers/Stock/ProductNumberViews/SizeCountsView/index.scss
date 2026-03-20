@@ -1,0 +1,20 @@
+@import '../../../../assets/styles/variables.scss';
+
+.size-counts-view {
+  &__top-header {
+    margin-bottom: 30px;
+  }
+  &__add-button {
+    background: $c-grey-f5f5f5;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 24px;
+  }
+  &__option {
+    margin-bottom: 12px;
+
+    & p {
+      color: $c-black-2c2d2e !important;
+    }
+  }
+}

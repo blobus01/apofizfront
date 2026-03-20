@@ -1,0 +1,33 @@
+.button-option {
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(52, 168, 83, 0.1);
+  border-radius: 10px;
+  width: 100%;
+  &__content {
+    flex-grow: 1;
+    padding: 0 16px;
+    text-align: left;
+  }
+  &__checkmark {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #E6E8EB;
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 16px;
+    box-shadow: 0 1px 6px rgba(207, 218, 226, 0.25);
+  }
+  &.selected &__checkmark {
+    border: 1px solid #34A853;
+    background: rgba(52, 168, 83, 0.5);
+  }
+  &.selected {
+    border: 1px solid #34A853;
+  }
+}

@@ -1,0 +1,9 @@
+export const CHANGE_TIME_INTERVAL = 'CHANGE_TIME_INTERVAL';
+
+export const TOGGLE_INTERVAL_MENU = 'TOGGLE_INTERVAL_MENU';
+
+export const SET_PAGE = 'SET_PAGE';
+
+export const SET_LOADING = 'SET_LOADING';
+
+export const SET_HAS_MORE = 'SET_HAS_MORE';

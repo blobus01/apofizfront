@@ -1,0 +1,59 @@
+@import "@styles/variables.scss";
+
+
+.fileInputBox {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  &Right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.photoPlaceholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $primaryBlue;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  &Error {
+    border: 2px solid #FF0000
+  }
+}
+
+.photo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid #FFF;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  object-fit: cover;
+}
+
+.fileInput {
+  display: none;
+  &Label {
+    display: inline-block;
+    color: $primaryBlue;
+    cursor: pointer;
+  }
+  &Error {
+    color: $c-red-eb5757;
+  }
+}
+
+.fieldDesc {
+  color: $c-grey-818c99;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 0.5rem;
+}
+
+.textInput {
+  margin-bottom: 1rem;
+}

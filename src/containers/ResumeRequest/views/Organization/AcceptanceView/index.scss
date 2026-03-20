@@ -1,0 +1,23 @@
+@import "../../../../../assets/styles/variables";
+
+.acceptance-view {
+  padding-bottom: 5rem;
+
+  &__accept-text {
+    color: #156CFD;
+  }
+
+  &__decline-text {
+    color: #D72C20;
+  }
+
+  &__buttons {
+    position: fixed;
+    background-color: #fff;
+    padding: 1rem 1rem 1.5rem;
+    left: 0;
+    right: 0;
+    bottom: $navBottomPadding;
+    gap: 12px;
+  }
+}

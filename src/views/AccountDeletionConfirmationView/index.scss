@@ -1,0 +1,24 @@
+.account-deletion-view {
+  &__title {
+    color: #FF0000;
+    padding: 25px 0 15px;
+  }
+  &__desc {
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+  &__cancel {
+    display: block;
+    min-height: 38px;
+    margin: 0 auto;
+    max-width: 60%;
+    background-color: #FF0000;
+    margin-bottom: 8px;
+  }
+  &__agree {
+    display: block;
+    min-height: 36px;
+    margin: 0 auto;
+    max-width: 60%;
+  }
+}

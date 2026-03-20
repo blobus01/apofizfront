@@ -1,0 +1,101 @@
+@import "../../../assets/styles/variables";
+
+.standard-button {
+  border: none;
+  min-height: 28px;
+  width: 100%;
+  background: $c-grey-f5f5f5;
+  border-radius: 7px;
+  overflow: hidden;
+  &__label {
+    color: $c-blue-4285f4;
+  }
+}
+
+.button-upload {
+  cursor: pointer;
+  min-width: 80px;
+  width: 80px;
+  height: 80px;
+  background: #f5f5f5;
+  border: 1px solid #e6e8eb;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    overflow: hidden;
+    width: 0 !important;
+    height: 0 !important;
+  }
+  &:hover {
+    opacity: 0.7;
+  }
+  &.error {
+    border: 1px solid $errorRed;
+    & svg path {
+      fill: $errorRed;
+    }
+  }
+}
+
+.button-with-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 44px;
+  background: #007aff;
+  border-radius: 11px;
+  overflow: hidden;
+  width: 100%;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: #007bffb5;
+  }
+
+  & > span {
+    height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  &__label {
+    flex-grow: 1;
+    color: #fff;
+    align-self: center;
+    padding: 0 16px;
+  }
+  &__question {
+    margin: auto;
+    & path {
+      fill: #fff;
+    }
+  }
+  &__extra {
+    min-width: 64px;
+    background: #ffffff20;
+    justify-content: center; // 🔥 ВОТ ЭТОГО НЕ ХВАТАЛО
+  }
+  // &:hover {
+  //   transform: scale(1.01);
+  // }
+}
+
+.button-space-between {
+  background: $onlineGreen;
+  border-radius: 10px;
+  outline: none;
+  width: 100%;
+  border: none;
+  overflow: hidden;
+  min-height: 44px;
+  padding: 0 15px;
+  color: #fff;
+}
+
+.button-with-content__question {
+  margin: auto;
+}

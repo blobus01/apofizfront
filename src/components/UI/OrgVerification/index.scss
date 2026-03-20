@@ -1,0 +1,12 @@
+.organization-verification {
+  display: inline-block;
+  transform: translateY(4px);
+  margin-right: 2px;
+  & svg:first-child {
+    width: 18px;
+    height: 18px;
+  }
+  & svg path {
+    fill: #007AFF;
+  }
+}

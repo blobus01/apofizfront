@@ -1,0 +1,204 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+@import "../../../node_modules/swiper/swiper.scss";
+@import "../../../node_modules/swiper/components/pagination/pagination.scss";
+
+$width: 301px;
+$height: 197px;
+
+.promotions-page {
+  padding-bottom: $navbarBottomPadding;
+  & .sticky {
+    top: 10px;
+  }
+  & .shop-controls-list-wrap {
+    position: sticky;
+  }
+  &__grid {
+    display: grid;
+    // Default: Responsive two columns, items grow up to 1fr, min 140px
+    grid-template-columns: repeat(1, minmax(140px, 1fr));
+    padding: 12px 0;
+    margin-top: 20px;
+    justify-content: space-between; // Distribute space between items (and to edges)
+    gap: 17px;
+    @include md {
+      grid-template-columns: repeat(2, minmax(140px, 1fr));
+      gap: 17px; // Slightly larger minimum gap for more space
+    }
+    @media (min-width: 900px) {
+      gap: 40px;
+    }
+  }
+  & .promotions-page-slider {
+    background-color: #fff;
+    border-radius: 16px;
+    margin: 20px -15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    &__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 15px;
+    }
+    &__slide {
+      width: 100%;
+      height: $height;
+
+      transform: scale(1);
+      transition: transform 0.3s;
+      border-radius: 16px;
+      overflow: hidden;
+      display: block;
+      position: relative;
+      @media (min-width: 500px) {
+        height: 250px;
+      }
+      @media (min-width: 768px) {
+        height: 197px;
+      }
+      @media (min-width: 950px) {
+        height: 250px;
+      }
+      &:last-child {
+        width: 100%;
+      }
+      &-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      &-organization {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 15px;
+        & .organization-card__image {
+          border-radius: 6px !important;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border: 0.1px solid #fff;
+          padding: 0;
+          .org-avatar__image {
+            border-radius: 0;
+          }
+        }
+        & .organization-card__title {
+          color: #fff;
+        }
+      }
+      &-tile {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(148, 172, 193, 0.2);
+        backdrop-filter: blur(4px);
+        min-height: 33px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &-content {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          & svg {
+            margin-left: 15px;
+          }
+        }
+        &-text {
+          color: #fff;
+          text-shadow: 0 0 2px #000000;
+          letter-spacing: -0.15px;
+        }
+      }
+    }
+
+    & .organization-card__title {
+      text-shadow: 0 0 2px #000000;
+    }
+    & .swiper-wrapper {
+      padding: 13px 0;
+      align-items: center;
+    }
+
+    & .swiper-slide-active {
+      transform: scale(1.06) !important;
+      transition: transform 0.3s;
+    }
+  }
+
+  &__message {
+    text-align: center;
+    padding: 40px 20px;
+    margin-top: 56px; // Below the header
+    color: #555;
+
+    h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    p {
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #007aff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.9;
+      }
+    }
+
+    &--error {
+      h3 {
+        color: #d72c20; // Red for errors
+      }
+    }
+
+    &--empty {
+      h3 {
+        color: #818c99; // Grey for empty state
+      }
+    }
+  }
+  & .shop-controls-with-view-change__shop-controls::after {
+    content: none;
+  }
+}
+
+.promotions-page {
+  background: #ffffff;
+
+  &.dark {
+    background: #00193f;
+    color: #ffffff;
+
+    .sticky {
+      background: #090027;
+      padding: 3px 0;
+    }
+
+    .shop-controls-list__item {
+      border: 1px solid #00193f;
+    }
+  }
+}
+
+.sticky {
+  padding: 3px 0;
+}

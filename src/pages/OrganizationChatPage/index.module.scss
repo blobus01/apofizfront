@@ -1,0 +1,50 @@
+@import "@styles/variables";
+
+.root {
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.messages {
+  flex-grow: 1;
+  padding-top: 30px;
+  padding-bottom: 4rem;
+}
+
+.controls {
+  position: sticky;
+  bottom: 0;
+}
+
+.messageField {
+  margin-bottom: 0;
+
+  &Wrapper {
+    border-top: 0.1px solid #979797;
+    background: #D1D5DBCC;
+    padding: 1rem 0 1rem;
+  }
+}
+
+.note {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 0 4rem;
+
+  &Icon {
+    min-width: 28px;
+    min-height: 28px;
+
+    &Container {
+      display: flex;
+      align-items: center;
+      padding-right: 4px;
+      border-right: 1px solid $primaryBlue;
+    }
+  }
+}

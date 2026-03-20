@@ -1,0 +1,67 @@
+@import "../../assets/styles/variables";
+@import "../../../node_modules/swiper/swiper.scss";
+@import "../../../node_modules/swiper/components/pagination/pagination.scss";
+
+.post-slider {
+  overflow: hidden;
+  &__slide {
+    height: auto;
+    overflow: hidden;
+    & img {
+      width: 100%;
+      height: 100%;
+    }
+
+    & iframe {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+  &__video {
+    width: 100%;
+    height: 100%;
+    &.youtube {
+      &::after {
+        pointer-events: none;
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        content: '';
+        width: 13vw;
+        height: 13vw;
+        background: url("../../assets/icons/icon_youtube.svg") no-repeat;
+        background-size: cover;
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+    &-preview.hidden {display: none;}
+    &-player.hidden {display: none;}
+  }
+  & .swiper-container {
+    padding-bottom: 40px;
+    margin: 0;
+  }
+
+  & .swiper-container-horizontal>.swiper-pagination-bullets {
+    bottom: 15px;
+  }
+
+  & .swiper-pagination-bullet-active {
+    background: #FF5A60;
+  }
+
+  &__preloader {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: #FFF;
+  }
+}

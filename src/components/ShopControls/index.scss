@@ -1,0 +1,156 @@
+@import "../../assets/styles/variables.scss";
+
+.shop-controls-list {
+  &-wrap {
+    position: relative;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+  &__item {
+    background-color: #fff;
+    transition:
+      background-color 0.25s ease,
+      color 0.2s ease;
+    &:hover {
+      background-color: #007aff;
+    }
+  }
+  &-shadow {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    box-shadow:
+      inset 14px 0 8px -7px #fff,
+      inset -14px 0 8px -7px #fff;
+  }
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: flex-start;
+  & li {
+    cursor: pointer;
+    border: 1px solid #e6e8eb;
+    box-sizing: border-box;
+    border-radius: 18px;
+    min-height: 41px;
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+    white-space: nowrap;
+    color: #898a8d;
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+    &.active {
+      background: #007aff;
+      color: #fff;
+    }
+  }
+  /* Ensure child span text becomes white on hover even if inline color is set */
+  & li:hover span,
+  & li:hover {
+    color: #fff;
+  }
+  &__image-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #e6e8eb;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  &__image {
+    display: inline-block;
+    width: 22px;
+  }
+}
+
+// Shop Controls With View Change
+.shop-controls-with-view-change {
+  display: flex;
+  padding-bottom: 15px;
+  padding-top: 20px;
+  background-color: #fff;
+  border-radius: 16px;
+  z-index: 99;
+  flex-direction: column;
+  &__button {
+    margin-right: 8px;
+    border-radius: 18px;
+    background: #007aff;
+    border: 1px solid #e6e8eb;
+    & svg path {
+      fill: #fff;
+    }
+  }
+  .row {
+    padding-left: 0;
+  }
+  .home-posts-module__products-title {
+    margin: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 16px;
+  }
+  &__shop-controls {
+    .shop-controls-list {
+      padding-left: 15px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 24px;
+      width: 1px;
+      top: 6px;
+      left: 0;
+      background: #e6e8eb;
+    }
+  }
+}
+
+.shop-controls-with-view-change {
+  &--dark {
+    .shop-controls-list-shadow {
+      box-shadow:
+        inset 14px 0 8px -7px #090027,
+        inset -14px 0 8px -7px #090027;
+    }
+  }
+}
+
+.shop-controls-list {
+  &__item {
+    background-color: transparent;
+    transition:
+      background-color 0.25s ease,
+      color 0.2s ease;
+
+
+    &:hover {
+      background-color: #007aff;
+    }
+
+    // 🌚 DARK
+    &--dark {
+      background: transparent;
+      border: 1px solid #DDE3E8;
+      color: #DDE3E8;
+
+      
+
+    }
+
+    // активная в dark НЕ меняется
+    &--dark.active {
+      background-color: #007aff; // если у тебя так
+      border-color: transparent;
+    }
+  }
+}

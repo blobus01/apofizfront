@@ -1,0 +1,91 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.cities-and-countries-view {
+  &__header {
+    @include stickyHeader;
+    box-shadow: unset;
+    & .container {
+      display: flex;
+      align-items: center;
+      height: 44px;
+    }
+  }
+  &__search {
+    background: #F5F5F5;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    width: 100%;
+    & input {
+      flex-grow: 1;
+      margin: 0 8px;
+      border: none;
+      outline: none;
+      font-size: 17px;
+      line-height: 24px;
+      background: inherit;
+      &::placeholder {
+        font-size: 17px;
+        line-height: 24px;
+        color: $textGrey;
+      }
+    }
+    & button {
+      width: 16px;
+      min-width: 16px;
+      height: 16px;
+    }
+  }
+  &__preloader {
+    height: 60px;
+  }
+  &__empty {
+    margin-top: 20px;
+  }
+  &__item {
+    height: 52px;
+    border-bottom: 1px solid #F5F5F5;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &-flag {
+      width: 25px;
+      min-width: 20px;
+      height: 16px;
+      border-radius: 2px;
+      margin-left: 15px;
+      overflow: hidden;
+      border: 1px solid #E6E8EB;
+      background: #E6E8EB;
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin-bottom: 1px;
+      }
+    }
+    &-postal {
+      margin-left: 15px;
+      color: $textGrey;
+    }
+    &.active {
+      & p {
+        color: $primaryBlue;
+        &::before {
+          content: '•';
+          display: inline-block;
+          margin-right: 5px;
+        }
+      }
+      .cities-and-countries-view__item-postal { color: $primaryBlue; }
+    }
+  }
+}

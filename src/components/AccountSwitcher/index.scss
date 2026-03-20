@@ -1,0 +1,84 @@
+.change-profile {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &__user {
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #e6e8eb;
+  }
+
+  &__item {
+    gap: 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    justify-content: space-between;
+  }
+
+  &__item-photo {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #e6e8eb;
+  }
+
+  &__item-info {
+    gap: 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item-title {
+    font-size: 17px;
+    color: #333333;
+  }
+
+  &__item-id {
+    font-size: 14px;
+    color: #818c99;
+  }
+
+  &__item-settings {
+    cursor: pointer;
+    transition: 0.25s;
+    margin-right: 10px;
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+
+  &__item-btn {
+    width: 100%;
+    padding: 11px;
+    color: #fff;
+    transition: 300ms;
+    margin: 20px 0 12px;
+    border-radius: 10px;
+    background: #d72c20;
+
+    &:hover {
+      background: #d72c20d1;
+    }
+  }
+
+  &__item-add-profile {
+    gap: 16px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+  }
+
+  &__item-add-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #e6e8eb;
+  }
+}

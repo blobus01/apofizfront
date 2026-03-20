@@ -1,0 +1,66 @@
+@import "../../assets/styles/variables";
+
+.organization-working-time {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: flex-start;
+  color: #eb5757;
+  &.close {
+    color: #eb5757;
+  }
+  &.online,
+  &.open {
+    color: #27ae60;
+  }
+  &.around_the_clock {
+    color: $textGrey !important;
+  }
+  &__label {
+    color: $textGrey;
+    margin-right: 4px;
+  }
+  &__text {
+    font-weight: 500;
+  }
+  .organization-working-time__icon {
+    height: 24px;
+    width: 24px;
+  }
+}
+.service-detail-page__group-time {
+  .organization-working-time__icon {
+    width: 20px;
+    height: 20px !important;
+    bottom: 0 !important;
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  .organization-working-time__text {
+    padding-left: 23px !important;
+  }
+}
+
+.organization-working-time {
+  color: #818c99;
+  transition: 0.2s;
+
+  &:hover {
+    color: #007aff;
+
+    svg {
+      transform: scale(1.1);
+    }
+  }
+
+  &.online {
+    color: #27ae60;
+  }
+
+  &:not(.online) {
+    color: #eb5757;
+  }
+}

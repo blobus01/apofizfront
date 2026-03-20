@@ -1,0 +1,75 @@
+.messenger-search-page {
+  &__content {
+    margin-top: 8px;
+  }
+  &__search {
+    background: #f5f5f5;
+    border-radius: 11px;
+    height: 36px;
+    padding: 0 15px 0 10px;
+    @media (min-width: 600px) {
+      height: 45px;
+    }
+    & input {
+      font-size: 17px;
+      outline: none;
+      border: none;
+      background: transparent;
+      margin-left: 8px;
+      margin-right: 8px;
+      flex: 1;
+    }
+    & button {
+      color: #4285f4;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    display: flex;
+    align-items: center;
+  }
+  &__error {
+    color: #d72c20;
+    font-size: 13px;
+    margin-top: 20px;
+    margin-left: 8px;
+    display: flex;
+    justify-content: center;
+  }
+  &__loading {
+    font-size: 13px;
+    margin-top: 20px;
+    margin-left: 8px;
+    display: flex;
+    justify-content: center;
+  }
+  &__result {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    padding: 0 4px;
+    cursor: pointer;
+  }
+  &__result-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 12px;
+    border: 1px solid #e0e0e0;
+  }
+  &__result-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__result-name {
+    font-size: 16px;
+    color: #222;
+    margin-bottom: 2px;
+  }
+  &__result-nick {
+    font-size: 13px;
+    color: #818c99;
+    font-weight: 400;
+  }
+}

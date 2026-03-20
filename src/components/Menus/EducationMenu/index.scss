@@ -1,0 +1,38 @@
+.education-menu {
+  &__content {
+    max-height: calc(100 * var(--vh) - 20vh);
+    overflow-y: auto;
+  }
+  &__preloader {
+    margin-top: 24px;
+  }
+  &__list {
+    &-item {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      text-align: center;
+      &-text {
+        padding: 12px 40px 12px 0;
+        transition: opacity 0.3s;
+      }
+      &-icon {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transition: transform 0.3s;
+        transform: translateY(-50%) scale(1);
+        &--hidden {
+          transform: translateY(-50%) scale(0);
+        }
+      }
+      &--selected {
+        & .education-menu__list-item-text {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}

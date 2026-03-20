@@ -1,0 +1,17 @@
+export const SEARCH_PARAMS = Object.freeze({
+  subcategories: 'subcategories',
+  salary_from: 'salary_from',
+  salary_to: 'salary_to',
+  gender: 'gender',
+  has_work_experience: 'has_work_experience',
+  has_education: 'has_education',
+  ordering: 'ordering',
+  category: 'category',
+  subcategory: 'subcategory',
+  country: 'country',
+  city: 'city',
+  search: 'search',
+  region: 'region',
+  tab: 'tab',
+  posts_view: 'posts_view',
+})

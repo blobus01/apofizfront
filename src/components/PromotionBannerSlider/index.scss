@@ -1,0 +1,122 @@
+@import "../../assets/styles/variables";
+@import "../../../node_modules/swiper/swiper.scss";
+@import "../../../node_modules/swiper/components/pagination/pagination.scss";
+
+$width: 301px;
+$height: 163px;
+
+.promotion-banner-slider {
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+  }
+  &__slide {
+    width: $width;
+    height: $height;
+    min-width: $width;
+    max-width: $width;
+    min-height: $height;
+    max-height: $height;
+    transform: scale(1);
+    transition: transform 0.3s;
+    border-radius: 16px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    &:last-child {
+      width: 100%;
+    }
+    &-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-duration, 0.3s) ease;
+      &:hover {
+        transform: scale(var(--hover-scale, 1.05));
+      }
+    }
+    &:hover &-image {
+      transform: scale(var(--hover-scale, 1.05));
+    }
+    &-organization {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 15px;
+      & .organization-card__image {
+        border-radius: 6px !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 0.1px solid #fff;
+        padding: 0;
+        .org-avatar__image {
+          border-radius: 0;
+        }
+      }
+      & .organization-card__title {
+        color: #fff;
+      }
+    }
+    &-tile {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(148, 172, 193, 0.2);
+      backdrop-filter: blur(4px);
+      min-height: 33px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        & svg {
+          margin-left: 15px;
+        }
+      }
+      &-text {
+        color: #fff;
+        text-shadow: 0 0 2px #000000;
+        letter-spacing: -0.15px;
+      }
+    }
+  }
+
+  & .organization-card__title {
+    text-shadow: 0 0 2px #000000;
+  }
+  & .swiper-wrapper {
+    padding: 13px 0;
+    align-items: center;
+  }
+
+  & .swiper-slide-active {
+    transform: scale(1.06) !important;
+    transition: transform 0.3s;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    .slide-btns {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin-left: 10px;
+      svg {
+        cursor: pointer;
+        transition: transform 0.2s ease;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,76 @@
+.organization-payment-method-select {
+  &__header {
+    margin-bottom: 1rem;
+  }
+  &__option {
+    &:not(:last-of-type) {
+      margin-bottom: 1rem;
+    }
+    & .category-option__image_bg {
+      background: transparent;
+      border: none;
+      padding: 0;
+      border-radius: 0;
+    }
+    & .category-option__title {
+      font-weight: 500;
+    }
+    &--disabled {
+      color: #979797;
+    }
+  }
+}
+
+.maaly-pay-window {
+  position: fixed;
+  inset: 0;
+ 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 32px 24px;
+    max-width: 360px;
+    width: 100%;
+    animation: fadeInUp 0.4s ease-out;
+  }
+
+  &__loader {
+    margin-bottom: 24px;
+
+    .preloader__btn {
+      transform: scale(1.4);
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #000;
+    margin-bottom: 8px;
+    letter-spacing: 0.3px;
+  }
+
+  &__subtitle {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(29, 29, 29, 0.65);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

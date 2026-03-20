@@ -1,0 +1,45 @@
+@import "../../assets/styles/variables";
+
+.post-compilation-create-menu {
+  padding-top: 1.1rem;
+  &__form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  &__image, &__placeholder-image {
+    border: 0.4px solid #C4C4C4;
+    border-radius: 8px;
+  }
+  &__placeholder-image {
+    width: 74px;
+    height: 74px;
+  }
+  &__title {
+    margin-bottom: 1.25rem;
+  }
+  &__add-btn {
+    position: relative;
+    display: block;
+    color: $primaryBlue;
+    transition: color .2s;
+    &--grey {
+      color: #979797;
+    }
+    &-loader {
+      position: absolute;
+      left: calc(100% + 0.05rem);
+      top: 50%;
+      transform: translateY(-50%);
+      animation: rotate 2s linear infinite;;
+    }
+    @keyframes rotate {
+      from {
+        transform: translateY(-50%) rotate(0deg);
+      }
+      to {
+        transform: translateY(-50%) rotate(360deg);
+      }
+    }
+  }
+}

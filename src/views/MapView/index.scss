@@ -1,0 +1,42 @@
+.map-view {
+  height: 100%;
+  position: relative;
+  &__map {
+    position: absolute;
+    top: 44px;
+    right: 0;
+    width: 100vw;
+    bottom: 0;
+  }
+  & .leaflet-container {
+    z-index: 0;
+  }
+  &__map-link {
+    color: #007AFF;
+  }
+  &__bottom {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+  }
+}
+
+// fix marker position
+.leaflet-marker-icon {
+  margin-left: -12px;
+  margin-top: -41px;
+  width: 25px;
+  height: 41px;
+  outline: none;
+}
+// fix marker's shadow position
+.leaflet-marker-shadow {
+  margin-left: -12px;
+  margin-top: -41px;
+  width: 41px;
+  height: 41px;
+}
+.leaflet-popup {
+  translate: 0 -41px;
+}

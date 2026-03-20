@@ -1,0 +1,307 @@
+.discount-card {
+  position: relative;
+  // min-width: 343px;
+  max-width: 343px;
+  height: 218px;
+  border-radius: 17px;
+  padding: 20px;
+  overflow: hidden;
+  margin: 0 auto;
+  transition: 300ms;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+
+  &:hover {
+    box-shadow: 5px 8px 8px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+  }
+
+  &-cumulative {
+    background: linear-gradient(104.83deg, #e4484c 0%, #e75f31 100%);
+  }
+
+  &-fixed {
+    background: linear-gradient(177.23deg, #54ccff -13.49%, #4971ff 109.75%);
+  }
+
+  &-cashback {
+    background: linear-gradient(177.23deg, #8feed2 -13.49%, #43cb9a 109.75%);
+  }
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__settings {
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 11;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: rotate(90deg);
+    }
+
+  }
+
+  &__overlay {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 17px;
+    background: rgba(0, 0, 0, 0.6);
+
+    &-text {
+      margin: auto;
+      color: #fff;
+      text-align: center;
+      padding: 0 20px;
+      white-space: pre;
+      text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25),
+        0 1px 1px rgba(255, 255, 255, 0.25);
+    }
+  }
+
+  &__bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 44px;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 0 15px;
+  }
+
+  &__name {
+    text-shadow: 0 0 2px #000000, 0 0 2px #ffffff;
+  }
+
+  &__percent {
+    text-shadow: 0 0 2px #000000, 0 0 2px #ffffff;
+    margin-right: 15px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    transition: transform 0.4s ease; // плавная анимация
+
+    &:hover {
+      transform: scale(1.1); // увеличиваем
+    }
+  }
+}
+
+
+.coupon-slides {
+  li {
+
+    position: relative;
+
+    .organization-coupon-create__content-wallpaper {
+      overflow: hidden;
+      margin: 0 auto;
+      background-color: #ebedf0;
+      border-radius: 16px;
+      min-height: 220px;
+      max-width: 343px;
+      position: relative;
+      transition: background-color 0.3s ease;
+      display: flex;
+      justify-content: end;
+      padding: 35px 9px 17px;
+      padding-left: 119px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
+      transition: 400ms;
+
+
+      &:hover {
+        box-shadow: 5px 8px 8px rgba(0, 0, 0, 0.18);
+        cursor: pointer;
+      }
+
+      &-title {
+        cursor: pointer;
+
+
+
+      }
+
+      &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: start;
+        width: 100%;
+
+        h2 {
+          font-size: 17px;
+          color: #fff;
+          font-weight: 500;
+          margin-bottom: 10px;
+          text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+          padding-right: 35px;
+        }
+
+        &-product {
+          display: flex;
+          align-items: start;
+          gap: 12px;
+
+
+
+          &-info {
+            &-title {
+              margin-bottom: 4px;
+              font-size: 14px;
+              color: #fff;
+              text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              /* максимум 2 строки */
+              -webkit-box-orient: vertical;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+
+            &-price {
+              &-old {
+                font-size: 14px;
+                color: #fff;
+                text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+                text-decoration: line-through;
+              }
+
+              &-new {
+                font-size: 16px;
+                font-weight: 600;
+                color: #FFF;
+                text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+              }
+            }
+          }
+        }
+      }
+
+      &-discount {
+        display: inline-block;
+        height: fit-content;
+        color: #fff;
+        font-size: 60px;
+        font-weight: 900;
+        position: absolute;
+        top: 50%;
+        left: 54px;
+        transform: translate(-50%, -50%) rotate(-90deg);
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+        white-space: nowrap;
+      }
+
+      &-divider {
+        position: absolute;
+        top: 10px;
+        bottom: 10px;
+        left: 103px;
+        width: 0;
+        transform: translateX(-50%);
+        border-left: 1px dashed rgba(255, 255, 255, 0.9);
+        pointer-events: none;
+
+        &:before,
+        &:after {
+          content: "";
+          position: absolute;
+
+          transform: translateX(-59%);
+          width: 9px;
+          height: 17px;
+          background: #fff;
+          border-radius: 16px;
+        }
+
+        &:before {
+          top: -19px;
+        }
+
+        &:after {
+          bottom: -19px;
+        }
+      }
+
+        &-divider-line {
+        position: absolute;
+        bottom: 10px;
+        left: 99px;
+        width: 0;
+        z-index: 11;
+        transform: translateX(-50%);
+        pointer-events: none;
+      }
+
+      &-title {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        p {
+          display: flex;
+          align-items: center;
+          color: #007aff;
+          font-size: 16px;
+          font-weight: 500;
+          gap: 4px;
+        }
+      }
+
+
+    }
+  }
+}
+
+.coupon-slides__item-used {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  z-index: 1;
+}
+
+.coupon-slides__item-info {
+  gap: 8px;
+  position: absolute;
+  display: flex;
+  color: #FFF;
+  align-items: center;
+  bottom: 10px;
+  left: 92px;
+  font-size: 14px;
+  z-index: 16;
+}
+

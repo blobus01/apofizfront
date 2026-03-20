@@ -1,0 +1,51 @@
+@import "../../../assets/styles/variables";
+
+.post-row-card {
+  display: flex;
+  &:not(:last-child) {
+    margin-bottom: 1.35rem;
+  }
+  &__image {
+    min-width: 72px;
+    height: 72px;
+    border-radius: 12px;
+    margin-right: 0.75rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-x: hidden;
+  }
+  &__name {
+    color: #007AFF;
+    margin-bottom: 2px;
+  }
+  &__org {
+    color: $textOrange;
+    margin-bottom: 2px;
+  }
+  &__price-without-discount {
+    position: relative;
+    display: inline-block;
+    color: $textGrey;
+    margin-right: 0.75rem;
+    text-decoration: line-through;
+    &::after {
+      content: "";
+      position: absolute;
+      right: -0.4rem;
+      width: 2px;
+      height: 2px;
+      background-color: $primaryBlack;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__discounted-price {
+    color: #007AFF;
+  }
+}

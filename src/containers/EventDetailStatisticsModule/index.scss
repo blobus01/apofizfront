@@ -1,0 +1,83 @@
+@import "../../assets/styles/variables";
+
+.event-detail-statistics-module {
+  padding-bottom: calc(#{$navBottomPadding} + 1rem);
+  &__controls {}
+  &__top-container {
+    border-bottom: 1px solid rgba(245, 245, 245, 1);
+    padding-bottom: 6px;
+    margin-bottom: 1rem;
+  }
+  &__header {
+    margin-bottom: 0.5rem;
+  }
+  &__tabs {
+    margin-bottom: 1rem;
+
+    .tab-links__item {
+      margin-right: 24px;
+    }
+  }
+  &__savings-block {
+    margin-bottom: 6px;
+  }
+  &__receipts-actions {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: hidden;
+  }
+  &__date-selection-interval {
+    margin-right: 0.5rem;
+  }
+  &__client-activation-row-card {
+    display: flex;
+
+    &-avatar {
+      margin-right: 0.75rem;
+      border: 0.5px solid #E6E8EB;
+    }
+    &-content {
+      display: flex;
+      justify-content: space-between;
+      flex: 1;
+      overflow-x: hidden;
+    }
+    &-info {
+      overflow-x: hidden;
+    }
+    &-date {
+      color: $c-green-27ae60;
+      margin-top: 0.2rem;
+
+      &--period {
+        color: #007AFF;
+      }
+    }
+    &-time {
+      color: $c-green-27ae60;
+
+      &--period {
+        color: #007AFF;
+      }
+    }
+    &-action {
+      min-width: 96px;
+      color: #007AFF;
+      &:disabled {
+        color: $c-green-27ae60;
+        cursor: initial;
+      }
+    }
+  }
+  &__event-view {
+    &-client {
+      margin-bottom: 26px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  &__user-card {
+    margin-bottom: 22px;
+  }
+}

@@ -1,0 +1,25 @@
+@import "../../assets/styles/variables";
+
+.device {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 0;
+  margin-bottom: 16px;
+
+  &__name {
+    color: $c-blue-4285f4;
+    margin-bottom: 2px;
+  }
+  &__platform {
+    color: #000;
+    margin-bottom: 4px;
+  }
+  &__additional-data {
+    color: $c-grey-818c99;
+
+    &--last-active {
+      color: $c-green-27ae60;
+    }
+  }
+}

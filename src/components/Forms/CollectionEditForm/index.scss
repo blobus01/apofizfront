@@ -1,0 +1,38 @@
+@import "../../../assets/styles/variables";
+
+.collection-edit-form {
+  &__header {
+    margin-bottom: 1rem;
+  }
+  &__main {
+    &-image {
+      margin: 0 auto 1.1rem;
+      border-radius: 8px;
+      border: 0.4px solid #C4C4C4;
+    }
+    &-placeholder-image {
+      margin: 0 auto 1.1rem;
+      width: 74px;
+      height: 74px;
+      border: 0.4px solid #C4C4C4;
+      border-radius: 8px;
+    }
+    &-change-image-btn {
+      display: flex;
+      margin: 0 auto 3rem;
+      text-align: center;
+      color: $primaryBlue;
+      &:disabled {
+        color: #979797;
+      }
+    }
+    &-title {
+      margin-bottom: 2.75rem;
+    }
+  }
+  &__image-selection {
+    &-list {
+      padding-bottom: $navBottomPadding;
+    }
+  }
+}

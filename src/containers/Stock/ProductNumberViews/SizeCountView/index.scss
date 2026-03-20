@@ -1,0 +1,19 @@
+.size-count-view {
+  &__top-header {
+    margin-bottom: 30px;
+  }
+  &__category-option {
+    margin-bottom: 20px;
+
+    & .category-option__image_bg {
+      border: none;
+      background: transparent;
+    }
+    & .category-option__icon {
+      display: none;
+    }
+  }
+  &__delete-btn {
+    margin-top: 15px;
+  }
+}

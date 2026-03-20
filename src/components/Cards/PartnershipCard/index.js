@@ -1,0 +1,102 @@
+import React from "react";
+import * as classnames from "classnames";
+import OrgAvatar from "../../UI/OrgAvatar";
+import { Link } from "react-router-dom";
+import { prettyDate } from "../../../common/utils";
+import { translate } from "../../../locales/locales";
+import "./index.scss";
+
+const PartnershipCard = (props) => {
+  const { partner, to, className } = props;
+  if (!partner) {
+    return null;
+  }
+  return (
+    <Link to={to} className={classnames("partnership-card__wrap", className)}>
+      {getContent(props)}
+    </Link>
+  );
+};
+
+export default PartnershipCard;
+
+const getContent = ({
+  partner,
+  isAccepted,
+  isIncoming,
+  onAcceptPartnership,
+  onRejectPartnership,
+}) => {
+  const { title, image, address, partners, types, latest_transaction_time } =
+    partner;
+  return (
+    <div className="partnership-card">
+      <OrgAvatar
+        src={image && image.medium}
+        alt={title + "Logo"}
+        className="partnership-card__logo"
+      />
+
+      <div className="partnership-card__right">
+        <div className="partnership-card__type-block row">
+          <p className="partnership-card__type f-12 f-500 tl">
+            {(types[0] && types[0].title) || "Фирменный магазин"}
+          </p>
+          {latest_transaction_time && (
+            <div className="partnership-card__time f-11 f-500">
+              {prettyDate(latest_transaction_time)}
+            </div>
+          )}
+        </div>
+        <h4 className="partnership-card__title f-16 tl">{title}</h4>
+        <p className="partnership-card__address f-12 tl">
+          {address || "155 просп. Чуй. Бишкек"}
+        </p>
+
+        {!!partners.count && (
+          <div className="partnership-card__bottom">
+            <div className="partnership-card__group">
+              {partners.list?.map((partner) => (
+                <div key={partner.id} className="partnership-card__group-image">
+                  <img
+                    src={partner.image && partner.image.medium}
+                    alt={partner.title}
+                  />
+                </div>
+              ))}
+            </div>
+
+            <div className="partnership-card__partners f-11">
+              {translate("{count} партнеров", "partners.partnersNumber", {
+                count: partners.count,
+              })}
+            </div>
+          </div>
+        )}
+
+        <div className="org-partners-page__item-buttons">
+          {!isAccepted && !isIncoming && (
+            <div className="org-partners-page__item-pending">В ожидании</div>
+          )}
+
+          {isIncoming && !isAccepted && (
+            <React.Fragment>
+              <button
+                className="org-partners-page__item-accept f-14 f-500"
+                onClick={onAcceptPartnership}
+              >
+                Принять
+              </button>
+              <button
+                className="org-partners-page__item-decline f-14 f-500"
+                onClick={onRejectPartnership}
+              >
+                Отклонить
+              </button>
+            </React.Fragment>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};

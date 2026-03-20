@@ -1,0 +1,56 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.partnership-detail-page {
+  &__card {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #F6F6F6;
+  }
+  &__title {
+    margin: 25px 0;
+    color: $textGrey;
+    display: flex;
+    align-items: center;
+  }
+
+  &__tooltip {
+    width: 24px;
+    height: 24px;
+    margin-left: 10px;
+  }
+
+  &__content-wrap {
+    @include minHeightWithHeader;
+    padding: 20px 0 30px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    margin-bottom: 40px;
+  }
+
+  &__remove {
+    margin-top: 70px;
+    background: $offlineRed;
+    color: #FFF;
+  }
+
+  &__actions {
+    &-btn {
+      max-width: 300px;
+
+      &--accept {
+        margin-right: 15px;
+      }
+
+      &--reject {
+        background: $c-grey-f5f5f5;
+
+        & span {
+          color: $c-red-d72c20 !important;
+        }
+      }
+    }
+  }
+}

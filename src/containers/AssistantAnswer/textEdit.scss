@@ -1,0 +1,46 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1000;
+
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+}
+
+.modal-content {
+  background: #fff;
+  height: 100%;
+  transform: translateY(20px);
+  opacity: 0;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.modal-overlay.open .modal-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.modal-content {
+  transform: translateY(100%);
+}
+
+.modal-overlay.open .modal-content {
+  transform: translateY(0);
+}
+
+.text-edit-modal__debug {
+  margin-top: 16px;
+  font-size: 12px;
+  background: #f7f7f7;
+  padding: 12px;
+  border-radius: 8px;
+  overflow: auto;
+}

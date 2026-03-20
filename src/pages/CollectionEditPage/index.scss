@@ -1,0 +1,13 @@
+@import "../../assets/styles/variables";
+
+.collection-edit-page {
+  &__form {
+    margin-bottom: 2.75rem;
+  }
+  &__delete-btn {
+    margin-bottom: 0.75rem;
+  }
+  &__deletion-warn {
+    color: $primaryBlue;
+  }
+}

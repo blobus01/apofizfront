@@ -1,0 +1,102 @@
+@import '../../../../assets/styles/variables.scss';
+
+.links-view {
+  &__desc {
+    margin-bottom: 1em;
+
+    p:first-child {
+      margin-bottom: 1em;
+    }
+  }
+  &__link-example {
+    color: $primaryBlue;
+  }
+
+  &__form-title {
+    margin-bottom: 0.7em;
+  }
+
+  &__input-box {
+    display: flex;
+
+    border-bottom: 1px solid rgba(129, 140, 153, 0.12);
+
+    &_error {
+      border-bottom: 1px solid #f93c10;
+    }
+  }
+
+  &__error-label {
+    color: #f93c10;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  &__list {
+    margin-top: 16px;
+
+    &_not-empty {
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(129, 140, 153, 0.12);
+    }
+
+    &-item {
+      margin-bottom: 28px;
+    }
+  }
+
+  &__input {
+    -webkit-box-sizing: border-box;
+    flex-grow: 1;
+    box-sizing: border-box;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    color: $c-grey-818c99;
+    // width: 100%;
+    border: none;
+    outline: none;
+    padding: 5px 0 5px 0;
+    margin-right: 20px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
+    &:disabled {
+      background: transparent;
+    }
+    &::placeholder {
+      font-size: 17px;
+      color: $c-grey-818c99;
+      letter-spacing: -0.408px;
+    }
+    //&:focus {
+    //  border-color: $primaryBlack;
+    //}
+  }
+
+  &__input:focus ~ &__label,
+  &__input-filled ~ &__label,
+  &__input:not(:placeholder-shown) ~ &__label {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+    color: $labelGrey;
+    top: -6px;
+    left: 0;
+  }
+
+  &__input:-webkit-autofill ~ &__label {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+    color: $labelGrey;
+    top: -6px;
+    left: 0;
+  }
+
+  &__submit-button {
+    color: $primaryBlue;
+  }
+}

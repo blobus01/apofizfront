@@ -1,0 +1,290 @@
+.ai-create__aspect-ratio {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 42px;
+    padding-bottom: 70px;
+
+    &-title {
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+        text-align: center;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 8px;
+    }
+
+    &-list {
+        display: flex;
+        gap: 24px;
+        align-items: end;
+        justify-content: center;
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    &-box {
+        width: 56px;
+        height: 40px;
+        border-radius: 10px;
+        border: 1px solid #555;
+        background: linear-gradient(180deg, #979797 0%, #000 100%);
+        color: #ccc;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease;
+
+        &:hover {
+            border-color: #007AFF;
+        }
+
+        &.active {
+            border-color: #007AFF;
+            border: 3px solid #007AFF;
+            color: #fff;
+            transform: scale(1.05);
+        }
+    }
+
+    &-radio {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        position: relative;
+        margin-top: 10px;
+        border: 2px solid #007AFF; // <-- ширина границы
+        border-radius: 50%;
+        cursor: pointer;
+        transition: border 0.1s ease, background 0.1s ease;
+
+        &:checked::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 9px; // размер внутренней точки
+            height: 9px;
+            background: #007AFF; // цвет точки
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    }
+}
+
+.ai-create__generate {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+
+    &-btn {
+        width: 100%;
+        padding: 11px 0;
+        color: #FFFFFF;
+        border-radius: 10px;
+        transition: 300ms;
+        background: #007AFF;
+        margin-top: 30px;
+
+        &:hover {
+            background: #007bffda;
+        }
+    }
+
+    &-btn-prompt {
+        width: auto !important;
+        padding: 5px 25px !important;
+        font-size: 12px !important;
+    }
+
+}
+
+.ai-create__generate-btn {
+    position: fixed;
+    bottom: 30px;
+    transition: background 0.3s ease, opacity 0.3s ease;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px, rgba(0, 0, 0, 0.25) 0px 3px 10px;
+
+    max-width: 600px;
+    width: 100%;
+
+
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &.loading {
+        opacity: 0.8;
+        cursor: not-allowed;
+    }
+
+    &.loading::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 16px; // спиннер справа внутри кнопки
+        transform: translateY(-50%);
+        width: 18px;
+        height: 18px;
+        border: 2px solid rgba(255, 255, 255, 0.6);
+        border-top-color: #fff;
+        border-radius: 50%;
+        animation: spin 0.7s linear infinite;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: translateY(-50%) rotate(0);
+    }
+
+    to {
+        transform: translateY(-50%) rotate(360deg);
+    }
+}
+
+
+/* 📱 Мобильная адаптация AI Photo Page */
+@media (max-width: 600px) {
+    .ai-create.container {
+        padding: 20px 12px !important;
+        margin: 20px 0 !important;
+    }
+
+    .product-form-main__subtitle {
+        font-size: 16px !important;
+        text-align: left;
+        margin-bottom: 12px !important;
+    }
+
+    .product-form-main__input {
+        width: 100% !important;
+    }
+
+    .product-form-main__images-list {
+        // flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    .ai-create__add-price-photo,
+    .ai-create__add-discount-toPhoto {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 12px;
+    }
+
+    .ai-create__aspect-ratio {
+        margin-top: 30px !important;
+    }
+
+    .ai-create__aspect-ratio-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px;
+    }
+
+    .ai-create__generate {
+        margin-top: 30px !important;
+    }
+
+    .ai-create__generate-btn {
+        width: 90%;
+        max-width: 100%;
+        padding: 13px 0 !important;
+        border-radius: 8px !important;
+        font-size: 15px;
+    }
+
+    .ai-create__generate-btn-prompt {
+        font-size: 14px;
+        padding: 5px 25px !important;
+
+    }
+
+}
+
+@media (max-width: 480px) {
+    .product-form-main__subtitle {
+        font-size: 15px !important;
+    }
+
+    .ai-create__add-price,
+    .ai-create__add-discount {
+        margin-top: 20px !important;
+    }
+
+    .ai-create__aspect-ratio-list {
+        gap: 23px;
+    }
+
+    // add new changes
+
+
+    .ai-create__generate-btn {
+        font-size: 14px;
+        padding: 12px 0 !important;
+    }
+
+    .ai-create__generate-btn-prompt {
+        font-size: 14px;
+        padding: 5px 25px !important;
+
+    }
+}
+
+
+
+.product-form-main__image-thumb {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .product-form-main__image-remove {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        font-size: 14px;
+        border: none;
+        cursor: pointer;
+        opacity: 0;
+        transform: scale(0.8);
+        transition: all 0.2s ease;
+
+        &:hover {
+            background: rgba(255, 0, 0, 0.6);
+        }
+    }
+
+    &:hover .product-form-main__image-remove {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.ai-create__generate-btn:disabled {
+    opacity: 0.8;
+    cursor: not-allowed;
+}

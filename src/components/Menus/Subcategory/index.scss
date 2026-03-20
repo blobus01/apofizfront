@@ -1,0 +1,9 @@
+.category-creation-menu-form {
+  &__name {
+    & .input-text-field__input {
+      &::placeholder {
+        color: #818C99;
+      }
+    }
+  }
+}

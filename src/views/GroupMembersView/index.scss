@@ -1,0 +1,13 @@
+.group-members-view {
+  .messenger-search-page__result {
+    justify-content: space-between;
+    cursor: default;
+    & > div {
+      display: flex;
+      align-items: center;
+    }
+    & > button {
+      cursor: pointer;
+    }
+  }
+}

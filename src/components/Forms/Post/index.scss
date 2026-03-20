@@ -1,0 +1,569 @@
+@import "../../../assets/styles/variables";
+
+.product-form-main {
+  &__content {
+    padding: 20px 0 60px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  &__images-item:hover &__media-overlay {
+    opacity: 1;
+  }
+
+  &__buttons {
+    width: 100%;
+    display: flex;
+    margin-bottom: 11px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__media-video {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    background: #000;
+
+    video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  &__media-btn {
+    top: 16px;
+    left: 16px;
+    position: absolute;
+    display: flex;
+    font-size: 15px;
+    font-weight: 500;
+    gap: 4px;
+    align-items: center;
+    padding: 8px 6px;
+    border-radius: 12px;
+    box-shadow: 0 0 0 1px #FFF, 0 0 6px 0 rgba(0, 0, 0, 0.30);
+    background: rgba(245, 245, 245, 0.8);
+  }
+
+  &__create-btn {
+    gap: 2px;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    padding: 8px 14px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.30);
+  }
+
+
+  &__button {
+    width: 100%;
+    display: flex;
+    margin: 10px 0 50px;
+    justify-content: center;
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 11px 0;
+    color: #FFFFFF;
+    border-radius: 12px;
+    transition: 300ms;
+    background: #007AFF;
+    box-shadow: 0 0 0 1px #FFF, 0 0 6px 0 rgba(0, 0, 0, 0.30);
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    justify-content: center;
+
+    &:hover {
+      background: #007bffda;
+    }
+
+  }
+
+
+
+  &__preview {
+    border: 1px solid #E6E8EB;
+    border-radius: 11px;
+    margin-bottom: 7px;
+    overflow: hidden;
+    position: relative;
+    font-size: 0;
+
+    width: 100%; // фиксированная ширина превью
+    height: 600px; // фиксированная высота (можешь сделать квадрат: 120px)
+    flex-shrink: 0; // чтобы не сжимались в ScrollContainer
+
+    @media (max-width: 480px) {
+      width: 100%;
+      height: 450px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 11px;
+    }
+
+    &-remove {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px #FFF, 0 0 6px 0 rgba(0, 0, 0, 0.30);
+      background: rgba(245, 245, 245, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        opacity: 0.8;
+        transition: opacity 0.2s ease-in-out;
+      }
+    }
+  }
+
+
+  &__images {
+    margin: 0 -15px 12px;
+
+    &-upload {
+      margin-left: 15px;
+    }
+
+    &-list {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 5px 0;
+    }
+
+    &-mock {
+      min-width: 15px;
+      width: 15px;
+      height: 80px;
+    }
+
+    &-item {
+      width: 80px;
+      height: 80px;
+      min-width: 80px;
+      border: 1px solid #E6E8EB;
+      border-radius: 11px;
+      overflow: hidden;
+      cursor: pointer;
+      margin-left: 15px;
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &.active {
+        border: 2px solid $primaryBlue;
+        box-shadow: 0 0 4px #007AFF;
+      }
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &-frame {
+        background: red;
+      }
+    }
+  }
+
+  &__field-desc {
+    font-size: 12px;
+    line-height: 16px;
+    font-style: italic;
+    color: #979797;
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    margin-bottom: 7px;
+
+    &--underline {
+      border-bottom: 1px solid rgb(129, 140, 153, 0.12);
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  &__input,
+  &__textarea {
+    margin-bottom: 4px;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & .product-form-main__input {
+      width: 100%;
+    }
+
+    & .product-form-main__input:nth-child(2) {
+      margin-left: 15px;
+    }
+  }
+
+  & .youtube-card {
+    margin-top: 12px;
+  }
+
+  &__remove {
+    margin-top: 30px;
+  }
+}
+
+.post-edit-form {
+  &__route {
+    position: relative;
+    margin-top: 20px;
+
+    &-mask {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      cursor: pointer;
+    }
+  }
+}
+
+.post-create-form {}
+
+
+.image-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  padding: 16px;
+
+  &__content {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  img {
+    width: auto; // ⬅ важно
+    height: auto; // ⬅ важно
+    max-width: 100%; // ⬅ ограничение по ширине экрана
+    max-height: 100vh; // ⬅ ограничение по высоте
+    object-fit: contain; // ⬅ чтобы ВЕСЬ кадр был виден
+    animation: fadeIn 0.2s ease-in-out;
+  }
+
+  &__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: white;
+    border-radius: 50%;
+    border: none;
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 100000;
+  }
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.93);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+.thumbnail-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(10px);
+
+  animation: thumbnailModalFadeIn 0.22s ease-out;
+
+  &__dialog {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    position: relative;
+
+    animation: thumbnailModalScaleIn 0.24s ease-out;
+    transform-origin: center;
+  }
+
+  &__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 2;
+  }
+
+  &__player {
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 14px;
+    position: relative;
+
+    video {
+      width: 100%;
+      display: block;
+      max-height: 420px;
+      object-fit: contain;
+      border: 2px solid #fff;
+      border-radius: 19px;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    margin-bottom: 10px;
+  }
+
+  &__play-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(6px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.18s ease, opacity 0.18s ease;
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: #fff;
+    }
+
+    &:active {
+      transform: scale(0.95);
+    }
+  }
+
+  &__range {
+    flex: 1;
+    appearance: none;
+    height: 6px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    outline: none;
+
+    &::-webkit-slider-runnable-track {
+      height: 6px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.3);
+    }
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #fff;
+      margin-top: -4px;
+      cursor: pointer;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+    }
+
+    &::-moz-range-thumb {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    &::-moz-range-track {
+      height: 6px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 12px;
+    animation: thumbnailModalSlideUp 0.28s ease-out;
+  }
+
+  &__btn {
+    flex: 1;
+    min-height: 56px;
+    border-radius: 16px;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: transform 0.18s ease, opacity 0.18s ease;
+
+    &:hover {
+      transform: translateY(-1px);
+    }
+
+    &:active {
+      transform: scale(0.98);
+    }
+
+    &--add {
+      background: #0a84ff;
+      box-shadow: 0 0 0 1px #fff inset;
+    }
+
+    &--save {
+      background: #34c759;
+      box-shadow: 0 0 0 1px #fff inset;
+    }
+  }
+}
+
+@keyframes thumbnailModalFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes thumbnailModalScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes thumbnailModalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.video-preview-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  &__poster {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+
+  &__video {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  &__play {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    z-index: 2;
+  }
+}
+
+.video-thumb {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__play {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none; // 🔥 важно чтобы клик шёл дальше
+  }
+
+  &--large {
+    height: 100%;
+  }
+}

@@ -1,0 +1,10 @@
+@import "../../../assets/styles/variables";
+
+.post-comment-menu {
+  &__red-btn {
+    color: $offlineRed;
+  }
+  &__green-btn {
+    color: $onlineGreen;
+  }
+}

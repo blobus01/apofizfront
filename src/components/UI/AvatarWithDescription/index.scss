@@ -1,0 +1,12 @@
+.avatar-with-description {
+  display: flex;
+  align-items: center;
+  &__avatar {
+    margin-right: 1rem;
+  }
+  &__desc {
+    &-paragraph {
+      color: #818C99;
+    }
+  }
+}

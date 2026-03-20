@@ -1,0 +1,16 @@
+.info-title {
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: -0.078px;
+  color: #007aff;
+
+  &__icon {
+    margin-right: 3px;
+    vertical-align: middle;
+  }
+  &__text {
+    vertical-align: middle;
+  }
+}

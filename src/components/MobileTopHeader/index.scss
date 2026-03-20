@@ -1,0 +1,174 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.mobile-top-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  height: $headerHeight;
+  max-height: $headerHeight;
+
+  &__wrap {
+    @include stickyHeader;
+
+    margin-bottom: 15px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 16px 16px;
+
+    //   background: rgba(255, 255, 255, 0.7); // Fill 80% пойдет
+
+    // backdrop-filter: blur(4px); // дефолт размытие зданей картинки
+    // -webkit-backdrop-filter: blur(4px); // для ios размытия на всякий safari
+  }
+  &__title {
+    padding: 0 40px;
+    width: 100%;
+    text-align: center;
+
+    @media (max-width: 500px) {
+      text-align: left;
+    }
+  }
+  &__icon {
+    transform: translateY(2px);
+    margin-right: 2px;
+    & svg {
+      width: 18px;
+      height: 18px;
+    }
+    & svg path {
+      fill: #007aff;
+    }
+  }
+  &__left,
+  &__right {
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__left {
+    justify-content: flex-start;
+    left: 0;
+  }
+  &__right {
+    justify-content: flex-end;
+    right: 0;
+  }
+  &__back {
+    display: inherit;
+    transition: 200ms;
+    &:hover {
+      transform: translateX(-2px);
+    }
+  }
+  &__next,
+  &__menu,
+  &__submit {
+    display: flex;
+    align-items: center;
+    color: $primaryBlue;
+  }
+  &__next[disabled] {
+    opacity: 0.5;
+    cursor: unset;
+  }
+  &__next-loading::after {
+    width: 15px;
+    height: 15px;
+    content: "";
+    background: url("../../assets/icons/icon_preloader.svg") no-repeat center;
+    display: inline-block;
+    background-size: cover;
+    margin: auto 0 auto 8px;
+  }
+  &__submit[disabled] {
+    opacity: 0.5;
+    cursor: unset;
+  }
+  &__submit-loading::after {
+    width: 15px;
+    height: 15px;
+    content: "";
+    background: url("../../assets/icons/icon_preloader.svg") no-repeat center;
+    display: inline-block;
+    background-size: cover;
+    margin: auto 0 auto 8px;
+  }
+  &__menu {
+    border-radius: 24px;
+    padding: 3px 9px;
+    margin-right: 5px;
+    & svg {
+      transform: scale(1.1);
+    }
+  }
+  .org svg {
+    transform: none;
+  }
+  &__submit-loading::after {
+    width: 15px;
+    height: 15px;
+    content: "";
+    background: url("../../assets/icons/icon_preloader.svg") no-repeat center;
+    margin-left: 8px;
+    display: inline-block;
+    background-size: cover;
+  }
+}
+
+.mobile-top-header__center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+
+.filter-count {
+  margin: 4px 4px;
+  color: #007aff;
+  font-size: 14px;
+  padding: 1px 6px;
+  background: #fff;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+
+.theme-switch {
+  margin-left: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  &__icon {
+    display: flex;
+    transition: all 0.3s ease;
+  }
+
+  &:active &__icon {
+    transform: scale(0.85);
+  }
+
+  &.dark &__icon {
+    animation: rotateIn 0.3s ease;
+  }
+
+  &.light &__icon {
+    animation: rotateIn 0.3s ease;
+  }
+}
+
+@keyframes rotateIn {
+  from {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(0) scale(1);
+  }
+}

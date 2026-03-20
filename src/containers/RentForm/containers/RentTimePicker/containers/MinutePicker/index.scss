@@ -1,0 +1,17 @@
+.rent-minutes-view {
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(45px, 1fr));
+    gap: 1.5rem;
+    place-items: center;
+  }
+
+  &__time-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
+    height: 2em;
+    padding: 0.5em;
+  }
+}

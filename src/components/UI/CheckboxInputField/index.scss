@@ -1,0 +1,14 @@
+.checkbox-input-field {
+  border-bottom: 1px solid #EBEDF0;
+  padding-bottom: 5px;
+  cursor: pointer;
+  &__top-label {
+    color: #818C99;
+    margin-bottom: 4px;
+    font-weight: normal;
+  }
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}

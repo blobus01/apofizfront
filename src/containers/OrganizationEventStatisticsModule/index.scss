@@ -1,0 +1,20 @@
+@import "../../assets/styles/variables";
+
+.organization-event-statistics-module {
+  padding-bottom: calc(#{$navBottomPadding} + 1rem);
+  &__header {
+    margin-bottom: 0.5rem;
+  }
+  &__tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    .tab-links__item {
+      display: inline-block;
+      width: calc(50% - 1rem);
+    }
+  }
+  &__receipt-list-controls {
+  }
+}

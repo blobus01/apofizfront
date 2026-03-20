@@ -1,0 +1,165 @@
+.post-share-view {
+  position: relative;
+  height: 100%;
+  min-height: 440px;
+  background: linear-gradient(180deg, #2d81ec 0%, #000000 100%);
+  box-shadow: 0px -4px 4px 0px #00000040;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  max-width: 500px;
+  &__banner {
+    height: 215px;
+    width: 100%;
+    border-radius: 12px;
+    position: relative;
+  }
+
+  &__preloader {
+    & svg path {
+      fill: #fff;
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 10;
+  }
+
+  &__upload-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 10;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__top {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+  }
+
+  &__card-wrap {
+    min-width: 330px;
+    margin: 0 auto 1.25rem;
+  }
+
+  &__bottom-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+
+    .post-share-view__bottom-button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background-color: #fff;
+      cursor: pointer;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      font-size: 12px;
+      color: #000;
+
+      & svg {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 5px;
+        & path {
+          stroke: #000;
+        }
+      }
+    }
+  }
+}
+
+.post_share {
+  animation: none;
+}
+.organization-qr__controls {
+  justify-content: center;
+  &-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    color: #fff;
+    font-size: 12px;
+    line-height: 24px;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+    &:hover {
+      & .organization-qr__controls-btn-icon-wrap {
+        background: darken(#fff, 5%);
+      }
+    }
+
+    &.active {
+      color: #007aff;
+      & .organization-qr__controls-btn-icon-wrap {
+        border: 2px solid rgba(66, 133, 244, 1);
+      }
+    }
+
+    &-icon-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 0.25rem;
+      width: 60px;
+      min-height: 60px;
+      background: #fff;
+      border-radius: 50%;
+    }
+  }
+
+  &-share {
+    margin-right: 8px;
+
+    & svg {
+      width: 23px;
+      height: 28px;
+
+      & path {
+        fill: #000;
+      }
+    }
+  }
+
+  &-copy-link {
+    margin-right: 8px;
+
+    & svg path {
+      fill: #000;
+    }
+  }
+  &-business-card {
+    & svg g path {
+      transition: fill 0.3s;
+    }
+    &.active {
+      & svg g path {
+        fill: #007aff;
+      }
+    }
+  }
+}

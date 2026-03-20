@@ -1,0 +1,72 @@
+@import "@styles/variables.scss";
+
+.root {
+  padding-bottom: calc(#{$navBottomPadding} + 1rem);
+}
+
+.h2 {
+  margin-bottom: 10px;
+}
+
+.italic {
+  font-size: 14px;
+  line-height: 16px;
+  font-style: italic;
+  color: #333333;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+}
+
+.roundBtn {
+  color: #fff;
+  background: #007aff;
+  border-radius: 12px;
+  box-shadow:
+    rgb(255, 255, 255) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.25) 0px 0px 4px;
+  font-size: 14px;
+  line-height: 16.41px;
+  padding: 8px 10px;
+  margin: 5px 0;
+  font-weight: 500;
+  transition: 0.25s ease;
+}
+
+.roundBtn:hover {
+  background: #007bffc3;
+}
+
+.toggleSwitch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toggleSwitchText {
+  color: #007aff;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.detailInfoLabel {
+  font-size: 14px;
+  line-height: 1.2em;
+}
+
+.importantTextRed {
+  gap:5px;
+  display: flex;
+  font-size: 14px;
+  color: #FF0004;
+  font-weight: 500;
+  align-items: end;
+}
+
+.importantText {
+  color: #FF0004;
+  font-size: 14px;
+  margin-top: 9px;
+  font-style: italic;
+}

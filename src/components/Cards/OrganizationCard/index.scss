@@ -1,0 +1,121 @@
+@import "../../../assets/styles/variables";
+
+.organization-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  padding: 10px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  background-color: #fff;
+
+ 
+
+  &__wrap {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  &__link {
+    width: 100%;
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+    width: 90%;
+
+    & .organization-card__right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+    }
+  }
+
+  &__right {
+    width: 100%;
+  }
+
+  &__title {
+    color: #000;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000;
+    white-space: nowrap;
+    /* не переносим строку */
+    overflow: hidden;
+    /* скрываем лишний текст */
+    text-overflow: ellipsis;
+    /* добавляем ... */
+    max-width: 180px;
+    /* регулируй под макет */
+
+    &--banned {
+      color: #ff0000;
+    }
+  }
+
+  &__verification-status {
+    margin-right: 2.5px;
+  }
+
+  &__image {
+    margin-right: 10px;
+  }
+
+  &__desc {
+    color: $textGrey;
+  }
+
+  &__type-icon {
+    margin-left: auto;
+  }
+
+  &__dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 12px;
+    cursor: pointer;
+    transition: 200ms;
+    gap: 5px;
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.organization-card__title-text {
+  display: block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tools-menu {
+  gap: 30px;
+  display: flex;
+  margin: 20px 0;
+  flex-direction: column;
+}
+
+.tools-menu__btn {
+  gap: 20px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  transition: transform 0.15s ease, background 0.2s ease;
+
+  &:active {
+    transform: scale(0.95); // 👈 лёгкое сжатие при нажатии
+  }
+}

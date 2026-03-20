@@ -1,0 +1,13 @@
+@import "../../../assets/styles/variables";
+
+.info-field {
+  border-bottom: 1px solid $lightGrey;
+  &__label {
+    color: #818C99;
+    margin-bottom: 0.285em;
+  }
+  &__info {
+    color: $primaryBlack;
+    padding-bottom: 0.47em;
+  }
+}

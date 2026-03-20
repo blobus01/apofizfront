@@ -1,0 +1,52 @@
+.api-settings {
+  &__toggle-switch {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+  }
+
+  &__toggle-text {
+    color: #007aff;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__desc {
+    margin: 17px 0 27px;
+    font-size: 12px;
+  }
+
+  &__note-title {
+    gap: 5px;
+    display: flex;
+    font-size: 14px;
+    color: #007aff;
+    font-weight: 600;
+    align-items: center;
+  }
+
+  &__note-text {
+    margin-top: 6px;
+    font-size: 14px;
+    font-style: italic;
+  }
+}
+
+.top-header__submit {
+  color: #007aff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s ease;
+
+  &.is-disabled {
+    color: #007bffc3;
+    cursor: not-allowed;
+    opacity: 0.9;
+  }
+}

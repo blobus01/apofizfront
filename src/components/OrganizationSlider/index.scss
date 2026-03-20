@@ -1,0 +1,32 @@
+@import "../../assets/styles/variables";
+
+.organization-slider {
+  padding: 0!important;
+  margin-top: 10px!important;
+  &__slide {
+    width: 250px;
+    &:last-child {width: 100%;}
+  }
+  & .organization-dsc-card:not(:last-child) { margin-bottom: 10px; }
+  &__slide.all {height: auto;}
+  &__all {
+    background: $primaryBlue;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 35px;
+    text-align: center;
+    border-radius: 12px;
+    max-width: 212px;
+    min-width: 212px;
+    height: 100%;
+  }
+
+  & .swiper-wrapper {
+    padding: 0 15px;
+  }
+}

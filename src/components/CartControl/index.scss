@@ -1,0 +1,26 @@
+@import "../../assets/styles/variables";
+
+.cart-control {
+  position: relative;
+
+  margin-bottom: 80px;
+
+  &__add {
+    background: $c-grey-f5f5f5;
+    color: $primaryBlue;
+    margin-bottom: 20px;
+    transition: 250ms;
+
+    &:hover {
+      background: #eeeeee;
+    }
+  }
+  &__preloader {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.5);
+  }
+}

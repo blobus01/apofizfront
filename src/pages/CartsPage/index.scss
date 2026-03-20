@@ -1,0 +1,98 @@
+@import "../../assets/styles/variables";
+
+.carts-page {
+  padding-bottom: $navbarBottomPadding;
+  background: #ebedf0;
+  min-height: 100vh;
+
+  &__content {
+    padding-top: 20px;
+  }
+  &__card {
+    &:not(:last-child) {
+      margin-bottom: 12px;
+    }
+  }
+  &__menu {
+    &-remove .row-button__label {
+      color: $c-red-d72c20;
+    }
+  }
+  &__empty {
+    // margin-top: 14vh; CartsPage Wiout Margin
+    min-height: 68vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-items: start;
+    justify-content: space-between;
+
+    &-title {
+      color: #333333;
+      text-align: center;
+    }
+    &-image {
+      margin: 0 auto;
+      display: block;
+      width: 500px;
+      max-width: 100%;
+    }
+    &-link {
+      margin-top: 50px;
+    }
+  }
+}
+
+.create__folder {
+  background: #007aff;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  height: 44px !important;
+
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: fixed;
+  left: 50%;
+  bottom: 90px;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 600px;
+  z-index: 10;
+
+  width: 95%;
+  margin: 12px auto;
+
+  border-radius: 16px;
+
+  box-shadow:
+    rgb(255, 255, 255) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.25) 0px 0px 8px;
+
+  & > div {
+    width: 51px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border-radius: 0 16px 16px 0;
+    background-color: #419cff;
+  }
+}
+
+.carts-page {
+  &.dark {
+    background: #00193f;
+
+    .cart-card {
+      background: #090027;
+      color: #fff;
+      box-shadow:
+        #090027 0px 0px 0px 1px,
+        rgba(0, 0, 0, 0.25) 0px 0px 8px;
+    }
+  }
+}

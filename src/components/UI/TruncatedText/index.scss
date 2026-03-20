@@ -1,0 +1,20 @@
+.truncated-text {
+  font-size: 14px;
+  line-height: 20px;
+  &.expanded {
+    white-space: pre-line;
+  }
+  & button {
+    display: inline-block;
+    background: transparent;
+    border: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: #818c99;
+  }
+}
+
+.less-and-more {
+  transition: 300ms;
+  color: #007aff;
+}

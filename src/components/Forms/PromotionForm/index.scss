@@ -1,0 +1,136 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+
+.promotion-form {
+  &__content {
+    @include minHeightWithHeader;
+    padding: 20px 0 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__image {
+    &-label {
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.88);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 350px;
+      height: 190px;
+      display: flex;
+      margin: 0 auto;
+      cursor: pointer;
+    }
+    &-input {
+      display: none;
+      opacity: 0;
+      position: absolute;
+      top: -1000px;
+      z-index: -100;
+    }
+    &-content {
+      display: inline-block;
+      margin: auto;
+      text-align: center;
+      color: $c-grey-818c99;
+      & p {
+        padding: 0 40px;
+        margin-top: 10px;
+      }
+    }
+  }
+  &__title {
+    margin-top: 30px;
+  }
+  &__warning {
+    margin-top: 50px;
+    &-list {
+      list-style: inherit;
+      list-style-type: decimal;
+      margin-left: 20px;
+      margin-top: 10px;
+      & li {
+        font-style: italic;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  &__preview {
+    text-align: center;
+    &-tile {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(148, 172, 193, 0.2);
+      backdrop-filter: blur(4px);
+      min-height: 33px;
+      display: flex;
+      justify-content: stretch;
+      &-content {
+        width: 100%;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & span {
+          color: #FFF;
+          text-shadow: 0 0 2px #000000;
+          white-space: nowrap;
+        }
+        & svg {
+          margin-left: 15px;
+        }
+      }
+    }
+    &-image {
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.88);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 350px;
+      height: 190px;
+      display: flex;
+      margin: 0 auto;
+      cursor: pointer;
+      background: #EBEDF0;
+      overflow: hidden;
+      z-index: 1;
+      border: 1px solid #e6e8eb;
+      position: relative;
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-label {
+      display: inline-block;
+      margin-top: 8px;
+      color: $primaryBlue;
+      cursor: pointer;
+    }
+  }
+  &__organization {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    & .organization-card__image {
+      border-radius: 4px!important;
+    }
+    & .organization-card__title {
+      color: #FFF;
+    }
+  }
+  &__input, &__employee {
+    margin-top: 20px;
+  }
+  &__date {
+    margin-top: 10px;
+    color: $c-grey-818c99;
+  }
+  &__submit, &__delete {
+    margin-top: 50px;
+  }
+}

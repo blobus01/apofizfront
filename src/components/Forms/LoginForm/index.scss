@@ -1,0 +1,40 @@
+@import "../../../assets/styles/variables";
+.login-form {
+  margin-top: 25px;
+  &__back-btn {
+    outline: none;
+    border: none;
+    align-self: flex-start;
+    width: 16px;
+    height: 14px;
+    background: url("../../../assets/icons/icon_arrow_left.svg") no-repeat;
+    background-size: cover;
+    margin-bottom: 25px;
+  }
+  &__password {
+    width: 100%;
+    margin-top: 50px;
+  }
+  &__forgot-link {
+    display: inline-block;
+    float: right;
+    margin-top: 10px;
+    text-align: right;
+    color: $textGrey;
+  }
+  &__forgot-button {
+    float: right;
+    margin-top: 10px;
+    text-align: right;
+    color: $textGrey;
+
+    &:active {
+      color: $primaryBlue;
+    }
+  }
+  &__button {
+    margin-top: 100px;
+    outline: invert;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px, rgba(0, 0, 0, 0.25) 0px 3px 10px;
+  }
+}

@@ -1,0 +1,68 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+
+.banner-manage-form {
+  &__content {
+    @include minHeightWithHeader;
+    display: flex;
+    padding: 20px 0 50px;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  &__label {
+    background: #EBEDF0;
+    border-radius: 11px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 156px;
+    width: 100%;
+    max-width: 343px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__input {
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+    z-index: -1000000;
+  }
+
+  &__upload-info {
+    text-align: center;
+    color: $textGrey;
+    & p:not(:first-child) { margin-top: 5px; }
+  }
+
+  &__org {
+    &-label {
+      cursor: pointer;
+      margin-top: 25px;
+    }
+    &-label, &-placeholder {
+      color: $textGrey;
+    }
+    &-select {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #E6E6E6;
+      padding: 8px 0;
+    }
+  }
+  &__remove {
+    color: $offlineRed;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-top: 25px;
+  }
+}

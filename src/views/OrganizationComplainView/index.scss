@@ -1,0 +1,19 @@
+@import "../../assets/styles/variables";
+
+.organization-complain-view {
+  position: relative;
+  padding-bottom: 50px;
+
+  &__title {
+    color: $primaryBlack;
+    margin: 10px 0 8px;
+  }
+  &__desc {
+    color: #898A8D;
+    margin-bottom: 20px;
+  }
+
+  &__send-btn {
+    margin-top: 36px;
+  }
+}

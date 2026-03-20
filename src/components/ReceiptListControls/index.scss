@@ -1,0 +1,15 @@
+.receipt-list-controls {
+  border-bottom: 1px solid rgba(245, 245, 245, 1);
+  padding-bottom: 6px;
+  &__savings-block {
+    margin-bottom: 6px;
+  }
+  &__receipts-actions {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: hidden;
+  }
+  &__date-selection-interval {
+    margin-right: 0.5rem;
+  }
+}

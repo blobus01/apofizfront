@@ -1,0 +1,111 @@
+@import "../../assets/styles/variables";
+
+.toast_info {
+  background: $primaryBlue;
+  padding: 20px;
+  position: relative;
+
+  &__text {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFF;
+  }
+}
+
+.toast_success,
+.toast_failure {
+  position: relative;
+  background: #FFFFFF;
+  backdrop-filter: blur(43.4925px);
+  border-radius: 10px;
+
+  &__inner {
+    padding: 15px;
+  }
+  &__icon {
+    min-width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    position: relative;
+    background: #4285F4;
+    border-radius: 9px;
+    & svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  &__text {
+    flex-grow: 1;
+    color: #000;
+    padding-right: 30px;
+  }
+  &__close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+}
+
+.Toastify__toast-container {
+  width: 100%!important;
+  max-width: 1000px;
+  @media (max-width: 1050px) {
+    padding: 0 15px!important;
+  }
+}
+
+.Toastify__toast {
+  margin-top: 1rem;
+  margin-bottom: unset!important;
+  padding: 0!important;
+}
+
+.Toastify__toast--default {
+  background: #FFF!important;
+  border-radius: 5px!important;
+  box-shadow: 0 0 96px rgba(0, 0, 0, 0.04), 0 0 2px rgba(0, 0, 0, 0.12)!important;
+}
+
+.toast-copy-link {
+  position: relative;
+  display: flex;
+  max-width: 430px;
+  height: 42px;
+  top: 1rem;
+  min-height: 42px !important;
+  border-radius: 16px !important;
+  margin: 0 auto;
+  background: $c-green-27ae60 !important;
+
+  &__inner {
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  &__text {
+    justify-content: center;
+    color: #fff;
+    line-height: 42px !important;
+  }
+
+  &__icon {
+    margin-right: 5px;
+    & path {
+      fill: #fff;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+
+    & path {
+      fill: #fff;
+    }
+  }
+}

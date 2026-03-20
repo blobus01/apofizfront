@@ -1,0 +1,55 @@
+@import "../../../../assets/styles/variables";
+
+.organization-rentals-list {
+  padding: 1.5rem 0 calc(#{$navBottomPadding} + 1.5rem);
+
+  &__rental {
+    display: flex;
+    &:not(:last-child) {
+      margin-bottom: 1.35rem;
+    }
+    &-image {
+      object-fit: cover;
+      min-height: 72px;
+      min-width: 72px;
+      max-height: 72px;
+      max-width: 72px;
+      border-radius: 12px;
+      margin-right: 0.75rem;
+    }
+    &-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow-x: hidden;
+    }
+    &-name {
+      color: #007AFF;
+      margin-bottom: 2px;
+    }
+    &-org {
+      color: $textOrange;
+      margin-bottom: 2px;
+    }
+    &-price-without-discount {
+      position: relative;
+      display: inline-block;
+      color: $textGrey;
+      margin-right: 0.75rem;
+      text-decoration: line-through;
+      &::after {
+        content: "";
+        position: absolute;
+        right: -0.4rem;
+        width: 2px;
+        height: 2px;
+        background-color: $primaryBlack;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    &-discounted-price {
+      color: #007AFF;
+    }
+  }
+}

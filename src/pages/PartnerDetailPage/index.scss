@@ -1,0 +1,71 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.partner-detail-page {
+  
+  background: #ebedf0;
+
+  & .mobile-top-header__menu {
+    margin-left: 10px;
+  }
+  &__content {
+    @include minHeightWithHeader;
+    padding-bottom: $navbarBottomPadding;
+  }
+  &__banners {
+    margin-top: 20px;
+  }
+  &__organizations {
+    margin-top: 25px;
+  }
+  &__categories {
+    margin-top: 30px;
+  }
+  &__scroller {
+    overflow-x: hidden !important;
+  }
+  &__category {
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+    &-top {
+      overflow: hidden;
+      & a {
+        color: $primaryBlue;
+        white-space: nowrap;
+        margin-left: 10px;
+      }
+    }
+    &-slider {
+      margin-top: 20px;
+    }
+  }
+
+  &__info {
+    margin-top: 8px;
+    padding: 8px 0;
+    border-bottom: 1px solid #f6f6f6;
+  }
+  &__posts-list {
+    padding-bottom: 100px;
+    margin-top: 12px;
+  }
+  &__dsc-card {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+  &__partners-search-result {
+    margin-top: 20px;
+  }
+
+  &__qr-box {
+    position: relative;
+    display: block;
+    margin: 0.2rem auto 0.5rem;
+    border: 0.3px solid #00000033;
+    border-radius: 22px;
+    padding: 0.6em;
+    width: fit-content;
+  }
+}

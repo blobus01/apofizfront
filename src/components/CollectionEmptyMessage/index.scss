@@ -1,0 +1,17 @@
+@import "../../assets/styles/variables";
+
+.collection-empty-message {
+  flex-direction: column;
+  &__image {
+    margin-bottom: 1em;
+  }
+  &__title {
+    color: #000;
+    font-size: 22px;
+    margin-bottom: 1em;
+  }
+  &__desc {
+    text-align: center;
+    color: $c-grey-818c99;
+  }
+}

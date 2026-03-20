@@ -1,0 +1,107 @@
+@import "../../assets/styles/variables";
+
+.delivery-view {
+  &__content {
+    padding: 20px 0;
+  }
+}
+
+.delivery-form {
+  &__radio {
+    height: 56px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    background: rgba(52, 168, 83, 0.1);
+    border-radius: 10px;
+    align-items: center;
+    margin-top: 20px;
+    cursor: pointer;
+    &-checkbox {
+      width: 20px;
+      height: 20px;
+      border: 1px solid #34A853;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+    }
+    & input {
+      display: block;
+      height: 0;
+      opacity: 0;
+      width: 0;
+    }
+    &.selected &-checkbox {
+      background: rgba(52, 168, 83, 0.5);
+      & svg path { fill: #FFF; }
+    }
+    &.selected {
+      border: 1px solid #34A853;
+    }
+  }
+  &__input {
+    margin-top: 20px;
+  }
+  &__address {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+
+    &--by_default {
+      color: #27AE60;
+    }
+
+    & svg {
+      vertical-align: middle;
+    }
+  }
+  &__map {
+    margin-top: 30px;
+    & > div {
+      color: #6d7885;
+    }
+    &-button {
+      border-bottom: 1px solid #ebedf0;
+      & .row-button__label {color: $primaryBlue;}
+      & .row-button__left svg {margin-right: 8px!important;}
+    }
+  }
+  &__row {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    & .input-text-field:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  &__buttons {
+    margin-top: 50px;
+  }
+  &__give-receipt {
+    background: $onlineGreen;
+    border-radius: 10px;
+    outline: none;
+    width: 100%;
+    border: none;
+    overflow: hidden;
+    min-height: 44px;
+    padding: 0 15px;
+    color: #FFF;
+  }
+  &__apply-discount {
+    margin-top: 20px;
+  }
+  &__organization {
+    margin-top: 20px;
+  }
+  &__submit {
+    margin-top: 50px;
+  }
+
+  & .organization-card__desc {
+    color: $primaryBlue;
+  }
+}

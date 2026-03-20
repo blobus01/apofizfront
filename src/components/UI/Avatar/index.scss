@@ -1,0 +1,39 @@
+@import "../../../assets/styles/variables";
+
+.avatar {
+  &__container {
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  &__error {
+    border: 1px solid $errorRed;
+  }
+
+  &__bordered {
+    border: 1px solid #e6e8eb;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+
+  }
+  &__gender-image {
+    &--not-chosen {
+      & g {
+        fill: #979797;
+      }
+    }
+    &--male {
+      & g {
+        fill: #007aff;
+      }
+    }
+    &--female {
+      & g {
+        fill: #ff0377;
+      }
+    }
+  }
+}

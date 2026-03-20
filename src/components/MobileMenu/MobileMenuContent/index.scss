@@ -1,0 +1,10 @@
+.mobile-menu-content {
+  margin-bottom: 40px;
+  max-height: calc(100 * var(--vh) - 20vh);
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 0 !important
+  }
+
+}

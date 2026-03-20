@@ -1,0 +1,24 @@
+@import "../../../assets/styles/variables";
+
+.search-results {
+  position: absolute;
+  background: #fff;
+  z-index: 9999;
+  top: $headerHeight;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 15px;
+
+  &__wrap-item {
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  &__btn {
+    & svg {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}

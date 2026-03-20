@@ -1,0 +1,18 @@
+.receipt-card-skeleton {
+  margin-bottom: 0.5rem;
+  height: 64px;
+  & > div {
+    height: 40px;
+  }
+  & > div:first-child {
+    min-width: 48px;
+    margin-right: 0.4rem;
+    background: linear-gradient(90deg, #D9D9D9 0%, #8A8C91 100%), linear-gradient(0deg, #D9D9D9, #D9D9D9), #34A853;
+    border-radius: 7px;
+  }
+  & > div:last-child {
+    flex-grow: 1;
+    background: linear-gradient(90deg, #D9D9D9 0%, #8A8C91 100%), #D9D9D9;
+    border-radius: 8px;
+  }
+}

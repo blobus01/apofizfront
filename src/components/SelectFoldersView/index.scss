@@ -1,0 +1,99 @@
+.select-folders {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__loader {
+    padding: 40px 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__empty {
+    padding: 40px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #8e8e93;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    height: 60vh;
+    overflow: auto;
+  }
+
+  &__item {
+    cursor: pointer;
+    padding: 16px 20px;
+    transition: background 0.2s ease;
+    border-bottom: 1px solid #f1f1f1;
+
+    &:hover {
+      background: #f9f9f9;
+    }
+
+    &--active {
+      background: rgba(18, 112, 236, 0.08);
+    }
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 15px;
+    font-weight: 500;
+    color: #2c2d2e;
+  }
+
+  &__icon {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.select-folders__create {
+  display: flex;
+  gap: 10px;
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.select-folders__input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+
+  &:focus {
+    border-color: #1270ec;
+  }
+}
+
+.select-folders__create-btn {
+  padding: 10px 16px;
+  border-radius: 12px;
+  background: #1270ec;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+}

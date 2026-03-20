@@ -1,0 +1,8 @@
+@import "../../assets/styles/mixins";
+
+.rent-receipt-detail-module {
+  &__content {
+    @include contentHeight;
+    padding: 20px 0 5.6rem;
+  }
+}

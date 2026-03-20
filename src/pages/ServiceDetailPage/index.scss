@@ -1,0 +1,128 @@
+.service-detail-page {
+  & .mobile-search-header__wrap.scrolled-up {
+    z-index: 3;
+  }
+  & .horizontal-filter-select__list-wrap::after {
+    content: none;
+  }
+  & .is-sticky {
+    box-shadow: none;
+  }
+  &__content {
+    padding: 0 0 120px;
+  }
+  &__category-controls-list-wrap {
+    padding: 15px 0 3px;
+  }
+  &__bottom {
+    display: flex;
+    align-items: center;
+  }
+  &__group {
+    display: flex;
+    position: relative;
+    margin-right: 15px;
+    &-wrap {
+      display: flex;
+      align-items: center;
+    }
+    &-time {
+      position: relative;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-right: 40px;
+      & .organization-working-time__icon {
+        position: absolute;
+        bottom: 2px;
+        left: 1px;
+        height: 21px;
+      }
+      & .organization-working-time__label {
+        font-size: 10px;
+        line-height: 16px;
+      }
+      & .organization-working-time__text {
+        padding-left: 27px;
+        font-size: 12px;
+      }
+    }
+    //&-image {
+    //  width: 24px;
+    //  height: 24px;
+    //  border: 1px solid  #EBEDF0;
+    //  border-radius: 6px;
+    //  overflow: hidden;
+    //  &:not(:first-child) {
+    //    margin-left: -3px;
+    //  }
+    //  & img {
+    //    width: 100%;
+    //    height: 100%;
+    //    object-fit: cover;
+    //  }
+    //}
+  }
+  &__list {
+    &-item-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #f5f5f5;
+    }
+    &-card {
+      &:not(:first-child) {
+        margin-top: 10px;
+      }
+    }
+  }
+  &__avg-check {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start !important;
+    align-self: flex-end;
+    margin-left: 10px;
+    & .organization-average-check__icon {
+      position: absolute;
+      bottom: 2px;
+    }
+    & .organization-average-check__label {
+      margin-bottom: 2px;
+      font-size: 10px;
+      line-height: 16px;
+    }
+    & .organization-average-check__sum {
+      padding: 0 15px 0 25px;
+      font-size: 12px;
+    }
+    & .preloader {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+  &__products-grid {
+    padding: 5px;
+    .post-feed-card {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    }
+  }
+  .grid_layout {
+    padding: unset;
+  }
+}
+.service-detail-page__tabs {
+  display: flex;
+  margin-bottom: 16px;
+  button {
+    flex: 1;
+    padding: 12px 0;
+    border: none;
+    background: #f5f5f5;
+    font-weight: 600;
+    cursor: pointer;
+    &.active {
+      background: #fff;
+      border-bottom: 2px solid #007aff;
+      color: #007aff;
+    }
+  }
+}

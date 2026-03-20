@@ -1,0 +1,107 @@
+.folder-modal__backdrop {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.18);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.folder-modal__window {
+  background: #fff;
+  border-radius: 24px 24px 0 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+  width: 100%;
+  max-width: 1170px;
+  padding: 14px 10px 45px;
+  position: relative;
+  animation: folder-modal-in 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@keyframes folder-modal-in {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.folder-modal__close {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: #f5f6fa;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 24px;
+  color: #3a8dff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s;
+}
+.folder-modal__delete {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  cursor: pointer;
+}
+.folder-modal__close:hover {
+  background: #e6eaf3;
+}
+.folder-modal__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 22px;
+}
+.folder-modal__avatar {
+  box-shadow: 0 2px 8px rgba(58, 141, 255, 0.12);
+}
+.folder-modal__icon-wrap {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.folder-modal__input {
+  width: 100%;
+  max-width: 185px;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  border-bottom: 2px solid #e6eaf3;
+  padding: 10px 0 8px 0;
+  margin-bottom: 12px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.folder-modal__input:focus {
+  border-bottom: 2px solid #3a8dff;
+}
+.folder-modal__save {
+  width: 100%;
+  background: none;
+  border: none;
+  color: #3a8dff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.15s;
+  margin-top: 12px;
+}
+.folder-modal__save:disabled {
+  color: #b3c6e2;
+  cursor: not-allowed;
+}

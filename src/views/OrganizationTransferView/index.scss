@@ -1,0 +1,39 @@
+.organization-transfer-view {
+  padding-bottom: 50px;
+
+  &__btns-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__btn {
+    height: 44px;
+    width: calc(50% - 4.5px);
+
+    &--reject {
+      background: #F5F5F5;
+      color: #4285F4;
+    }
+  }
+
+  &__receiver {
+    position: relative;
+    margin: 0 auto 32px;
+    max-width: 480px;
+
+    &-avatar {
+      width: 100%;
+      border: 1px solid rgba(129, 140, 153, 0.1);
+      border-radius: 16px;
+    }
+
+    &-info {
+      position: absolute;
+      bottom: -15px;
+      left: 0;
+      right: 0;
+      padding: 16px 16px 0;
+      border-radius: 10px 10px 0 0;
+      background-color: #fff;
+    }
+  }
+}

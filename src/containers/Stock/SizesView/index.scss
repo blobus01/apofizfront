@@ -1,0 +1,12 @@
+.sizes-view {
+  &__top-header {
+    margin-bottom: 30px;
+  }
+  &__option {
+    margin-bottom: 12px;
+
+    &.active {
+      border: none;
+    }
+  }
+}

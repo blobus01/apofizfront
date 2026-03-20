@@ -1,0 +1,127 @@
+@import "../../../assets/styles/variables";
+
+.rent-form-main {
+  &__content {
+    padding: 20px 0 60px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  &__image-uploader {
+    margin-bottom: 12px;
+  }
+
+  &__field-desc {
+    font-style: italic;
+    font-size: 12px;
+    line-height: 16px;
+    color: #979797;
+    margin-bottom: 20px;
+  }
+
+  &__remove {
+    margin-top: 30px;
+  }
+
+  &__subtitle {
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+
+    &--underlined {
+      border-bottom: 1px solid rgb(129, 140, 153, 0.12);
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__text-field {
+    & .input-text-field__error {
+      margin-bottom: 8px;
+    }
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+
+    & .rent-form-main__text-field {
+      flex-grow: 1;
+    }
+  }
+
+  &__map-button {
+    height: unset;
+    border-bottom: 1px solid #ebedf0;
+    padding-bottom: 8px;
+    text-align: left;
+
+    & .row-button__label {
+      display: flex;
+      align-items: center;
+      color: $primaryBlue !important;
+
+      & svg {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+.rent-edit-form {
+  &__route {
+    position: relative;
+
+    &-mask {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      cursor: pointer;
+    }
+  }
+
+  &__input {
+    cursor: pointer;
+
+    & .input-text-field__input {
+      cursor: pointer;
+    }
+
+    & .input-text-field__tools {
+      & svg path {
+        fill: $primaryBlue;
+      }
+    }
+  }
+}
+
+.product-form-main__btn {
+  width: 100%;
+  padding: 11px 0;
+  color: #FFFFFF;
+  border-radius: 10px;
+  transition: 300ms;
+  background: #007AFF;
+
+  &:hover {
+    background: #007bffda;
+  }
+
+}
+
+
+.product-form-main__button {
+  width: 100%;
+  display: flex;
+  margin: 10px 0 50px;
+  justify-content: center;
+}

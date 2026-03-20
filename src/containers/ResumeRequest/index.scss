@@ -1,0 +1,146 @@
+@import "../../assets/styles/variables";
+
+.resume-request {
+  &__header {
+  }
+
+  &__container {
+    padding: 1.25rem 0 calc(#{$navBottomPadding} + 1.5rem);
+  }
+
+  &__resume-card {
+    margin-bottom: 4px;
+  }
+
+  &__description {
+    font-size: 12px;
+    color: #979797;
+    line-height: 16px;
+  }
+
+  &__sender {
+    &-name {
+      display: flex;
+      align-items: center;
+      flex-grow: 1;
+      margin-right: 6px;
+      &-icon {
+        min-width: 12px;
+        max-width: 12px;
+        height: 12px;
+        margin-right: 2px;
+      }
+    }
+    &-description {
+      margin-top: 4px;
+    }
+  }
+
+  &__info-box {
+    min-width: 270px;
+    width: 70%;
+    margin: 45px auto 0;
+    text-align: center;
+    color: #000;
+
+    &-title {
+      margin-bottom: 7px;
+    }
+
+    &-desc {
+      border-bottom: 1px solid $lightGrey;
+      padding-bottom: 19px;
+      margin-bottom: 10px;
+    }
+
+    &-accept-text {
+      color: #27AE60;
+    }
+
+
+    &-declined-text {
+      color: $offlineRed;
+    }
+  }
+
+  &__employer-info {
+    &-textarea {
+      margin-bottom: 24px;
+    }
+
+    &-link {
+      max-width: 100%;
+      word-break: break-word;
+      color: $primaryBlue;
+    }
+
+    &-link-field {
+      border-bottom: 1px solid $lightGrey;
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+      max-width: 100%;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &-label {
+        color: #818C99;
+        margin-bottom: 4px;
+      }
+    }
+  }
+}
+
+.resume-row-card {
+  display: flex;
+  border-bottom: 1px solid $lightGrey;
+  padding-bottom: 12px;
+
+  &__avatar {
+    border-radius: 12px;
+    margin-right: 12px;
+  }
+
+  &__right {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: calc(100% - 84px);
+  }
+
+  &__position {
+    color: $textOrange;
+  }
+
+  &__salary {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    word-wrap: break-word;
+
+    &-from {
+      color: $textGrey;
+      max-width: 100%;
+
+      &--highlighted {
+        color: #007AFF;
+      }
+    }
+
+    &-separator {
+      display: inline-block;
+      background-color: $primaryBlack;
+      margin: 0 13px;
+      width: 2px;
+      height: 2px;
+      border-radius: 50%;
+    }
+
+    &-to {
+      color: #007AFF;
+      max-width: 100%;
+    }
+  }
+}

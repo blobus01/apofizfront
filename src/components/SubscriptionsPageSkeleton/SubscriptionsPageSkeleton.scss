@@ -1,0 +1,137 @@
+.subscription-row-skeleton {
+  display: flex;
+  align-items: center;
+  height: 75px;
+  max-width: 1000px;
+  margin: 10px auto;
+  padding: 0 16px;
+  border-radius: 24px;
+  gap: 12px;
+  border-radius: "24px";
+  padding: 9px 20px;
+  box-shadow:
+    rgb(255, 255, 255) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.25) 0px 3px 10px;
+  background: #fff;
+}
+
+/* Left icon */
+.subscription-row-skeleton__left {
+  flex-shrink: 0;
+}
+
+.subscription-row-skeleton__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #dbdbdb;
+}
+
+/* Content */
+.subscription-row-skeleton__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Lines */
+.subscription-row-skeleton__line {
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #ffffff 25%, #f0f0f0 37%, #e0e0e0 63%);
+  background-size: 400% 100%;
+  animation: skeleton-loading 1.4s ease infinite;
+}
+
+/* Right checkbox */
+.subscription-row-skeleton__right {
+  flex-shrink: 0;
+}
+
+.subscription-row-skeleton__checkbox {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: #c4c4c4;
+}
+
+/* Width helpers */
+.w-60 {
+  max-width: 100px;
+}
+
+.w-40 {
+  max-width: 80px;
+}
+
+.w-30 {
+  max-width: 20px;
+}
+
+/* Animation */
+@keyframes skeleton-loading {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.subscription-row-skeleton {
+  display: flex;
+  align-items: center;
+  height: 75px;
+  max-width: 1000px;
+  margin: 10px auto;
+  padding: 9px 20px;
+  border-radius: 24px;
+  gap: 12px;
+  box-shadow:
+    rgb(255, 255, 255) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.25) 0px 3px 10px;
+  background: #fff;
+
+  &.dark {
+    background: #090027;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 3px 12px;
+  }
+}
+
+/* Icon */
+.subscription-row-skeleton__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #dbdbdb;
+}
+
+.subscription-row-skeleton.dark .subscription-row-skeleton__icon {
+  background: #1a003d;
+}
+
+/* Lines */
+.subscription-row-skeleton__line {
+  height: 12px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #ffffff 25%, #f0f0f0 37%, #e0e0e0 63%);
+  background-size: 400% 100%;
+  animation: skeleton-loading 1.4s ease infinite;
+}
+
+.subscription-row-skeleton.dark .subscription-row-skeleton__line {
+  background: linear-gradient(90deg, #090027 25%, #14004a 37%, #1f0066 63%);
+}
+
+/* Checkbox */
+.subscription-row-skeleton__checkbox {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: #c4c4c4;
+}
+
+.subscription-row-skeleton.dark .subscription-row-skeleton__checkbox {
+  background: #220066;
+}

@@ -1,0 +1,16 @@
+@import "../../assets/styles/variables";
+
+.certain-period-statistics {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #F5F5F5;
+  cursor: pointer;
+
+  &__summary {
+    margin-bottom: 0.25rem;
+    flex-wrap: wrap;
+  }
+
+  &__calendar-btn {
+    color: $primaryBlue;
+  }
+}

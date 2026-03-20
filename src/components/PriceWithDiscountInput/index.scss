@@ -1,0 +1,8 @@
+.price-with-discount-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__input {
+    width: calc(50% - 5px);
+  }
+}

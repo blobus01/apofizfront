@@ -1,0 +1,56 @@
+@import "../../../assets/styles/variables";
+
+.city-select-field {
+  color: $textGrey;
+  padding: 15px 0 5px;
+  border-bottom: 1px solid #ebedf0;
+  &__wrap {
+    cursor: pointer;
+  }
+
+  &__group {
+    position: relative;
+  }
+
+  &__placeholder {
+    position: absolute;
+    font-size: 17px;
+    line-height: 24px;
+    -webkit-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+    &-moved {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: normal;
+      color: $labelGrey;
+      top: -18px;
+      left: 0;
+    }
+  }
+  &__value {
+    flex-grow: 1;
+    color: $primaryBlack;
+  }
+
+  & svg {
+    min-width: 24px;
+  }
+
+  &__error-msg {
+    color: #F93C10;
+    font-size: 14px;
+    margin-top: 5px;
+    display: none;
+  }
+
+  &__error {
+    & .city-select-field__error-msg {
+      display: block;
+    }
+
+    & .city-select-field {
+      border-color: #F93C10;
+    }
+  }
+}

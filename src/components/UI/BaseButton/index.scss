@@ -1,0 +1,36 @@
+@import "../../../assets/styles/variables";
+
+.base-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 10px;
+  max-width: 100%;
+  overflow: hidden;
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &.text {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    min-height: 32px;
+    max-height: 44px;
+  }
+
+  &.contained {
+    justify-content: center;
+    outline: none;
+    border: none;
+    padding: 0.45em 1.1em;
+
+    &.hover-shadow:not(:disabled):hover {
+      box-shadow: 0 2px 5px 0 rgba(0,0,0, 0.4);
+    }
+    &-warning {background: $c-grey-f5f5f5;}
+    &-danger {background: $offlineRed;}
+    &-success {background: $onlineGreen;}
+  }
+}

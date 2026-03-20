@@ -1,0 +1,39 @@
+.ai-wrapper {
+  &__list {
+    gap: 10px;
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__item {
+    width: 100%;
+    display: flex;
+    cursor: pointer;
+
+    border-radius: 8px;
+    background-color: #f5f5f5;
+    padding: 18px 16px 18px 20px;
+    justify-content: space-between;
+  }
+
+  &__item-left,
+  &__item-right {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item-left {
+    gap: 20px;
+  }
+
+  &__item-test {
+    color: #fff;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 8px 26px;
+    background: #007aff;
+    border-radius: 12px 0 12px 12px;
+  }
+}

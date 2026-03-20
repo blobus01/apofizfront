@@ -1,0 +1,10 @@
+@import "../../assets/styles/variables";
+
+.receipt-detail-module {
+  &__header {
+    margin-bottom: 1rem;
+  }
+  &__content {
+    padding-bottom: calc(#{$navbarBottomPadding} + 1rem);
+  }
+}

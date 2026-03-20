@@ -1,0 +1,83 @@
+@import "../../assets/styles/variables";
+
+.instagram-integration-view {
+  &__content {
+    padding: 20px 0;
+  }
+  &__profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    &-content {
+      display: flex;
+      align-items: center;
+      margin-right: 12px;
+      flex-grow: 1;
+      overflow: hidden;
+    }
+    &-avatar {
+      margin-right: 12px;
+    }
+    &-name {
+      overflow: hidden;
+      color: $c-grey-818c99;
+      & div:last-child {
+        color: $primaryBlue;
+      }
+    }
+  }
+
+  &__update {
+    margin-top: 20px;
+  }
+
+  &__info {
+    margin-top: 20px;
+    padding: 38px 18px;
+    background: #FFFFFF;
+    box-shadow: 0 2px 24px rgba(194, 198, 203, 0.3);
+    border-radius: 16px;
+    overflow: hidden;
+    & h2 {
+      text-align: center;
+      margin-top: 28px;
+      color: $c-grey-818c99;
+    }
+    & p {
+      text-align: center;
+      font-style: italic;
+      &:not(:first-child) {
+        margin-top: 26px;
+      }
+    }
+    &-images {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & img:last-child {
+        margin-left: 35px;
+      }
+    }
+  }
+
+  &__apofiz-logo {
+    width: 50px;
+    height: auto;
+  }
+
+  &__form {
+    position: relative;
+    & input {
+      padding-right: 4.6em !important;
+    }
+    &-add {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      right: 0.5em;
+      bottom: 8px;
+      color: $primaryBlue;
+    }
+  }
+}

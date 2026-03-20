@@ -1,0 +1,32 @@
+@import "../../assets/styles/variables";
+
+.resume-request-page {
+  &__header {
+    margin-bottom: 1rem;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form {
+  }
+
+  &__sender {
+    margin-bottom: 8px;
+  }
+
+  &__org-avatar, &__avatar {
+    margin-left: 4px;
+    margin-right: 6px;
+  }
+
+  &__org-avatar {
+    border-radius: 6px;
+  }
+
+  &__sender-name {
+    flex-grow: 1;
+  }
+}

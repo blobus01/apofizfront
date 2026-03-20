@@ -1,0 +1,14 @@
+@import "../../assets/styles/mixins";
+
+.full-height-container {
+  @include fullHeight();
+  &--with-navbar {
+    @include fullHeightWithNavbar();
+  }
+  &--with-header {
+    @include fullHeightWithHeader();
+  }
+  &--with-navbar.full-height-container--with-header {
+    height: calc(100 * var(--vh) - 50px);
+  }
+}

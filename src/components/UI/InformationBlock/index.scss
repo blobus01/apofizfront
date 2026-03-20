@@ -1,0 +1,12 @@
+@import "../../../assets/styles/variables";
+
+.information-block {
+  padding: 8px 0;
+  border-bottom: 1px solid #e6e6e6;
+  &__label {
+    color: $c-grey-818c99;
+  }
+  &__value {
+    color: $primaryBlack;
+  }
+}

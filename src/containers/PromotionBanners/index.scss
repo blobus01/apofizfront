@@ -1,0 +1,48 @@
+.home-posts-module__promo-banners {
+  background-color: #fff;
+  border-radius: 16px;
+  margin: 20px -15px;
+  padding: 10px 2px;
+  box-shadow:
+    0 0 0 1px #fff,
+    0 0 8px rgba(0, 0, 0, 0.25);
+  & .promotion-banner-slider__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    position: sticky;
+    top: 42px;
+    z-index: 2;
+    background: #fff;
+    padding-bottom: 5px;
+    border-radius: 0 0 16px 16px;
+    padding-top: 11px;
+  }
+}
+
+.home-posts-module__promo-banners {
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+.home-posts-module__promo-banners.dark {
+  background: #090027; // или что тебе нужно
+  box-shadow: none;
+  color: #fff;
+
+  .promotion-banner-slider__top {
+    background: transparent; 
+  }
+
+  span {
+    font-weight: 500;
+  }
+
+  .white-shadow-slider::after {
+    box-shadow: none;
+  }
+
+
+}

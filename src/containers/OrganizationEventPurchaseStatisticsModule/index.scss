@@ -1,0 +1,60 @@
+@import "../../assets/styles/variables";
+
+.organization-event-purchase-statistics-module {
+  padding-bottom: calc(#{$navBottomPadding} + 1rem);
+  &__header {
+    margin-bottom: 0.5rem;
+  }
+  &__tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    .tab-links__item {
+      display: inline-block;
+      width: calc(50% - 1rem);
+    }
+  }
+  &__activated-ticket-layer, &__unactivated-ticket-layer {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+    &-top {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+    }
+    &-label {
+      color: $c-green-27ae60;
+    }
+    &-receipt {
+      margin-bottom: 36px;
+    }
+  }
+  &__unactivated-ticket-layer {
+    &-qr-wrap {
+      position: relative;
+      padding: 8px;
+      border: 0.3px solid rgba(0, 0, 0, 0.2);
+      border-radius: 22px;
+      margin-bottom: 2rem;
+    }
+    &-label {
+      text-align: left;
+      font-size: 14px;
+      line-height: 18px;
+      color: #979797;
+    }
+  }
+  &__event-activation-card {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__bought-tickets-layer {
+    padding-bottom: 2rem;
+  }
+}

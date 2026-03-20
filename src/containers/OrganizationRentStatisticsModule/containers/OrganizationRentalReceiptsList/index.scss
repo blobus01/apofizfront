@@ -1,0 +1,25 @@
+@import "../../../../assets/styles/variables";
+
+
+.organization-rental-receipts-list {
+  padding-bottom: calc(#{$navBottomPadding} + 1rem);
+  &__top {
+    border-bottom: 1px solid #F5F5F5;
+    padding: 0.7rem 0 0.4rem;
+    margin-bottom: 0.2rem;
+  }
+  &__savings-block {
+    margin-bottom: 0.3rem;
+  }
+  &__date-selection-interval {
+    margin-right: 0.5rem;
+  }
+  &__actions {
+    display: flex;
+    justify-content: space-between;
+    overflow-x: hidden;
+  }
+  &__list-item {
+    margin-bottom: 0.1rem;
+  }
+}

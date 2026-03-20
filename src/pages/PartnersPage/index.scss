@@ -1,0 +1,29 @@
+@import "../../assets/styles/variables";
+
+.partners-page {
+  &__content {
+    margin-top: 20px;
+    padding-bottom: $navbarBottomPadding;
+  }
+
+  &__item {
+    padding: 8px 0;
+    border-bottom: 1px solid #f6f6f6;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.partners-page {
+  background: #ffffff;
+
+  &.dark {
+    background: #00193f;
+    color: #ffffff;
+
+    .partners-page__item {  
+      border-bottom: 1px solid #090027;
+    }
+  }
+}

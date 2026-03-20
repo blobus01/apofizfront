@@ -1,0 +1,35 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.printer-settings-page {
+  &__content {
+    @include contentHeight;
+    padding-top: 40px;
+    text-align: center;
+  }
+  &__title,
+  &__desc {
+    margin: 0 auto;
+    max-width: 240px;
+  }
+  &__title {
+    margin-top: 20px;
+  }
+  &__desc {
+    margin-top: 10px;
+  }
+  &__download {
+    margin-top: 40px;
+    height: 44px;
+    background: $primaryBlue;
+    color: #FFF;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__paper {
+    text-align: left;
+    margin-top: 15px;
+  }
+}

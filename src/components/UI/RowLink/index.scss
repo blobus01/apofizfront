@@ -1,0 +1,20 @@
+@import "../../../assets/styles/variables";
+
+.row-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: $buttonHeight;
+  text-decoration: none;
+  color: inherit;
+  padding: 0 10px;
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  & svg:first-child {
+    margin-right: 20px;
+  }
+}

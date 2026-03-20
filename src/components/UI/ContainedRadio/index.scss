@@ -1,0 +1,36 @@
+.contained-radio {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(52, 168, 83, 0.1);
+  padding: 1em 1.1em;
+  border-radius: 10px;
+
+  &__checkbox {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #34A853;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    &-icon {
+      visibility: hidden;
+    }
+  }
+  & input {
+    visibility: hidden;
+  }
+}
+
+.contained-radio:has(input[type="radio"]:checked) {
+  //background: rgba(52, 168, 83, 0.5);
+  border: 1px solid #34A853;
+
+  & .contained-radio__checkbox {
+    background: rgba(52, 168, 83, 0.5);
+    & svg {
+      visibility: initial;
+      fill: #FFF;
+    }
+  }
+}

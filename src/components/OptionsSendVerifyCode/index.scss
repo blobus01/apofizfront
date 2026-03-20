@@ -1,0 +1,21 @@
+.options-send-verify-code {
+  &__top {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    margin-bottom: 43px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 30px;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}

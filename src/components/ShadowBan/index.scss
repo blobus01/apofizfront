@@ -1,0 +1,53 @@
+@import "../../assets/styles/variables";
+
+.shadow-ban {
+  &__top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    margin-bottom: 22px;
+  }
+  &__back {
+    position: absolute;
+    top: 56%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  &__title {
+    letter-spacing: -0.32px;
+  }
+  &__info {
+    white-space: pre-wrap;
+    letter-spacing: -0.08px;
+    padding: 0 4px 0 10px;
+    margin-bottom: 35px;
+  }
+  &__sent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $primaryBlue;
+  }
+  &__icon-subs {
+    margin-left: 6px;
+  }
+  &__btn {
+    width: 100%;
+    height: 44px;
+    background: $primaryBlue;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: -0.41px;
+  }
+  &__btn[disabled] {
+    background: $c-grey-828282;
+    cursor: wait;
+  }
+  &__btn:not(:disabled):hover {
+    box-shadow: 0 2px 5px 0 rgb(0 0 0 / 40%);
+  }
+}

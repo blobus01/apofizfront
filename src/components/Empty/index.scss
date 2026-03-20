@@ -1,0 +1,13 @@
+@import "../../assets/styles/variables";
+
+.empty {
+  &__title {
+    text-align: center;
+    color: $c-grey-818c99;
+  }
+  &__image {
+    margin-top: 40px;
+    width: 100%;
+    max-width: 600px;
+  }
+}

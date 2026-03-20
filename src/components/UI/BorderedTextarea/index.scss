@@ -1,0 +1,29 @@
+@import "../../../assets/styles/variables";
+
+.bordered-textarea {
+  border-radius: 14px;
+  padding: 13px 11px;
+  width: 100%;
+
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25) !important;
+
+  overflow: auto;
+  height: 0px;
+
+  outline: none;
+  border: none;
+
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+
+  resize: none; /*remove the resize handle on the bottom right*/
+  color: #333333;
+
+  &--error {
+    border: 1px solid #f93c10;
+  }
+
+  &::placeholder {
+    color: #979797;
+  }
+}

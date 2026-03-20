@@ -1,0 +1,20 @@
+@import "../../../assets/styles/variables";
+@import "../../../assets/styles/mixins";
+
+.rent-activation-success-view {
+  @include contentHeight;
+
+  &__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__desc {
+    display: block;
+    color: $primaryBlue;
+    flex-grow: 3;
+    margin-top: 1rem;
+    text-align: center;
+  }
+}

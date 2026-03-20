@@ -1,0 +1,32 @@
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0 41px;
+
+  &[aria-disabled="true"] {
+    opacity: 0.5;
+  }
+
+  &__left {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      margin-right: 17px;
+    }
+
+    &-img {
+      margin-right: 17px;
+      width: 24px;
+      height: 24px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    &-text {
+      letter-spacing: -0.41px;
+    }
+  }
+}

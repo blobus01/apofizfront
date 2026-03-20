@@ -1,0 +1,55 @@
+@import "../../assets/styles/variables";
+
+.horizontal-list-field {
+  padding-bottom: 5px;
+  border-bottom: 1px solid $lightGrey;
+
+  &__label {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    color: $textGrey;
+    pointer-events: none;
+
+    &--shrink {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: normal;
+      color: $labelGrey;
+      margin-bottom: 6px;
+      $labelGrey: red;
+      $textGrey: red;
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 0.2em 0.85em;
+    border: 1px solid #E6E8EB;
+    border-radius: 10px;
+
+    &:disabled {
+      cursor: unset;
+    }
+
+    &-text {
+      display: inline-block;
+      white-space: nowrap;
+      margin-right: 0.2em;
+      color: #000000;
+    }
+  }
+
+  &__add-btn {
+    display: flex;
+    align-items: center;
+  }
+}

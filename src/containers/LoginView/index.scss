@@ -1,0 +1,38 @@
+$logoSize: 100px;
+
+.login-page {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  &__title {
+    text-align: center;
+  }
+  &__image {
+    text-align: center;
+  }
+  &__logo {
+    display: inline-block;
+    min-width: $logoSize;
+    max-width: $logoSize;
+    min-height: $logoSize;
+    max-height: $logoSize;
+    margin-top: 50px;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__logo-txt {
+    display: inline-block;
+    min-width: 200px;
+    max-width: 200px;
+    margin-top: 50px;
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

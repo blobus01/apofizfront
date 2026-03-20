@@ -1,0 +1,71 @@
+.organization-coupon-page {
+  &__content {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding-bottom: 70px;
+
+    &-item {
+      max-width: 343px;
+
+      h2 {
+        font-size: 16px;
+        font-weight: 500;
+        margin-bottom: 16px;
+      }
+
+      button {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        padding: 23px 13px;
+        border-radius: 11px;
+        background-color: #ebedf0;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #dfe1e4;
+        }
+
+        h3 {
+          display: flex;
+          align-items: center;
+          font-size: 16px;
+          font-weight: 500;
+          color: #4285f4;
+          gap: 4px;
+          justify-content: center;
+          width: 100%;
+        }
+
+        p {
+          font-size: 13px;
+          color: #2c2d2e;
+          text-align: start;
+          font-style: italic;
+        }
+      }
+    }
+  }
+}
+
+
+.coupon-loader {
+  display: flex;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.coupon-empty {
+  text-align: center;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.organization-coupon-create__content-wallpaper-content-title span {
+  line-height: 24px;
+  font-weight: 400;
+}

@@ -1,0 +1,44 @@
+@import "../../../assets/styles/animations";
+
+.pdf-modal {
+  position: fixed !important;
+  inset: 0 !important;
+  background: rgba(0, 0, 0, 0.6) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  z-index: 9999 !important;
+}
+
+.pdf-actions {
+  background: white;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.pdf-modal iframe {
+  flex: 1;
+  background: white;
+}
+
+.payment-form {
+  &__payment-system-selection {
+    &-header {
+      margin-bottom: 1rem;
+    }
+
+    &-option {
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      & .category-option__image_bg {
+        background: transparent;
+        border: none;
+        padding: 0;
+        border-radius: 0;
+      }
+    }
+  }
+}

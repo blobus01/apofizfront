@@ -1,0 +1,94 @@
+@import "../../assets/styles/variables";
+
+.organization-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
+  &__link {
+    display: flex;
+    align-items: end;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+
+  &__avatar {
+    border-radius: 22px !important;
+
+    &--absolute {
+      position: absolute;
+      left: 15px;
+      top: -30px;
+    }
+
+
+    &--absolute-discount {
+      position: absolute;
+      left: 15px;
+      top: 0;
+    }
+
+  }
+
+
+
+  &__right {
+    width: 100%;
+    overflow: hidden;
+    padding-bottom: 6px;
+  }
+
+  &__type {
+    color: $textGrey;
+  }
+
+  &__b2b-icon {
+    margin-right: 5px;
+    min-height: 24px;
+    min-width: 24px;
+    transform: translateY(-1px);
+  }
+
+  &__title-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-height: 0;
+  }
+
+  &__title {
+    color: $primaryBlack;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2;
+    align-items: start;
+
+    &--red {
+      color: #ff0000;
+    }
+  }
+
+  &__verification {
+    width: 22px;
+    height: 21px;
+    transform: translateY(0);
+
+    & svg:first-child {
+      width: 22px;
+      height: 21px;
+    }
+  }
+
+  &__subscribers {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: $textGrey;
+    margin-bottom: 8px;
+
+    & b {
+      color: $primaryBlue;
+    }
+  }
+}

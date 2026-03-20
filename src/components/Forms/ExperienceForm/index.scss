@@ -1,0 +1,83 @@
+@import "../../../assets/styles/variables";
+
+.experience-form {
+  &__header {
+    margin-bottom: 1rem;
+  }
+
+  &__desc-text {
+    font-size: 12px;
+    line-height: 16px;
+    color: #979797;
+    font-style: italic;
+    margin-bottom: 12px;
+  }
+
+  &__text-blue {
+    color: #007AFF;
+  }
+
+  &__text-red {
+    color: #D72C20;
+  }
+
+  &__add-work-exp-btn {
+    display: inline-block;
+  }
+
+  &__remove-work-exp-btn {
+    margin-top: 16px;
+  }
+
+  &__work-experience {
+    margin-bottom: 36px;
+
+    &--disabled {
+      .experience-form__input {
+        margin-bottom: 12px;
+      }
+    }
+  }
+
+  &__description-label {
+    padding-top: 0;
+    .input-text-field__label {
+      color: #2C2D2E;
+      font-weight: 500;
+    }
+  }
+
+  &__textarea {
+    margin-bottom: 12px;
+  }
+
+  &__text-input-label-width-fix {
+    .input-text-field__label {
+      right: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__date-inputs {
+    margin-bottom: 12px;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  &__date-input {
+    flex-grow: 1;
+  }
+
+  &__row-toggle {
+    margin-bottom: 22px;
+    transition: .2s;
+
+    &--checked {
+      .row-toggle__label {
+        color: #007AFF;
+      }
+    }
+  }
+}

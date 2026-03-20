@@ -1,0 +1,43 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.cart-detail-page {
+
+  margin-bottom: 50px;
+  
+  &__content {
+    @include contentHeight();
+    padding: 20px 10px;
+    overflow-y: unset;
+    height: auto;
+  }
+
+  &__card {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  &__total {
+    display: inline-block;
+    text-align: center;
+    margin: 0 10px;
+    width: 100%;
+    color: #FFF;
+  }
+  &__buy {
+    margin-top: 35px;
+  }
+  &__delivery {
+    & .empty-info__content {
+      flex-direction: column-reverse;
+    }
+    &-btn {
+      margin: 100px 0;
+    }
+    & p {
+      text-align: center;
+      color: $c-grey-818c99;
+      margin-top: 30px;
+    }
+  }
+}

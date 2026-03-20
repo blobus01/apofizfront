@@ -1,0 +1,8 @@
+.loading-button {
+  &__label {
+    max-width: 100%;
+  }
+  &.loading {
+    cursor: unset;
+  }
+}

@@ -1,0 +1,14 @@
+.congrats-view {
+  padding-top: 5rem;
+
+  &__text {
+    text-align: center;
+    color: #818C99;
+  }
+  &__bottom {
+    position: fixed;
+    bottom: calc(2rem + 68px);
+    left: 0;
+    right: 0;
+  }
+}

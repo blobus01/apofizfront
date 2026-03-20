@@ -1,0 +1,122 @@
+@import "../../assets/styles/variables";
+
+.resume-detail-info {
+  &__scrollable-view {
+    padding-bottom: calc(#{$navBottomPadding} + 1rem);
+  }
+
+  &__header {
+    margin-bottom: 1rem;
+    &--submitting {
+      .mobile-top-header__title {
+        padding-right: 80px;
+      }
+    }
+  }
+
+  &__preloader {
+    margin-top: 3rem;
+  }
+
+  &__title {
+    margin-bottom: 0.3rem;
+  }
+
+  &__desc {
+    font-size: 14px;
+    line-height: 16px;
+    font-style: italic;
+    color: $primaryBlack;
+  }
+
+  &__desc-text {
+    font-size: 12px;
+    line-height: 16px;
+    color: #979797;
+    font-style: italic;
+  }
+
+  &__view-title {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 9px;
+  }
+  &__view-desc {
+    font-style: italic;
+    font-size: 12px;
+    line-height: 16px;
+    color: #979797;
+    margin-bottom: 12px;
+  }
+
+  &__textarea {
+    border: 1px solid rgba(221, 221, 221, 1);
+    border-radius: 18px;
+    padding: 13px 11px;
+    width: 100%;
+    overflow: auto;
+    margin-bottom: 15px;
+
+    outline: none;
+
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+
+    resize: none; /*remove the resize handle on the bottom right*/
+    color: $primaryBlack;
+
+    &--error {
+      border: 1px solid #F93C10;
+    }
+
+    &::placeholder {
+      color: #979797;
+    }
+  }
+
+  &__with-badge {
+    position: relative;
+    width: fit-content;
+    &-badge {
+      position: absolute;
+      top: -15%;
+      right: -15%;
+    }
+  }
+
+  &__text-input-label-width-fix {
+    .input-text-field__label {
+      right: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &__text-button {}
+
+  &__main-view {
+    &-links {
+      padding: 16px 0;
+    }
+  }
+
+  &__detail-form {
+    &-gender {
+      margin: 24px 0 20px;
+    }
+    &-full-name {
+      margin-bottom: 18px;
+    }
+    &-birthday {
+      margin-bottom: 24px;
+    }
+    &-files {
+      margin-top: 20px;
+    }
+  }
+
+  &__description-form {}
+}

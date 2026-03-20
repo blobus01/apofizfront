@@ -1,0 +1,42 @@
+@import "./../../../assets/styles/variables.scss";
+
+.post-mini-card {
+  display: flex;
+  margin-right: auto;
+
+  &__content {
+    flex-grow: 1;
+  }
+
+  &__status-label {
+    color: #FF0000;
+  }
+
+  &__image {
+    width: 60px;
+    height: 60px;
+    border: 1px dashed #F5F5F5;
+    border-radius: 12px;
+    margin-right: 0.75em;
+  }
+
+  &__name {
+    color: #007AFF;
+    margin-bottom: 0.25em;
+    line-height: 1.1em;
+  }
+
+  &__discounted-price {
+    line-height: 1.5em;
+  }
+
+  &__original-price {
+    line-height: 1.5em;
+    text-decoration-line: line-through;
+    color: #818C99;
+  }
+
+  &__no-discount {
+    color: $c-grey-818c99;
+  }
+}

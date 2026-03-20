@@ -1,0 +1,174 @@
+@import "@styles/variables";
+
+.root {
+}
+
+.assistant {
+  display: flex;
+  gap: 11px;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 8px;
+  margin-bottom: 36px;
+
+  &Label {
+    margin-bottom: 4px;
+    color: #818c99;
+  }
+
+  &Name {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: -0.40799999237060547px;
+  }
+}
+
+.h2 {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.15399999916553497px;
+  margin-bottom: 24px;
+  color: #818c99;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 2rem;
+}
+
+.textButton {
+  width: 100%;
+}
+
+.root .textButton {
+  display: block;
+  margin: 0 auto 10rem;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16.41px;
+  color: #007aff;
+  padding: 0;
+
+  @media (min-width: 768px) {
+    margin: 0 0 10rem;
+  }
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 4px 0;
+
+  &Text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex-grow: 1;
+  }
+
+  &Top {
+  }
+
+  &Bottom {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+
+  &Name {
+    color: #000000;
+    font-size: 17px;
+    line-height: 24px;
+    letter-spacing: -0.40799999237060547px;
+  }
+
+  &AdditionalName {
+    color: #2f80ed;
+  }
+
+  &Price {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.23999999463558197px;
+    color: #34a853;
+  }
+
+  &BestChoice {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: -0.23999999463558197px;
+    color: #ffa000;
+  }
+}
+
+.payBtn {
+  position: sticky;
+  bottom: calc(#{$navbarBottomPadding} + 1.5rem);
+  background-color: #27ae60;
+
+  &Price {
+    padding: 12px 29px;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: -0.23999999463558197px;
+    color: #fff;
+  }
+
+  &_repay {
+    background-color: $primaryBlue;
+  }
+}
+
+.detailedPlanParts {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4px;
+  gap: 22px;
+}
+
+.botInput {
+  margin-top: 12px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+
+.botInputShow {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.botLabel {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #555;
+}
+
+.botField {
+  width: 100%;
+  border-radius: 14px;
+  padding: 13px 11px;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25) !important;
+
+  &::placeholder {
+    color: #aaa;
+  }
+}
+
+
+.itemAdditionalName {
+  font-size: 14px;
+  color: #007AFF;
+}

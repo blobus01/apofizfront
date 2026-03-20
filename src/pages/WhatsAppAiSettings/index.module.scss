@@ -1,0 +1,130 @@
+.wrapper {
+  margin-bottom: 120px;
+}
+
+.toggleSwitch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.toggleSwitchText {
+  color: #007aff;
+  font-size: 17px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.qrIcon {
+  margin: auto;
+}
+
+.toggleDesc {
+  color: #333333;
+  font-size: 12px;
+  margin-bottom: 26px;
+}
+
+.qrDesc {
+  font-size: 14px;
+  color: #007aff;
+  font-style: italic;
+  margin-bottom: 14px;
+}
+
+.qrPreview {
+  border: 2px solid #007aff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+  width: 170px;
+  height: 170px;
+  margin: 18px auto 26px;
+  border-radius: 16px;
+}
+
+.qrImportant {
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.qrImportantFirst {
+  color: #ff0004;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  margin: 20px 0 0;
+}
+
+.qrImportantSecond {
+  color: #ff0004;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.noteWrapper {
+  margin-top: 22px;
+}
+
+.noteIcon {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-bottom: 6px;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #007aff;
+}
+
+.noteText {
+  font-size: 14px;
+  font-style: italic;
+  color: #333333;
+}
+
+.qrConnectRules {
+  margin: 5px;
+  padding: 15px 12px;
+  border-radius: 16px;
+  background: rgba(39, 174, 96, 0.2);
+  box-shadow:
+    0 0 0 1px rgba(39, 174, 96, 0.9),
+    0 0 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.qrConnectWrapper {
+  list-style: decimal;
+  padding-left: 10px;
+}
+
+.qrConnectItem {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.ConnectText {
+  font-size: 14px;
+  color: #27ae60;
+  margin-top: 5px;
+}
+
+.connectedBlock .qrContainer {
+  overflow: hidden;
+}
+
+.qrInner {
+  opacity: 0;
+  transform: translateY(-20px) scale(0.95);
+  transition:
+    opacity 0.35s ease,
+    transform 0.35s ease;
+}
+
+.qrContainerActive .qrInner {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}

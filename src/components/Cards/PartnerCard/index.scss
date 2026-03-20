@@ -1,0 +1,79 @@
+@import '../../../assets/styles/variables';
+
+.partner-card {
+  display: flex;
+  width: 100%;
+  &__wrap { display: block; }
+  &__left {
+    position: relative;
+    margin-right: 15px;
+  }
+  &__count {
+    position: absolute;
+    background: $c-red-d72c20;
+    font-size: 11px;
+    left: calc(100% - 8px);
+    border-radius: 10px;
+    padding: 0 5px;
+    color: #fff;
+    top: -8px;
+    height: 17px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    justify-content: center;
+    min-width: 17px;
+  }
+  &__type,
+  &__time {
+    color: $textGrey;
+  }
+  &__time {
+    min-width: 65px;
+    overflow: hidden;
+    margin-left: 10px;
+    text-align: right;
+  }
+
+  &__title {
+    margin-top: 5px;
+  }
+  &__address {
+    margin-top: 5px;
+  }
+  &__bottom {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+  }
+  &__right {
+    flex-grow: 1;
+    overflow: hidden;
+  }
+  &__partners {
+    margin-left: 8px;
+    color: $primaryBlue;
+  }
+  &__group {
+    display: flex;
+    position: relative;
+    &-image {
+      width: 24px;
+      height: 24px;
+      border: 1px solid  #EBEDF0;
+      border-radius: 6px;
+      overflow: hidden;
+      &:not(:first-child) {
+      margin-left: -3px;
+    }
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

@@ -1,0 +1,139 @@
+@import "../../../../assets/styles/variables";
+
+.resume-form-main-view {
+  &__container {
+    padding: 20px 15px 60px;
+    max-width: 600px;
+  }
+
+  &__image-uploader {
+    margin-bottom: 12px;
+  }
+
+  &__field-desc {
+    font-style: italic;
+    font-size: 12px;
+    line-height: 16px;
+    color: #979797;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 24px;
+
+    &--underlined {
+      border-bottom: 1px solid rgb(129, 140, 153, 0.12);
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+  }
+
+  &__route {
+    position: relative;
+
+    &-mask {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      cursor: pointer;
+    }
+  }
+
+  &__preview-placeholder {
+    border: 1px solid #E6E8EB;
+    border-radius: 11px;
+    padding: 7em 0;
+    text-align: center;
+    color: $textGrey;
+    &-icon {
+      margin-bottom: 0.2em;
+    }
+    &-title {
+      margin-bottom: 0.5em;
+    }
+  }
+}
+
+.resume-form-main-view__multiple-region-select {
+  &-option {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid #F5F5F5;
+    padding: 1em 0;
+
+    &--active {
+      & .resume-form-main-view__multiple-region-select-option-name {
+        color: #4285F4;
+
+        &::before {
+          content: "•";
+          display: inline-block;
+          margin-right: 5px;
+        }
+      }
+    }
+
+    &-image {
+      height: 16px;
+      width: 23px;
+      border: 1px solid #E6E8EB;
+      object-fit: cover;
+    }
+  }
+}
+
+.resume-form-main-view__links-field {
+  margin-bottom: 11px;
+  &-input {
+    & .input-text-field__input-group {
+      border-bottom: 1px solid #EBEDF0;
+    }
+    & .input-text-field__input {
+      width: calc(100% - 70px);
+      color: $textGrey;
+      border-bottom: none;
+    }
+  }
+  &-add-btn {
+    color: $primaryBlue;
+  }
+  & .resume-form-main-view__link-card {
+    margin-top: 12px;
+  }
+}
+
+.resume-form-main-view__link-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid $lightGrey;
+
+  &-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: calc(100% - 18px);
+  }
+
+  &-image,
+  &-title {
+    margin-right: 12px;
+    color: $primaryBlue;
+  }
+
+  &-image {
+    border: 1px solid #E6E8EB;
+    border-radius: 7px;
+  }
+}

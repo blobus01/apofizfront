@@ -1,0 +1,38 @@
+@import "@styles/variables.scss";
+
+.row {
+  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.rowElement {
+  margin-right: 10px;
+  flex-grow: 1;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.input {
+  margin-bottom: 0.8rem;
+}
+
+.map {
+  margin-top: 1.3rem;
+  margin-bottom: 0.5rem;
+  &_filled {
+    margin-top: 0.5rem;
+  }
+  &Btn {
+    height: auto;
+    padding: 0.25em 0 0.5em;
+    color: $primaryBlue;
+    border-bottom: 1px solid #ebedf0;
+    font-size: 17px;
+    font-weight: 500;
+  }
+  &Label {
+    color: $textGrey;
+  }
+}

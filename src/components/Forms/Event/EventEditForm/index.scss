@@ -1,0 +1,26 @@
+@import "../../../../assets/styles/variables";
+
+.event-edit-form {
+  &__route {
+    position: relative;
+    &-mask {
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      cursor: pointer;
+    }
+  }
+  &__input {
+    cursor: pointer;
+    & .input-text-field__input {
+      cursor: pointer;
+    }
+    & .input-text-field__tools {
+      & svg path {
+        fill: $primaryBlue;
+      }
+    }
+  }
+}

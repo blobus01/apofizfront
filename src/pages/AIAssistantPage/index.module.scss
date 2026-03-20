@@ -1,0 +1,9 @@
+@import "@styles/variables.scss";
+
+.root {
+  padding-bottom: calc(#{$navBottomPadding} + 1.5rem);
+}
+
+.buttons {
+  padding: 20px 0;
+}

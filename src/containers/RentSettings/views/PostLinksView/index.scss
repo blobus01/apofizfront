@@ -1,0 +1,28 @@
+.post-links-view {
+  &__input-box {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #EBEDF0;
+
+    &--error {
+      border-bottom-color: #F93C10;
+    }
+    &-error {
+      color: #F93C10;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+  }
+  &__input-link {
+    flex-grow: 1;
+    padding-top: 0;
+
+    & .input-text-field__input {
+      border-bottom: none;
+      color: #818C99;
+      &::placeholder {
+        color: #818C99;
+      }
+    }
+  }
+}

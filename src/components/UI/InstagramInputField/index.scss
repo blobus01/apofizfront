@@ -1,0 +1,25 @@
+@import "../../../assets/styles/variables";
+
+.instagram-input-field {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  color: $primaryBlue;
+  display: block;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 5px 0 5px 0;
+  border-bottom: 1px solid $lightGrey;
+  &::placeholder {
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: normal;
+    color: $labelGrey;
+  }
+  .errorColor {
+    border-bottom: 1px solid #f93c10;
+  }
+}

@@ -1,0 +1,208 @@
+@import "../../assets/styles/variables";
+
+.profile-edit-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+
+  &__links {
+    margin-top: 30px;
+    margin-bottom: -15px;
+    margin-left: -15px;
+
+    // Special styling for profile edit page buttons
+    .row-button,
+    .row-link {
+      border-radius: 8px;
+      margin-bottom: 2px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+
+      // Enhanced hover effects for profile page
+      &:hover {
+        background: rgba(0, 122, 255, 0.08);
+        box-shadow: 0 2px 8px rgba(0, 122, 255, 0.15);
+        transform: translateX(4px);
+
+        .row-button__left,
+        .row-link__left {
+          transform: translateX(2px);
+          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        svg {
+          transform: scale(1.1);
+          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .row-button__label,
+        .row-link__label {
+          color: $primaryBlue;
+          font-weight: 600;
+          transition: color 0.3s ease, font-weight 0.3s ease;
+        }
+
+        .arrow-right {
+          transform: translateX(4px);
+          transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        // Special effect for exit button
+        &:has(svg[data-icon="exit"]) {
+          background: rgba(215, 44, 32, 0.08);
+          box-shadow: 0 2px 8px rgba(215, 44, 32, 0.15);
+
+          .row-button__label,
+          .row-link__label {
+            color: #d72c20;
+          }
+        }
+
+        // Special effect for password change button
+        &:has(svg[data-icon="pass"]) {
+          background: rgba(66, 133, 244, 0.08);
+          box-shadow: 0 2px 8px rgba(66, 133, 244, 0.15);
+        }
+
+        // Special effect for phone change button
+        &:has(svg[data-icon="phone"]) {
+          background: rgba(52, 168, 83, 0.08);
+          box-shadow: 0 2px 8px rgba(52, 168, 83, 0.15);
+        }
+      }
+
+      // Active state
+      &:active {
+        transform: translateX(2px) scale(0.98);
+        transition: transform 0.1s ease;
+      }
+
+      // Focus state for accessibility
+      &:focus {
+        outline: 2px solid $primaryBlue;
+        outline-offset: -2px;
+      }
+
+      // Ripple effect on click
+      &:active {
+        transform: scale(0.98);
+        transition: transform 0.1s ease;
+      }
+
+      // Add transitions to child elements
+      .row-button__left,
+      .row-link__left {
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .row-button__label,
+      .row-link__label {
+        transition: color 0.3s ease, font-weight 0.3s ease;
+      }
+
+      svg {
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+    }
+  }
+
+  &__avatar {
+    margin-top: 20px;
+    &-icon {
+      margin: 0 auto;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &__more {
+    &-wrap {
+      width: 100%;
+      margin-top: 10px;
+      border-radius: 14px;
+      background: #f5f5f5;
+      box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+    }
+    height: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+
+    &-text {
+      color: $primaryBlue;
+      transition: color 0.3s ease;
+    }
+    &-icon path {
+      fill: $primaryBlue;
+      transition: fill 0.3s ease;
+    }
+
+    &:hover {
+      background: #eef5ff;
+
+      .profile-edit-page__more-text {
+        color: #0056b3;
+      }
+
+      .profile-edit-page__more-icon path {
+        fill: #0056b3;
+      }
+    }
+  }
+
+  &__languages {
+    margin-top: 5px;
+  }
+
+  &__language {
+    padding: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: rgba(0, 122, 255, 0.05);
+      padding-left: 10px;
+      border-radius: 4px;
+    }
+
+    &-left {
+      display: flex;
+      align-items: center;
+      transition: transform 0.3s ease;
+
+      & img,
+      svg {
+        margin-right: 15px;
+        transition: transform 0.3s ease;
+      }
+    }
+
+    &-right {
+      display: none;
+      transition: opacity 0.3s ease;
+    }
+
+    &.active {
+      .profile-edit-page__language-right {
+        display: block;
+        opacity: 1;
+      }
+
+      .profile-edit-page__language-left {
+        transform: translateX(4px);
+
+        img,
+        svg {
+          transform: scale(1.1);
+        }
+      }
+    }
+  }
+}

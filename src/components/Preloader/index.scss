@@ -1,0 +1,15 @@
+.preloader {
+  display: flex;
+  &__icon {
+    width: 30px;
+    height: 30px;
+    margin: auto;
+  }
+  &__btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: -15px;
+  }
+}

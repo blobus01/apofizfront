@@ -1,0 +1,51 @@
+@import "@styles/variables";
+
+.root {
+  box-shadow: 0 2px 24px 0 #C2C6CB4D;
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem 0 2.5rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  & input {
+    pointer-events: none;
+  }
+}
+
+.title {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  color: #000;
+
+  & svg {
+    vertical-align: middle;
+  }
+
+  &_selected {
+    color: #27AE60;
+  }
+}
+
+.top {
+  margin-bottom: 0.8rem;
+}
+
+.mapBtn {
+  height: auto;
+  padding: 0.25em 0 0.5em;
+  border-bottom: 1px solid #ebedf0;
+  font-size: 17px;
+  font-weight: 500;
+
+  &_active {
+    color: $primaryBlue;
+  }
+}
+
+.comment textarea {
+  color: $primaryBlack;
+}

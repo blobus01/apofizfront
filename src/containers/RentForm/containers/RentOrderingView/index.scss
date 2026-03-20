@@ -1,0 +1,44 @@
+.rent-ordering-view {
+  padding-bottom: 4rem;
+  &__payment-method-text {
+    margin-bottom: 1.25rem;
+  }
+  &__radio {
+    margin-bottom: 1.25rem;
+  }
+  &__avatar {
+    margin-bottom: 1rem;
+  }
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.15em 0;
+    border-bottom: 1px dashed rgba(129, 140, 153, 0.2);
+    color: #818C99;
+
+    &-title {
+      font-size: 1.1em;
+    }
+    &-value {
+      color: #2C2D2E;
+    }
+    &--total-price {
+      & .rent-ordering-view__row-title {
+        color: #000;
+      }
+      & .rent-ordering-view__row-value {
+        color: #000;
+      }
+    }
+    &--rent {
+      color: #27AE60;
+      margin-bottom: 1rem;
+      & .rent-ordering-view__row-value {
+        color: #27AE60;
+      }
+    }
+  }
+  &__post-mini-card {
+    margin-bottom: 4rem;
+  }
+}

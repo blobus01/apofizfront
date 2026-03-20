@@ -1,0 +1,8 @@
+@import "../../assets/styles/variables";
+
+.org-receipt-detail-module {
+  padding-bottom: $navbarBottomPadding;
+  &__receipt {
+    margin-top: 20px;
+  }
+}

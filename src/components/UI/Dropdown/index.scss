@@ -1,0 +1,22 @@
+.dropdown {
+  &__header {
+    width: 100%;
+    height: 40px;
+    border-bottom: 1px solid #e6e6e6;
+    & svg {
+      transform: rotate(0);
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+  &__container {
+    max-height: 0;
+    overflow: hidden;
+  }
+  &.active &__header svg {
+    transform: rotate(90deg);
+    transition: transform 0.2s ease-in-out;
+  }
+  &.active &__container {
+    max-height: 10000000px;
+  }
+}

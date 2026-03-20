@@ -1,0 +1,23 @@
+@import "../../assets/styles/variables";
+
+.messages-page {
+  min-height: 100vh;
+  background:
+    linear-gradient(177.23deg, #FFFFFF -13.49%, #F5F5F5 29.26%, #E6E8EB 109.75%),
+    linear-gradient(180.4deg, rgba(255, 255, 255, 0) -7.33%, #0056E7 9.42%, rgba(255, 255, 255, 0) 113.57%);
+  padding-bottom: $navbarBottomPadding;
+  &__icon { display: inherit; }
+  &__infinite-scroll {
+    overflow: unset !important;
+  }
+  &__content {
+    margin-top: 20px;
+  }
+  &__message {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+}

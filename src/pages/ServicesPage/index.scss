@@ -1,0 +1,237 @@
+@import "../../assets/styles/variables";
+
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.services-page {
+  padding-bottom: $navbarBottomPadding;
+  & .container {
+    padding: 0 5px;
+    @include md {
+      padding: 0 15px;
+    }
+  }
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(1, minmax(176px, 260px));
+    gap: 6px; // Gap between grid items
+    margin-top: 20px; // Adjust for fixed header
+    justify-content: space-around;
+    @media (min-width: 382px) {
+      grid-template-columns: repeat(2, minmax(176px, 260px));
+    }
+    @include md {
+      grid-template-columns: repeat(3, minmax(176px, 300px));
+      gap: 20px;
+    }
+
+    &-item {
+      width: 100%;
+      background-color: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      text-decoration: none; // Remove underline for links
+      color: inherit; // Inherit text color
+      display: flex;
+      flex-direction: column;
+
+      &-content {
+        padding: 12px;
+        position: relative;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      &-image-wrap {
+        background-color: #fff;
+        border-radius: 16px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        width: 60px; // Icon size
+        height: 60px; // Icon size
+        position: absolute;
+        top: -30px; // Half of icon height to overlap banner
+        left: 12px;
+      }
+
+      &-image {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 12px; // Match wrap radius
+      }
+
+      &-title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 36px; // Space for the overlapping icon
+        margin-bottom: 4px;
+        line-height: 1.3;
+        color: #2c2d2e;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; // Ensure text stays on one line
+      }
+
+      &-title--clamp-text {
+        // Specific class for truncation if name is too long
+        width: 100%; // Ensure it takes full width before truncating
+      }
+
+      &-description {
+        font-size: 12px;
+        color: #818c99;
+        line-height: 1.4;
+        flex-grow: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box; // For multi-line ellipsis
+        -webkit-line-clamp: 2; // Show up to 2 lines
+        -webkit-box-orient: vertical;
+        white-space: normal; // Allow text to wrap within the clamped lines
+      }
+    }
+  }
+  & .services-slider {
+    &__wrap {
+      border-radius: 16px;
+    }
+    & .swiper-wrapper {
+      padding-left: 15px;
+      border-radius: 16px;
+    }
+
+    &__wrap {
+      position: relative;
+      overflow-x: hidden;
+    }
+    &__slide {
+      max-width: 176px;
+      display: flex;
+      &-wrap {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: -50px;
+      }
+
+      &-banner {
+        width: 100%;
+        border-radius: 12px;
+        transition: filter 0.2s ease;
+        padding-top: 100%;
+        &:hover {
+          filter: brightness(0.7);
+        }
+      }
+    }
+    &__slide-link {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+    &__slide-image-wrap {
+      margin-bottom: 12px;
+      position: relative;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 3px;
+      box-shadow:
+        0 0 1px #000,
+        0 4px 8px rgba(0, 0, 0, 0.04),
+        0 0 2px rgba(0, 0, 0, 0.06),
+        0 0 1px rgba(0, 0, 0, 0.04);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(
+          180deg,
+          #156cfd 0%,
+          #ff8a00 62.88%,
+          #7000ff 100%
+        );
+        border-radius: 50%;
+      }
+    }
+    &__slide-image {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      z-index: 1;
+    }
+    &__slide-title-wrap {
+      width: 100%;
+      flex-grow: 1;
+      justify-content: center;
+      padding: 0 3px;
+    }
+    &__slide-title {
+      text-transform: uppercase;
+      font-size: 16px;
+      line-height: 20px;
+      width: 100%;
+      letter-spacing: -0.15px;
+      font-weight: 600;
+      font-family: "Plus Jakarta Sans", sans-serif;
+      width: 100%;
+      text-align: start;
+      &-wrap {
+        flex-direction: column;
+        h5 {
+          text-align: start;
+        }
+        p {
+          font-family: "Plus Jakarta Sans", sans-serif;
+          font-size: 14px;
+          color: #61758a;
+          margin-top: 8px;
+          text-align: start;
+          line-height: 20px;
+          width: 100%;
+          text-align: start;
+          margin-bottom: 24px;
+          @include md {
+            margin-bottom: 0;
+          }
+        }
+      }
+      &--clamp-text {
+        width: 155px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+
+.services-page {
+  background: #ffffff;
+
+  &.dark {
+    background: #00193f;
+    color: #ffffff;
+
+    .services-page__grid-item {
+      background: #090027;
+    }
+  }
+}

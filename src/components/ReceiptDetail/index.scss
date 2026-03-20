@@ -1,0 +1,165 @@
+@import "../../assets/styles/variables";
+
+.receipt-detail {
+  &__initiator {
+    display: flex;
+    align-items: center;
+    &-border {
+      border-top: 1px solid #F5F5F5;
+      margin-top: 15px;
+      padding-top: 20px;
+    }
+    &-view {
+      width: 100%;
+      color: $primaryBlue;
+      padding: 8px 0;
+      display: block;
+      border-bottom: 1px solid #E5E5E5;
+    }
+    &-avatar { margin-right: 15px; }
+    &-right {
+      flex-grow: 1;
+      text-transform: capitalize;
+      & p { color: $textGrey; }
+    }
+  }
+  &__info { margin-top: 20px; }
+  &__status.accepted {color: $onlineGreen;}
+  &__status.rejected {color: $offlineRed;}
+  &__status.in_progress {color: $primaryBlue;}
+  &__row {
+    height: 50px;
+    color: $primaryBlack;
+    border-bottom: 1px dashed #818C99;
+    display: flex;
+    & p:first-child { color: $textGrey; }
+  }
+
+  &__total p,
+  &__cashback p {
+    color: $primaryBlack!important;
+  }
+  &__organization {
+    display: flex;
+    align-items: center;
+    &-content { flex-grow: 1; overflow: hidden }
+    &-avatar { margin-right: 10px; }
+    &-role { color: $textGrey; }
+  }
+  &__delivery-status.delivery_status_taken_for_delivery {color: $primaryBlue;}
+  &__delivery-status.delivery_status_set_for_delivery {color: $c-yellow-fbbc05;}
+  &__delivery-status.delivery_status_rejected_by_delivery_service {color: $c-red-d72c20;}
+  &__delivery-status.delivery_status_delivered {color: $c-green-27ae60;}
+  &__map {
+    margin-top: 30px;
+    & > div {
+      color: #6d7885;
+    }
+    &-button {
+      border-bottom: 1px solid #ebedf0;
+      & .row-button__label {color: $primaryBlue;}
+      & .row-button__left svg {margin-right: 8px!important;}
+    }
+  }
+  &__paid-by {
+    color: $c-green-27ae60;
+  }
+  &__courier {
+    margin-top: 15px;
+    padding-top: 20px;
+    border-top: 1px solid $c-grey-e5e5e5;
+  }
+  &__client {
+    border-radius: 8px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    &-avatar { margin-right: 15px; }
+    &-right {
+      flex-grow: 1;
+      text-transform: capitalize;
+      &-role {
+        color: $c-blue-4285f4;
+      }
+    }
+  }
+  &__delivery {
+    margin-top: 30px;
+    &-container {
+      padding: 0 15px 10px;
+    }
+    &-organization {
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    &-entrance {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-column-gap: 15px;
+    }
+    & .dropdown:not(:first-child) {
+      margin-top: 10px;
+    }
+    & .dropdown__container {
+      margin: 0 -15px;
+      background: #f8f8f8;
+    }
+    & .information-block {
+      margin-top: 10px;
+    }
+    & .receipt-detail__address {
+      margin-top: 8px;
+    }
+  }
+  &__delivery-type {
+    padding-top: 1.5rem;
+    & .input-text-field__label {
+      color: #818c99 !important;
+    }
+    & .input-text-field__tools {
+      cursor: default;
+    }
+  }
+  &__payment-status {
+    &--in-progress {
+      color: $primaryBlue;
+    }
+    &--accepted {
+      color: $c-green-27ae60;
+    }
+    &--rejected, &--refunded {
+      color: $offlineRed;
+    }
+  }
+  &__products {
+    padding: 0 15px;
+  }
+  &__payment-actions {
+    margin-top: 1.75rem;
+    & > button {
+      width: calc(50% - 0.37rem);
+    }
+  }
+  &__deliver-label {
+    color: #FFF;
+    padding: 0 15px;
+  }
+  &__remove-btn,
+  &__deliver-btn,
+  &__delivery-accept-btn,
+  &__delivery-reject-btn,
+  &__delivery-delivered-btn,
+  &__print-btn {
+    margin-top: 20px;
+  }
+  &__buttons {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-column-gap: 20px;
+    margin-top: 40px;
+  }
+  &__btn {
+    height: 44px;
+  }
+}

@@ -1,0 +1,50 @@
+@import "../../assets/styles/variables";
+
+.org-receipts-page {
+  &__switch-tab {
+    margin-bottom: 16px;
+  }
+  &__switch-sticky {
+    top: 43px;
+  }
+  &__content { padding-bottom: $navbarBottomPadding; }
+  &__top {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #F5F5F5;
+  }
+  &__summary {
+    margin-top: 20px;
+    margin-bottom: 0.25rem;
+    flex-wrap: wrap;
+  }
+  &__calendar {
+    cursor: pointer;
+    color: #4285F4;
+  }
+  &__list {
+    padding-top: 15px;
+  }
+
+  &__empty {
+    &-image {
+      display: block;
+      max-width: 100%;
+      margin: 30px auto 0;
+    }
+    &-title {
+      text-align: center;
+      margin-top: 15px;
+      color: $textGrey;
+    }
+    &-link {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+      color: $primaryBlue;
+    }
+  }
+
+  &__users {
+    margin-bottom: 16px;
+  }
+}

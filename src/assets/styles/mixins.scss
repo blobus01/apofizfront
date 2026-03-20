@@ -1,0 +1,78 @@
+@import "variables";
+
+@mixin contentHeight {
+  height: calc(100vh - 112px); //fallback;
+  height: calc(100 * var(--vh) - 112px);
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
+}
+
+@mixin fullHeight {
+  height: calc(100vh); //fallback;
+  height: calc(100 * var(--vh));
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 0 !important;
+  }
+}
+
+@mixin fullHeightWithNavbar {
+  height: calc(100vh - #{$navBottomPadding}); // fallback
+  height: calc(100 * var(--vh) - #{$navBottomPadding});
+}
+
+@mixin minHeightWithNavbar {
+  min-height: calc(100vh - #{$navBottomPadding}); // fallback
+  min-height: calc(100 * var(--vh) - #{$navBottomPadding});
+}
+
+@mixin fullHeightWithHeader {
+  height: calc(100vh - #{$headerHeight}); //fallback;
+  height: calc(100 * var(--vh) - #{$headerHeight});
+}
+
+@mixin minHeightWithHeader {
+  min-height: calc(100vh - #{$headerHeight}); //fallback;
+  min-height: calc(100 * var(--vh) - #{$headerHeight});
+}
+
+@mixin maxHeightWithHeader {
+  max-height: calc(100vh - #{$headerHeight}); //fallback;
+  max-height: calc(100 * var(--vh) - #{$headerHeight});
+}
+
+@mixin fullHeightWithHeaderAndNavbar {
+  height: calc(100vh - #{$navBottomPadding} - #{$headerHeight}); // fallback
+  height: calc(100 * var(--vh) - #{$navBottomPadding} - #{$headerHeight});
+}
+
+@mixin stickyHeader {
+  position: -webkit-sticky;
+  position: sticky;
+  background: #fff;
+  top: -1px;
+  width: 100%;
+  z-index: 2;
+  max-width: 1170px; // Container width + 10px
+  margin: 0 auto;
+}
+
+@mixin clampText($line) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@mixin lg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin md {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}

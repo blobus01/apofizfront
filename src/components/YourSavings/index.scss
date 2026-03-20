@@ -1,0 +1,23 @@
+@import "../../assets/styles/variables";
+
+.your-savings {
+  &__label {
+    margin-bottom: 4px;
+  }
+  &__value {
+    margin-right: 8px;
+  }
+  &__select {
+    border: none;
+    background: transparent;
+    color: #fff;
+    outline: none;
+    & option {
+      color: $primaryBlack;
+      padding: 5px;
+    }
+  }
+  & svg path {
+    fill: #fff;
+  }
+}

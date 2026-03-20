@@ -1,0 +1,14 @@
+@import "../../assets/styles/variables";
+
+.rent-detail-statistics-module {
+  padding-bottom: calc(2rem + #{$navBottomPadding});
+  &__header {
+    margin-bottom: 0.5rem !important;
+  }
+  &__tabs {
+    & .tab-links__item {
+      margin-right: 1.3rem;
+      margin-bottom: 1.2rem;
+    }
+  }
+}

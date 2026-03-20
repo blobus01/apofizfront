@@ -1,0 +1,11 @@
+@import "../../assets/styles/variables";
+
+.download-excel-btn {
+  display: flex;
+  align-items: center;
+  color: $c-blue-4285f4;
+
+  & svg {
+    margin-right: 0.2rem;
+  }
+}

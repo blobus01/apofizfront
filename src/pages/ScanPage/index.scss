@@ -1,0 +1,18 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.scan-page {
+  &__organizations {
+    &-content {
+      padding: 20px 0 30px;
+    }
+
+    &-card {
+      cursor: pointer;
+      background: #EBEDF0;
+      border-radius: 11px;
+      padding: 10px 16px;
+      margin-bottom: 12px;
+    }
+  }
+}

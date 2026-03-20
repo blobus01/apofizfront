@@ -1,0 +1,84 @@
+@import "../../assets/styles/variables";
+
+.devices-page {
+  padding-bottom: calc(#{$navBottomPadding} + 1rem);
+  &__device-detail {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    &-icon-box {
+      display: flex;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      margin-right: 17px;
+    }
+    &-icon-box > svg {
+      width: 24px;
+      height: 24px;
+    }
+    &--user-agent {
+      align-items: initial;
+    }
+    &--deactivation-time {
+      cursor: pointer;
+    }
+  }
+  &__mobile-menu-content {
+    margin-top: 25px;
+  }
+  &__mobile-menu-right {
+    top: 36px;
+  }
+  &__menu-option {
+    padding: 12px 0 16px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    &-icon {
+      margin-right: 20px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__menu-option:first-child {
+    margin-top: 12px;
+  }
+  &__leave-all-devices {
+    color: #F44242;
+  }
+  &__leave-device-btn {
+    margin-top: 45px;
+  }
+  &__log-time-label {
+    color: $c-green-27ae60;
+  }
+  &__ip-label {
+    color: #007AFF
+  }
+  &__location-label {
+    color: #FF7200;
+  }
+  &__agent-label {
+    padding-top: 0.5em;
+    color: #898a8d;
+  }
+  &__last-active-label {
+    color: $c-green-27ae60;
+  }
+  &__expiration-time-label {
+    &-name {
+    }
+    &-value {
+      color: #0075FF;
+    }
+    &-arrow {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+}

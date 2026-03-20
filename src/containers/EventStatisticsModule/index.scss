@@ -1,0 +1,27 @@
+@import "../../assets/styles/variables";
+
+.event-statistics-module {
+  padding-bottom: calc(#{$navBottomPadding} + 1rem);
+  &__header {
+    margin-bottom: 0.5rem;
+  }
+  &__tabs {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+
+    .tab-links__item {
+      display: inline-block;
+      width: calc(50% - 1rem);
+    }
+  }
+  &__top {
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(245, 245, 245, 1);
+    margin-bottom: 0.5rem;
+  }
+  &__savings-block {
+    margin-bottom: 0.3rem;
+  }
+  &__sales {}
+}

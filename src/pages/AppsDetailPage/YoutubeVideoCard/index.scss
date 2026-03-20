@@ -1,0 +1,52 @@
+// src/components/Cards/YoutubeVideoCard/index.scss
+.youtube-video-card {
+  position: relative;
+  width: 280px; // Примерная ширина карточки в слайдере
+  aspect-ratio: 16 / 9; // Соотношение сторон видео 16:9
+  border-radius: 12px;
+  overflow: hidden; // Важно для скругления углов и скрытия выходящего контента
+  flex-shrink: 0; // Запрещаем карточке сжиматься в flex-контейнере
+  background-color: #000; // Цвет фона, пока загружается или как запасной
+
+  // Стили для превью
+  &__thumbnail {
+    width: 100%;
+    height: 100%;
+    background-size: cover; // Или contain, в зависимости от желаемого отображения
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // Оверлей для затемнения превью и центрирования кнопки Play
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3); // Полупрозрачный черный
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none; // Позволяет кликам проходить сквозь оверлей на thumbnail
+  }
+
+  // Стили для кнопки Play (примерные, зависят от вашей SVG иконки)
+  &__play-icon {
+    width: 50px; // Размер иконки
+    height: 50px;
+    // Убедитесь, что цвет иконки подходит для оверлея
+    fill: #fff; // Пример: белый цвет
+  }
+
+  // Стили для iframe плеера
+  &__iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+}

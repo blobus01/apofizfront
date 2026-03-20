@@ -1,0 +1,72 @@
+@import "../../assets/styles/variables";
+
+.tab-links {
+  height: 48px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0 0 10px 10px;
+  &__item {
+    flex-grow: 1;
+    padding: 5px;
+    text-align: center;
+    color: $c-grey-818c99;
+    position: relative;
+
+    &::after {
+      content: "";
+      height: 2px;
+      border-radius: 5px;
+      width: 0;
+      position: absolute;
+      bottom: -4px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      background: #007aff;
+    }
+
+    &.active {
+      color: $primaryBlue;
+
+      &::after {
+        animation: tab-underline-in 250ms ease forwards;
+      }
+    }
+
+    &:not(.active)::after {
+      transition: width 0.25s ease;
+    }
+
+    & span {
+      position: relative;
+    }
+
+    &.counter span::after {
+      content: attr(data-count);
+      font-size: 11px;
+      position: absolute;
+      left: calc(100% + 1px);
+      background: $c-red-d72c20;
+      border-radius: 10px;
+      padding: 0 5px;
+      color: #fff;
+      top: -6px;
+      height: 17px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 17px;
+    }
+  }
+}
+
+
+@keyframes tab-underline-in {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 70%;
+  }
+}

@@ -1,0 +1,50 @@
+@import "../../../assets/styles/variables";
+
+
+.aspect-ratio-selection-menu {
+  &__aspect-ratios {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-bottom: 0.75rem;
+  }
+  &__aspect-ratio-wrap {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    padding: 2px;
+    border-radius: 8px;
+    background: #898A8D;
+    &:not(:last-child) {
+      margin-right: 1.25rem;
+    }
+    &--selected {
+      background: linear-gradient(180deg, #007AFF 0%, #70FF00 100%);
+      & .aspect-ratio-selection-menu__aspect-ratio {
+        filter: blur(0.5px);
+      }
+    }
+  }
+  &__aspect-ratio {
+    color: #fff;
+    $border: 2px;
+    background: linear-gradient(200deg, #979797 6.42%, #000000 77.36%);
+    border-radius: inherit;
+    &--one-to-one {
+      padding: 0.9em;
+    }
+    &--four-to-five {
+      padding: 1.3em 0.9em;
+    }
+    &--four-to-three {
+      padding: 0.9em 1.3em;
+    }
+  }
+  &__selected-icon {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+  }
+}

@@ -1,0 +1,80 @@
+@import "../../../assets/styles/variables";
+
+.textarea-field {
+  border: none;
+  resize: none;
+  width: 100%;
+  padding: 0;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 24px;
+  max-height: 70vh !important;
+  &__wrap {
+    padding-top: 17px;
+    &.error {
+      border-color: #F93C10;
+    }
+  }
+  &__group {
+    position: relative;
+  }
+  &:focus ~ &__label,
+  &-filled ~ &__label,
+  &:not(:placeholder-shown) ~ &__label {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+    color: $labelGrey;
+    top: -10px;
+    left: 0;
+  }
+  &:-webkit-autofill ~ &__label {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
+    color: $labelGrey;
+    top: -10px;
+    left: 0;
+  }
+  &__label {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    color: $textGrey;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 0;
+    position: absolute;
+
+    pointer-events: none;
+    -webkit-transition: all .25s ease;
+    -o-transition: all .25s ease;
+    transition: all .25s ease;
+  }
+  &:focus {
+    outline: none;
+  }
+  &::placeholder {
+    font-size: 14px;
+    line-height: 20px;
+    color: $textGrey
+  }
+  &__error {
+    border-color: #F93C10;
+  }
+  &__error-text {
+    color: #F93C10;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  &__counter {
+    color: $primaryBlue;
+    text-align: right;
+    margin-top: 8px;
+    & .error {
+      color: #F93C10;
+    }
+  }
+}

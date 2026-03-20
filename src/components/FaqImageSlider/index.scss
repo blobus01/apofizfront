@@ -1,0 +1,47 @@
+@import "../../assets/styles/variables";
+
+.faq-image-slider {
+  &__slide {
+    overflow: hidden;
+    padding: 8px 0;
+    & img,
+    & svg {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+
+      @media (min-width: 480px) {
+      max-width: 50%;
+
+      }
+
+    }
+  }
+
+  &__dots {
+    margin-top: 13px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__dot {
+    cursor: pointer;
+    margin: 5px;
+    display: block;
+    width: 7px;
+    height: 7px;
+    min-height: 7px;
+    min-width: 7px;
+    background: #818C99;
+    border-radius: 50%;
+    &-active {
+      background: $errorRed;
+    }
+  }
+
+  & .swiper-container {
+    // box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.08);
+  }
+}

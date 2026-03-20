@@ -1,0 +1,34 @@
+.time-item {
+  color: #27AE60;
+  transition: all .4s;
+  border-radius: 46%;
+  &--active {
+    background: #007AFF;
+    color: #fff;
+  }
+  &--booked {
+    color: #D72C20;
+  }
+  &--not-available {
+    color: #818C99;
+  }
+  &--interfered {
+    position: relative;
+    animation: interferedAnimation .4s;
+  }
+}
+
+@keyframes interferedAnimation {
+  25% {
+    left: -3px;
+  }
+  50% {
+    left: 3px;
+  }
+  75% {
+    left: -3px;
+  }
+  100% {
+    left: 3px;
+  }
+}

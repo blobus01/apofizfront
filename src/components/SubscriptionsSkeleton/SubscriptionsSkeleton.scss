@@ -1,0 +1,149 @@
+.subscriptions-skeleton {
+  display: grid;
+  grid-gap: 27px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .subscriptions-skeleton {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .subscriptions-skeleton {
+    grid-template-columns: 1fr;
+  }
+}
+
+.subscriptions-skeleton__card {
+  background: #fff;
+  border-radius: 16px;
+  width: 100%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+/* Header */
+.subscriptions-skeleton__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.subscriptions-skeleton__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  background: #e0e0e0;
+}
+
+.subscriptions-skeleton__header-text {
+  flex: 1;
+}
+
+.subscriptions-skeleton__button-wrapper {
+  display: flex;
+  gap: 6px;
+  align-items: end;
+  flex-direction: column;
+}
+
+.subscriptions-skeleton__button {
+  width: 60px;
+  height: 15px;
+  border-radius: 14px;
+  background: #e0e0e0;
+}
+
+.subscriptions-skeleton__button-bottom {
+  width: 30px;
+  height: 15px;
+  border-radius: 14px;
+  background: #e0e0e0;
+}
+
+/* Media */
+.subscriptions-skeleton__media {
+  width: 100%;
+  height: 400px;
+  background: #d9d9d9;
+  margin-bottom: 12px;
+}
+
+/* Text */
+.subscriptions-skeleton__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.subscriptions-skeleton__line {
+  height: 12px;
+  border-radius: 6px;
+  margin-bottom: 6px;
+  background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 37%, #e0e0e0 63%);
+  background-size: 400% 100%;
+  animation: skeleton-loading 1.4s ease infinite;
+}
+
+/* Width helpers */
+.w-90 {
+  width: 90%;
+}
+.w-80 {
+  width: 80%;
+}
+.w-70 {
+  width: 70%;
+}
+.w-60 {
+  width: 60%;
+}
+.w-50 {
+  width: 50%;
+}
+.w-40 {
+  width: 40%;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+// DARK THEME
+
+.subscriptions-skeleton__card {
+  background: #fff;
+}
+
+.subscriptions-skeleton__card--dark {
+  background: #090027;
+}
+
+.subscriptions-skeleton__card {
+  transition: background 0.25s ease;
+}
+
+.subscriptions-skeleton__card--dark {
+  background: #090027;
+
+  .subscriptions-skeleton__avatar,
+  .subscriptions-skeleton__button,
+  .subscriptions-skeleton__button-bottom,
+  .subscriptions-skeleton__media {
+    background: #150a3b;
+  }
+
+  .subscriptions-skeleton__line {
+    background: linear-gradient(90deg, #150a3b 25%, #1c124a 37%, #150a3b 63%);
+    background-size: 400% 100%;
+  }
+}

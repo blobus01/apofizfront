@@ -1,0 +1,13 @@
+.rent-detail-buyers {
+  &__top {
+    border-bottom: 1px solid #F5F5F5;
+    padding: 0.7rem 0 0.4rem;
+    margin-bottom: 0.5rem;
+  }
+  &__savings-block {
+    margin-bottom: 0.3rem;
+  }
+  &__client-card-link:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}

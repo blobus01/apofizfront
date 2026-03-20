@@ -1,0 +1,79 @@
+@import "../../../assets/styles/variables";
+
+.resume-request-form {
+  padding-bottom: 6rem;
+  &__field {
+  }
+
+  &__desc-text {
+    font-size: 12px;
+    color: #979797;
+    line-height: 16px;
+    margin-bottom: 16px;
+    margin-top: 2px;
+  }
+
+  &__row-toggle {
+    transition: .2s;
+
+    & .row-toggle__label {
+      display: flex;
+      align-items: center;
+    }
+
+    &-icon {
+      margin-right: 14px;
+    }
+  }
+
+  &__textarea {
+    margin-bottom: 1rem;
+  }
+
+  &__array-field {
+    margin-bottom: 24px;
+
+    &-input {
+      margin-bottom: 16px;
+
+      .input-text-field__label {
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: normal;
+        color: $labelGrey;
+        top: -6px;
+        left: 0;
+      }
+
+      .input-text-field__input {
+        &:focus::placeholder {
+          color: transparent;
+        }
+
+        &::placeholder {
+          color: $primaryBlack;
+        }
+      }
+    }
+  }
+
+  &__include-contacts-field {
+
+  }
+
+  &__light-text {
+    color: #007AFF;
+  }
+
+  &__add-number-btn {
+  }
+
+  &__bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 1rem 1rem 2rem;
+  }
+}

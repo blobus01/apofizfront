@@ -1,0 +1,261 @@
+@import "@/assets/styles/variables";
+@import "@/assets/styles/mixins";
+
+.apps-create-page {
+  padding-bottom: 16px;
+  background-color: #fff;
+  min-height: 100vh;
+
+  .apps-create-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .back-button {
+      font-size: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    h1 {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0;
+    }
+
+    .add-button {
+      color: #007aff;
+      background: none;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+  .mobile-top-header__left,
+  .mobile-top-header__right {
+    transform: none;
+    position: static;
+  }
+
+  &__banner {
+    position: relative;
+    min-height: 162px;
+    max-width: 1170px;
+    margin: 0 auto;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    background-color: #f5f5f5;
+    max-height: 400px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    color: #818c99;
+    box-sizing: border-box;
+    &.clickable {
+      cursor: pointer;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #f5f5f5;
+      z-index: 0;
+      opacity: var(--default-banner-opacity, 1);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: var(--banner-image);
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+      opacity: 1;
+    }
+    &__icon {
+      position: absolute;
+      z-index: 1;
+      width: 34px;
+      height: 34px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #4285f4;
+      border-radius: 50%;
+      right: 15px;
+      top: 10px;
+      cursor: pointer;
+
+      svg {
+        margin: 1px 0 0 2px;
+      }
+    }
+
+    img,
+    h3,
+    p {
+      position: relative;
+      z-index: 1;
+    }
+
+    h3 {
+      font-size: 14px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+
+  .app-preview {
+    display: flex;
+    align-items: end;
+    margin-bottom: 12px;
+    position: relative;
+    margin-top: -27px;
+
+    &__icon {
+      padding: 4px;
+      background: #fff;
+      border-radius: 17px;
+    }
+    .app-icon {
+      width: 72px;
+      height: 72px;
+      background: #f5f5f5;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #4285f4;
+      font-weight: bold;
+      border: 1.5px solid #e6e8eb;
+      cursor: pointer;
+    }
+
+    .app-info {
+      margin-bottom: 9px;
+      overflow: hidden;
+      flex-grow: 1;
+      h2 {
+        font-size: 20px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        max-width: 100%;
+        svg {
+          min-width: 24px;
+        }
+      }
+
+      p {
+        margin: 5px 0 0;
+        color: #818c99;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .form-section {
+    margin-bottom: 24px;
+    h3 {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 0 0 22px;
+    }
+    .input-text-field__label {
+      font-size: 16px;
+    }
+    &__input-fields {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      h3 {
+        margin-bottom: 0;
+        margin-top: 22px;
+        &:last-of-type {
+          margin-bottom: 23px;
+        }
+      }
+    }
+  }
+  .input-text-field__tools {
+    color: #818c99;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__submit-btn {
+    height: 44px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4285f4;
+    border-radius: 11px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+  .disabled {
+    background-color: #818c99;
+  }
+  .input-text-field__input,
+  .instagram-input-field {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    color: #2c2d2e;
+  }
+  .errorColor {
+    color: #f93c10;
+  }
+}
+.swiper-container-pointer-events {
+  touch-action: pan-y;
+}
+.swiper-container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+}
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: initial;
+}
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+}

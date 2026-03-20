@@ -1,0 +1,49 @@
+@import "@assets/styles/variables";
+.organization-messenger-page {
+  .messenger-header {
+    padding-left: 0 !important;
+    &-right {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    &-left {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      &-title {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        &-info {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+          h4 {
+            font-size: 20px;
+            font-weight: 500;
+          }
+          span {
+            font-size: 14px;
+            color: #818c99;
+          }
+        }
+      }
+    }
+  }
+  .profile-module__icon-count {
+    border-radius: 10px;
+    padding: 0 4px;
+    background: $c-red-d72c20;
+    color: #fff;
+    left: 38px;
+    top: -10px;
+    height: 17px;
+    min-width: 17px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    position: absolute;
+  }
+}

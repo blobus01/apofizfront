@@ -1,0 +1,78 @@
+.module-search {
+  &__search {
+    margin: 0 0 15px;
+    display: flex !important;
+    position: sticky;
+    top: 0px;
+    background: #fff;
+    padding: 6px 0;
+    z-index: 99;
+    justify-content: space-between;
+  }
+
+  &__search-file {
+    padding: 0 13px 0 8px;
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    border-radius: 10px;
+    height: 36px;
+    width: 100%;
+    position: sticky;
+    top: 10px;
+
+    & svg path {
+      fill: #818c99;
+    }
+  }
+
+  &__input {
+    flex-grow: 1;
+    margin-left: 8px;
+    border: none;
+    background: transparent;
+    outline: none;
+    color: #000;
+
+    &::placeholder {
+      color: #000;
+    }
+  }
+
+  &__input::placeholder {
+    color: #818c99;
+    /* Задаем нужный цвет */
+    opacity: 1;
+    /* Чтобы цвет был полностью непрозрачным */
+  }
+}
+
+.module-search__wrapper {
+
+    min-height: 100vh;
+
+  &.dark {
+    background: #00193f;
+
+    .row-organization-list__item {
+      background: #090027;
+      color: #fff;
+      box-shadow:
+        0 0 0 1px #090027,
+        0 0 4px rgba(0, 0, 0, 0.1),
+        0 1px 2px 0 rgba(0, 0, 0, 0.06);
+    }
+
+    .organization-card__title-text {
+      color: #fff;
+    }
+
+    .module-search__search {
+      background: #00193f;
+    }
+
+    .profile-module__organization-empty {
+        color: #FFF;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+@import "../../assets/styles/variables";
+
+.client-event-activation-page {
+  padding-bottom: calc(#{$navBottomPadding} + 1.3rem);
+
+  &__header {
+    margin-bottom: 1rem;
+  }
+
+  &__client {
+    margin-bottom: 26px;
+  }
+
+  &__ticket {
+    margin-bottom: 30px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__button {
+    position: relative;
+  }
+}

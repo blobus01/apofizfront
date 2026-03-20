@@ -1,0 +1,13 @@
+@import "../../../assets/styles/variables";
+
+.round-box-toast {
+  position: relative;
+  padding: 0.75rem calc(1.5rem + 24px);
+  color: #fff;
+  border-radius: 16px;
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

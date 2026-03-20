@@ -1,0 +1,20 @@
+@import '../../../assets/styles/variables';
+
+.youtube-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 0;
+  border-bottom: 1px solid $lightGrey;
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: calc(100% - 18px);
+  }
+  &__image,
+  &__title {
+    margin-right: 12px;
+    color: $primaryBlue;
+  }
+}

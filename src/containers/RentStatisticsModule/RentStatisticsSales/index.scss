@@ -1,0 +1,28 @@
+@import "../../../assets/styles/variables";
+
+.rent-statistics-sales {
+  &__top {
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #F5F5F5;
+    cursor: pointer;
+  }
+  &__summary {
+    flex-wrap: wrap;
+    margin-bottom: 5px;
+  }
+  &__time-interval {
+    color: $primaryBlue;
+  }
+  &__list {
+    padding-bottom: calc(#{$navBottomPadding} + 1rem);
+  }
+  &__item {
+    &:first-child {
+      padding-top: 0.5rem;
+    }
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.25rem;
+    border-bottom: 1px solid #F5F5F5;
+  }
+}

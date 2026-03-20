@@ -1,0 +1,21 @@
+@import "../../../assets/styles/variables";
+
+.saved-in-compilation-success-toast {
+  background: $c-green-27ae60;
+  &__checkmark {
+    width: 20px;
+    height: 20px;
+  }
+  &__text {
+    margin-left: 0.5em;
+    text-align: center;
+  }
+  &__close-btn {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    right: 0.7rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

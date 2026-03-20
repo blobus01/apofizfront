@@ -1,0 +1,28 @@
+.verified-organization-form {
+  &__title {
+    margin-bottom: 30px;
+  }
+  &__list-info {
+    margin-bottom: 30px;
+    list-style: disc;
+    padding-left: 20px;
+  }
+  &__list-title {
+    font-weight: 700;
+  }
+  &__fields {
+    margin-bottom: 30px;
+  }
+  &__field {
+    margin-bottom: 20px;
+    &--error {
+      color: green;
+    }
+  }
+  &__btn span {
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: normal;
+    letter-spacing: -0.41px;
+  }
+}

@@ -1,0 +1,18 @@
+@import "../../../assets/styles/variables";
+
+.region-info {
+  overflow: hidden;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  height: 44px;
+  &__title {
+    color: #000000;
+    margin: 0 10px 0 5px
+  }
+  &__location {
+    min-width: 20px;
+  }
+}

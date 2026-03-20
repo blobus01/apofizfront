@@ -1,0 +1,23 @@
+.size-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &__item {
+    min-width: 36px;
+    line-height: 36px;
+    padding: 0 11px;
+    margin: 12px 8px;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 16px;
+    background: #f5f5f5;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+
+    &_disabled {
+      opacity: 0.3;
+    }
+  }
+}

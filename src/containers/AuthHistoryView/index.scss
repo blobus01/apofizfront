@@ -1,0 +1,9 @@
+.auth-history {
+  &__device {
+    & .device__info {
+      & .device__name {
+        color: #f44242;
+      }
+    }
+  }
+}

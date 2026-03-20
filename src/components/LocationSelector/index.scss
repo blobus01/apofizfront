@@ -1,0 +1,20 @@
+@import "../../assets/styles/variables";
+
+.location-selector {
+  &__map-button {
+    height: unset;
+    border-bottom: 1px solid #ebedf0;
+    padding-bottom: 8px;
+    text-align: left;
+
+    & .row-button__label {
+      display: flex;
+      align-items: center;
+      color: $primaryBlue !important;
+
+      & svg {
+        margin-left: 5px;
+      }
+    }
+  }
+}

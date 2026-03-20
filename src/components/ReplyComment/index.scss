@@ -1,0 +1,41 @@
+@import "@styles/mixins";
+
+.reply-comment {
+  margin-bottom: 12px;
+  padding: 5px 0 0 10px;
+
+  &__right {
+    border-left: 1px solid #007AFF;
+    white-space: nowrap;
+    flex-grow: 1;
+    max-width: calc(100% - 36px);
+    gap: 6px;
+  }
+
+  &__content {
+    flex-grow: 1;
+    padding-left: 2px;
+    max-width: calc(100% - 30px);
+    overflow: hidden;
+  }
+
+  &__icon-container {
+    display: flex;
+    align-items: center;
+
+    & > svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__author-name {
+    color: #007AFF;
+    line-height: 14px;
+  }
+
+  &__text {
+    color: #818C99;
+    line-height: 12px;
+  }
+}

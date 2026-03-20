@@ -1,0 +1,36 @@
+@import "../../assets/styles/variables";
+
+.google-maps-organization-integration-page {
+  padding-bottom: calc(#{$navBottomPadding} + 2rem);
+  &__header {
+    margin-bottom: 1rem;
+  }
+  &__link {
+    margin-bottom: 2.5rem;
+  }
+  &__desc {
+    box-shadow: 0 2px 24px rgba(194, 198, 203, 0.3);
+    border-radius: 16px;
+    padding: 2.25rem 1.1rem;
+    font-style: italic;
+    &-images {
+      margin: 0 auto 2em;
+      max-width: 280px;
+    }
+  }
+  &__title {
+    color: $textGrey;
+    margin-bottom: 2em;
+  }
+  &__paragraph {
+    &--link-example {
+      color: #007AFF;
+    }
+    &--warning {
+      color: #DB1B1B;
+    }
+  }
+  &__paragraph:not(:last-child) {
+    margin-bottom: 1em;
+  }
+}

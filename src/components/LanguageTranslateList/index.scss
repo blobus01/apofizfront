@@ -1,0 +1,22 @@
+.language-translate {
+  &__top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    margin-bottom: 22px;
+  }
+  &__back {
+    position: absolute;
+    top: 56%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+  &__title {
+    letter-spacing: -0.32px;
+  }
+  &__item {
+    display: block;
+  }
+}

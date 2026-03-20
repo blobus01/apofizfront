@@ -1,0 +1,18 @@
+.stock-view {
+
+  margin: 0 auto;
+  max-width: 600px;
+
+  &__container {
+    padding: 0 32px;
+    margin: 0 auto;
+    max-width: 1140px !important;
+  }
+  &__title {
+    margin-bottom: 4px;
+  }
+  &__info {
+    font-size: 14px;
+    font-style: italic;
+  }
+}

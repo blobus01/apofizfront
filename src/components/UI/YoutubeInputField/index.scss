@@ -1,0 +1,34 @@
+@import "../../../assets/styles/variables";
+
+.youtube-input-field {
+  border-bottom: 1px solid $lightGrey;
+  padding: 5px 0;
+  &__group {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__input {
+    outline: none;
+    border: none;
+    flex-grow: 1;
+    color: $textGrey;
+    &::placeholder {
+      color: $textGrey;
+    }
+  }
+  &__button {
+    display: inline-block;
+    margin-left: 15px;
+    color: $primaryBlue;
+  }
+
+  &.error {
+    border-color: #F93C10;
+  }
+  &__error {
+    color: #F93C10;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+}

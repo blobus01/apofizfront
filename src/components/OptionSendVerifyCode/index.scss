@@ -1,0 +1,28 @@
+@import "../../assets/styles/variables";
+
+.option-send-verify-code {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  max-width: 600px;
+  width: 100%;
+  padding: 0 26px 0 20px;
+  background: $c-grey-f5f5f5;
+  margin-bottom: 16px;
+  border-radius: 8px  ;
+
+  &__icon,
+  &__arrow {
+    width: 23px;
+    height: 23px;
+  }
+
+  &__icon {
+    margin-right: 20px;
+  }
+
+  &__text {
+    width: 100%;
+    text-align: left;
+  }
+}

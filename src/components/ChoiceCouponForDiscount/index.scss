@@ -1,0 +1,25 @@
+.modal-for-choice-discount {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    width: 100%;
+    min-height: 105vh;
+    overflow-y: visible;
+    background: #FFF;
+}
+
+.coupons-slides {
+    gap: 10px;
+}
+    
+
+.organization-coupon-create__content-wallpaper-divider-line {
+    position: absolute;
+    bottom: 10px;
+    left: 99px;
+    width: 0;
+    z-index: 9;
+    transform: translateX(-50%);
+    pointer-events: none;
+}

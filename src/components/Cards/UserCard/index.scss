@@ -1,0 +1,22 @@
+@import "../../../assets/styles/variables";
+
+.user-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  &__avatar {
+    &-container {
+      position: relative;
+      margin-right: 10px;
+    }
+  }
+  &__content {
+    overflow: hidden;
+    &-desc { color: $textGrey; }
+  }
+  &__badge-container {
+    position: absolute;
+    top: 0;
+    left: 100%;
+  }
+}

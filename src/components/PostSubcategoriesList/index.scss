@@ -1,0 +1,7 @@
+.post-subcategories-list {
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+}

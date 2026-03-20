@@ -1,0 +1,11 @@
+.image-crop-view {
+  &__content {
+    text-align: center;
+  }
+  &__menu {
+    z-index: 111111 !important;
+  }
+}
+.image-crop-view__content .ReactCrop__image {
+  max-height: calc(100vh - 85px);
+}

@@ -1,0 +1,18 @@
+@import "../../assets/styles/variables";
+
+.collection-items-deletion-page {
+  padding-bottom: $navbarBottomPadding;
+
+  &__header {
+    margin-bottom: 1rem;
+  }
+
+  &__remove-text {
+    color: #979797;
+    transition: .2s color;
+
+    &--available {
+      color: $primaryBlue;
+    }
+  }
+}

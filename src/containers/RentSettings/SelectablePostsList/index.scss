@@ -1,0 +1,26 @@
+@import "../../../assets/styles/variables";
+
+.rent-settings__selectable-posts-list {
+  &-empty {
+    text-align: center;
+    margin-top: 30px;
+    color: $c-grey-818c99;
+    & img {
+      max-width: 600px;
+      width: 100%;
+      margin-bottom: 25px;
+    }
+  }
+  &-preloader {
+    margin-top: 30px;
+  }
+  &__shop-grid-view {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-column-gap: 11px;
+    grid-row-gap: 25px;
+    @media (max-width: 600px) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}

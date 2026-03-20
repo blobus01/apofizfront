@@ -1,0 +1,458 @@
+@import "assets/styles/reset";
+@import "assets/styles/variables";
+@import "assets/styles/mixins";
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("assets/fonts/SFProDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("assets/fonts/SFProDisplay-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("assets/fonts/SFProDisplay-Semibold.ttf") format("truetype");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("assets/fonts/SFProDisplay-Heavy.ttf") format("truetype");
+  font-weight: 800;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// * {
+//   transition: all 0.3s ease;
+// }
+
+/* Убираем мобильную обводку и tap-highlight */
+*,
+*::before,
+*::after {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Убираем системный focus / outline */
+button,
+a,
+input,
+textarea,
+select {
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  // background: #ebedf0;
+}
+
+.tl {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.dfc,
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.row {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+select {
+  /* for Firefox */
+  -moz-appearance: none;
+  /* for Chrome */
+  -webkit-appearance: none;
+}
+
+.cl-tooltip {
+  position: relative;
+  height: 24px;
+
+  &__text {
+    border-radius: 5px;
+    padding: 2px 5px;
+    font-size: 14px;
+    line-height: 20px;
+    background: #e6e6e6;
+    z-index: 1;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    right: 115%;
+    opacity: 0;
+    transition: opacity 0.3s;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -6px;
+      width: 0;
+      height: 0;
+      border-color: transparent transparent transparent #e6e6e6;
+      border-style: solid;
+      border-width: 6px 0 6px 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &-copied {
+      opacity: 1;
+      transition: opacity 0.3s;
+    }
+  }
+}
+
+#qr {
+  position: fixed;
+  background: #f5f5f5;
+  overflow: hidden;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+#menu {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 4;
+}
+
+#control {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+#layer {
+  position: fixed;
+  z-index: 100;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 100%;
+  overflow: hidden;
+
+  &.active {
+    top: 0;
+    transition: top 0.5s ease-in-out;
+  }
+
+  &.layer--no-transition {
+    transition: none;
+  }
+}
+
+.hashtag,
+.link {
+  color: $primaryBlue !important;
+  cursor: pointer;
+}
+
+.sticky {
+  @include stickyHeader;
+
+  &--tabs {
+    top: calc(#{$headerHeight} - 1px);
+    box-shadow: 0 4px 3px -3px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.is-sticky {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 0 0 16px 16px;
+}
+
+.d-block {
+  display: block;
+}
+
+.white-shadow-slider {
+  position: relative;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    box-shadow:
+      inset 14px 0 8px -7px #fff,
+      inset -14px 0 8px -7px #fff;
+  }
+}
+
+.grid_layout {
+  @media (max-width: 699px) {
+    max-width: 600px;
+    overflow: hidden;
+
+    .post-feed-card {
+      background-color: #fff;
+      border-radius: 16px;
+      // box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 4px;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  @media (min-width: 700px) {
+    &__inner {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-gap: 20px;
+      .post-feed-card {
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &__inner {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-gap: 27px;
+
+      .post-feed-card {
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin: 0 9px;
+  }
+}
+
+// buttons
+.accept-button {
+  color: #fff;
+  background-color: $primaryBlue;
+}
+
+.text-submit-button {
+  color: #007aff;
+  background-color: transparent;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.contained-submit-button {
+  color: #fff;
+  background-color: #27ae60;
+}
+
+.danger-button {
+  color: #fff;
+  background-color: $c-red-d72c20;
+}
+
+.reject-button {
+  color: $c-red-d72c20;
+  background-color: $c-grey-f5f5f5;
+}
+
+.shop-grid-view {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-column-gap: 11px;
+  grid-row-gap: 25px;
+
+  margin: 0 9px;
+
+  @media (max-width: 600px) {
+    & {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+}
+
+.grecaptcha-badge {
+  display: none;
+}
+
+.toastify-toast-reset {
+  background: transparent !important;
+  min-height: unset;
+}
+
+.ReactModal__Overlay,
+.ReactModal__Content {
+  max-width: 100%;
+  min-width: 320px;
+  margin: 0 auto;
+
+  width: 100%;
+}
+
+.organization-map-module__org-menu-content-top-right,
+.organization-map-module__org-menu-info-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.organization-form-discounts__add {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.Toastify__toast-container {
+  pointer-events: none; // чтобы клики проходили через слои
+}
+
+.Toastify__toast {
+  margin-bottom: -30px !important; // тосты будут перекрываться
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  opacity: 0.95;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+  pointer-events: all; // чтобы кнопки закрытия работали
+}
+
+.Toastify__toast--enter {
+  transform: translateY(0);
+}
+
+.Toastify__toast--exit {
+  transform: translateY(-10px);
+  opacity: 0;
+}
+
+.pdf-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.pdf-actions {
+  background: white;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.pdf-modal iframe {
+  flex: 1;
+  background: white;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+/* ================= MODAL ANIMATION ================= */
+
+.ReactModal__Overlay {
+  opacity: 0;
+  background: rgba(0, 0, 0, 0);
+  transition:
+    opacity 0.25s ease,
+    background 0.25s ease;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+  background: rgba(0, 0, 0, 0);
+}
+
+/* модальное окно */
+.ReactModal__Content {
+  transform: translateY(100%);
+  transition: transform 0.25s ease;
+}
+
+.ReactModal__Content--after-open {
+  transform: translateY(0);
+}
+
+.ReactModal__Content--before-close {
+  transform: translateY(100%);
+}
+
+.theme-toggle {
+  width: 30px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    animation: fadeIn 0.25s ease;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.theme-toggle {
+  width: 30px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+
+  &__icon {
+    display: flex;
+    align-items: center;
+    animation: fadeIn 0.25s ease;
+  }
+}

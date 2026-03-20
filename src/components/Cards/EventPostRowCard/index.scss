@@ -1,0 +1,11 @@
+@import "../../../assets/styles/variables";
+
+.event-post-row-card {
+  &__desc {
+    margin-bottom: 2px;
+    color: #007AFF;
+    &--activated-time {
+      color: $c-green-27ae60;
+    }
+  }
+}

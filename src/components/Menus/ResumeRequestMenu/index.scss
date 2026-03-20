@@ -1,0 +1,10 @@
+.resume-request-menu {
+  padding-top: 12px;
+  padding-bottom: 38px;
+  &__option {
+    margin-bottom: 12px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

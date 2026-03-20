@@ -1,0 +1,65 @@
+@import "../../assets/styles/variables";
+
+.organization-hotlinks {
+  .hotlinks-wrap {
+    width: 140px;
+  }
+  .hotlinks__empty {
+    color: #818c99;
+  }
+  &__add {
+    display: flex;
+    align-items: center;
+    color: $primaryBlue;
+    & svg {
+      margin-right: 6px;
+    }
+  }
+  &__list {
+    margin: 0 15px;
+    display: flex;
+    justify-content: flex-start;
+    &-container {
+      margin: 0 -15px;
+    }
+  }
+  &__card {
+    margin-right: 17px;
+    cursor: pointer;
+  }
+  &__card-add {
+    width: 140px;
+    min-width: 140px;
+    overflow: hidden;
+    margin-right: 17px;
+    &:hover {
+      & i {
+        border-color: $primaryBlue;
+        transition: all 0.2s ease-out;
+        & svg path {
+          fill: $primaryBlue;
+          transition: all 0.2s ease-out;
+        }
+      }
+    }
+    & i {
+      display: flex;
+      height: 175px;
+      border: 1px solid #e6e8eb;
+      box-sizing: border-box;
+      border-radius: 16px;
+      margin-bottom: 3px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04), 0 0 2px rgba(0, 0, 0, 0.06),
+        0 0 1px rgba(0, 0, 0, 0.04);
+      & svg {
+        margin: auto;
+      }
+    }
+    & span {
+      color: $primaryBlue;
+      text-align: center;
+      display: block;
+      overflow: hidden;
+    }
+  }
+}

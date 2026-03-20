@@ -1,0 +1,21 @@
+@import "../../../../assets/styles/variables";
+
+.root {
+  display: inline-block;
+  border: 1px solid $lightGrey;
+  padding: 0.6em;
+  text-align: center;
+  color: #818C99;
+  border-radius: 18px;
+  user-select: none;
+  transition: 0.1s ease-in border, color;
+
+  &Checked {
+    color: $primaryBlue;
+    border-color: $primaryBlue;
+  }
+}
+
+.checkbox {
+  display: none;
+}

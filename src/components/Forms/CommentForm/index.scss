@@ -1,0 +1,145 @@
+@import "../../../assets/styles/variables";
+
+.comment-form {
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px;
+
+  &__field-message {
+    display: flex;
+    width: 70%;
+    height: 25px;
+    font-size: 16px;
+    padding: 8px 13px;
+    border: none;
+    resize: none;
+    color: #333333;
+    flex-grow: 1;
+    border-radius: 22px;
+    background: transparent;
+
+    &:first-letter {
+      text-transform: uppercase;
+    }
+
+    &::placeholder {
+      font-size: 15px;
+      color: #979797;
+    }
+
+    &::-webkit-scrollbar {
+      width: 2px;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__icons-wrap {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__btn-send {
+    display: flex;
+    align-items: center;
+
+    & svg {
+      width: 32px;
+      height: 32px;
+
+      & path {
+        transition: 0.2s;
+      }
+    }
+
+    &--blue {
+      & svg > path {
+        fill: $primaryBlue;
+        stroke: $primaryBlue;
+      }
+    }
+  }
+}
+form {
+  width: 100%;
+}
+.blocked-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  .border-icon {
+    border-right: 1.5px solid #007aff;
+    padding-right: 5px;
+    height: 24px;
+  }
+  p {
+    font-size: 18px;
+    color: #2c2d2e;
+  }
+}
+
+.voiceBtn {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  .voiceBtn__icon {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:
+      opacity 0.25s ease,
+      transform 0.25s ease;
+  }
+
+  .voiceBtn__icon--wave,
+  .voiceBtn__icon--stop {
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+  }
+
+  /* ❌ НЕ АКТИВНА */
+  &:not(.voiceBtn--active) {
+    .voiceBtn__icon--play {
+      opacity: 1;
+    }
+  }
+
+  /* ✅ АКТИВНА */
+  &.voiceBtn--active {
+    .voiceBtn__icon--play {
+      opacity: 0;
+    }
+
+    .voiceBtn__icon--wave {
+      opacity: 1;
+      transform: scale(1.5);
+    }
+  }
+}
+
+/* 🔥 hover ТОЛЬКО когда isVoice === true */
+@media (hover: hover) and (pointer: fine) {
+  .voiceBtn.voiceBtn--active:hover {
+    .voiceBtn__icon--wave {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+
+    .voiceBtn__icon--stop {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}

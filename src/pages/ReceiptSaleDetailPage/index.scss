@@ -1,0 +1,11 @@
+@import "../../assets/styles/mixins";
+
+.receipt-sale-detail-page {
+  &__content {
+    @include contentHeight;
+    padding: 20px 0;
+  }
+  &__ready {
+    color: #2F80ED;
+  }
+}

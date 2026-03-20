@@ -1,0 +1,9 @@
+@import "../../../assets/styles/variables";
+
+.row-toggle {
+  width: 100%;
+  height: $buttonHeight;
+  &__label {
+    flex-grow: 1;
+  }
+}

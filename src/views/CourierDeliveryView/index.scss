@@ -1,0 +1,35 @@
+@import "../../assets/styles/variables";
+
+.courier-delivery-view {
+  &__content {padding: 20px 0;}
+  &__options {margin-top: 10px;}
+  &__option {margin-top: 20px;}
+  &__info {
+    margin-top: 30px;
+    box-shadow: 0 2px 10px rgba(129, 140, 153, 0.3);
+    border-radius: 12px;
+    padding: 16px;
+    & h5 {margin-top: 16px;}
+    & p.text {
+      font-style: italic;
+      font-size: 14px;
+      font-weight: 400;
+      color: $c-black-2c2d2e;
+      margin-top: 16px;
+    }
+  }
+  &__deliver-btn {margin-top: 50px;}
+  &__complete {
+    margin: 20px 0;
+    padding-top: 100px;
+    text-align: center;
+    & h5 {color: $c-grey-818c99;}
+    & p {color: $c-grey-818c99;}
+    &-button {margin-top: 80px;}
+    & img {
+      margin: 25px 0;
+      width: 100%;
+      max-width: 343px;
+    }
+  }
+}

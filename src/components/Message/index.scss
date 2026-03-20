@@ -1,0 +1,62 @@
+@import "../../assets/styles/variables";
+
+.message {
+  &__avatar-wrap {
+    align-self: flex-end;
+    margin: 0 9px -2px 0;
+  }
+
+  &__avatar {
+    border: 2px solid #007AFF;
+  }
+
+  &__body {
+    position: relative;
+    width: 100%;
+    padding: 12px 14px 0 10px;
+    background: #fff;
+    border-radius: 8px;
+  }
+
+  &__bubble-icon {
+    position: absolute;
+    bottom: -2px;
+    left: -10px;
+  }
+
+  &__info {
+    margin-bottom: 14px;
+    &-title {
+      color: #007AFF;
+    }
+    &-subtitle {
+      color: $textGrey;
+    }
+  }
+
+  &__text {
+    word-break: break-all;
+    margin-bottom: 22px;
+  }
+
+  &__time {
+    color: $textGrey;
+    font-size: 8px;
+    line-height: 16px;
+    text-align: right;
+    & span {
+      font-weight: 700;
+    }
+  }
+
+  &__group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    &-followers {
+      & .avatar__bordered {
+        border: 1px solid #fff;
+      }
+    }
+  }
+}

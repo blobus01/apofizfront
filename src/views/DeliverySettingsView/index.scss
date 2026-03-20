@@ -1,0 +1,19 @@
+@import "../../assets/styles/variables";
+
+.delivery-settings-view {
+  &__content {
+    padding: 20px 0;
+  }
+  &__desc {
+    margin-top: 20px;
+    color: $c-grey-818c99;
+    & i {
+      display: block;
+      margin-top: 20px;
+    }
+  }
+  &__types {
+    color: $c-grey-818c99;
+    margin: 40px 0 20px;
+  }
+}

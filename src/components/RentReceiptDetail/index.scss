@@ -1,0 +1,131 @@
+@import "../../assets/styles/variables";
+
+.rent-receipt-detail {
+  &__receipts-link {
+    display: block;
+    color: $primaryBlue;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #E5E5E5;
+    margin-bottom: 1.2rem;
+  }
+  &__client {
+    & .avatar-with-description__desc h4 {
+      font-size: 14px;
+      color: $primaryBlue;
+      font-weight: 500;
+    }
+    & .avatar-with-description__desc-paragraph {
+      font-size: 15px;
+      color: $primaryBlack;
+    }
+  }
+  &__organization-header {
+    margin-bottom: 1rem;
+  }
+  &__organization {
+    display: flex;
+    padding-bottom: 0.8em;
+    border-bottom: 1px solid rgba(129, 140, 153, 0.2);
+    margin-bottom: 1.5rem;
+    &-logo {
+      margin-right: 0.75em;
+      & img {
+        max-width: 72px;
+        height: auto;
+        border: 1px solid #E6E8EB;
+        border-radius: 12px;
+      }
+    }
+    &-desc {
+      &-category {
+        color: $textGrey;
+        margin-bottom: 0.2em;
+      }
+      &-title {
+        margin-bottom: 0.3em;
+      }
+    }
+  }
+
+  &__fields {
+    margin-bottom: 1rem;
+    &-field {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 0;
+      border-bottom: 1px dashed rgba(129, 140, 153, 0.2);
+      &-label {
+        color: #818C99;
+        font-size: 15px;
+      }
+      &_value {
+        color: #2C2D2E;
+      }
+
+      &.accepted {
+        & .rent-receipt-detail__fields-field-value {
+          color: $onlineGreen;
+        }
+      }
+      &.rejected {
+        & .rent-receipt-detail__fields-field-value {
+          color: $offlineRed;
+        }
+      }
+      &.in_progress {
+        & .rent-receipt-detail__fields-field-value {
+          color: $primaryBlue;
+        }
+      }
+      
+      &--rent {
+        font-weight: 500;
+        & .rent-receipt-detail__fields-field-label {
+          color: $c-green-27ae60;
+        }
+        & .rent-receipt-detail__fields-field-value {
+          color: $c-green-27ae60;
+        }
+      }
+
+      &--total {
+        font-weight: 500;
+        & .rent-receipt-detail__fields-field-label {
+          color: $c-black-2c2d2e;
+        }
+      }
+    }
+  }
+  &__payment-method {
+    & .input-text-field__tools {
+      cursor: initial;
+    }
+    & .input-text-field__input {
+      padding: 4px 0 8px;
+    }
+    &-status {
+      &.in-progress {
+        color: $primaryBlue;
+      }
+      &.accepted {
+        color: $c-green-27ae60;
+      }
+      &.rejected, &.refunded {
+        color: $offlineRed;
+      }
+    }
+  }
+  &__buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(50% - 0.7rem), 1fr));
+    grid-column-gap: 20px;
+  }
+  &__btn {
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+
+    &--delete {
+      color: #fff;
+    }
+  }
+}

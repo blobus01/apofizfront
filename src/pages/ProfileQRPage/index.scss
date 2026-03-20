@@ -1,0 +1,136 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+$avatarHeight: 60%;
+$containerMaxWidth: 560px;
+$contentMaxHeight: 1000px;
+$QRCodeContainerHeaderHeight: 48px;
+
+.my-qr {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    max-width: $containerMaxWidth;
+    padding: 0;
+
+    @include fullHeightWithNavbar;
+  }
+  &__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: $contentMaxHeight;
+    overflow-y: hidden;
+  }
+
+  &__avatar {
+    max-width: 100% !important;
+    height: $avatarHeight !important;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 16px 16px 0 0;
+  }
+  &__info {
+    flex-grow: 1;
+    width: 100%;
+    margin-top: -1rem;
+    text-align: center;
+    background: linear-gradient(180deg, #2F84ED 0%, #000000 100%);
+    border-radius: 16px 16px 0 0;
+    color: #fff;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.38px;
+    padding-bottom: 12px;
+    transition: height 1s;
+    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 1);
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+  }
+  &__header {
+    position: relative;
+    height: $QRCodeContainerHeaderHeight;
+    & svg path {
+      fill: #fff;
+    }
+  }
+  &__user-fullname {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    font-weight: 900;
+    padding: 0 23%;
+    text-shadow: 0 0 2px #000000;
+  }
+  &__btn-close  {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-44%);
+    & svg {
+      width: 28px;
+      height: 28px;
+    }
+  }
+
+  &__btn-share {
+    right: 15px;
+  }
+
+  &__share {
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-44%);
+    & svg {
+      width: 23px;
+      height: 23px;
+    }
+  }
+  &__code {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FFFFFF;
+    width: 180px;
+    max-width: 180px;
+    height: 180px;
+    margin: 7px auto 28px;
+    border: 0.1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    transition: width, height 1s;
+
+    &-wrap {}
+
+    &--stretch {
+      width: 240px;
+      max-width: 240px;
+      height: 240px;
+      margin-bottom: 20px;
+    }
+  }
+  &__user-id {
+    font-weight: 900;
+    text-shadow: 0 0 2px #000000;
+    margin: -0.5rem 0 0.5rem;
+  }
+  &__desc {
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+  }
+}

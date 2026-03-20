@@ -1,0 +1,57 @@
+.text-input-view {
+
+  .textarea-field__wrap {
+    border-bottom: unset!important;
+  }
+}
+
+.ai-create__generate-btn-wrap {
+    position: relative;
+    min-height: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.ai-create__generate-btn-prompt {
+    background-color: #007aff;
+    color: #fff;
+    border: none;
+    padding: 14px 16px;
+    height: 28px;
+    font-size: 12px;
+    border-radius: 8px 0px 8px 8px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    margin-top: 6px;
+    cursor: pointer !important;
+}
+
+.ai-create__loader {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-left: 8px;
+    border: 2px solid #ffffff;
+    /* белый цвет */
+    border-top-color: transparent;
+    /* прозрачный сектор для эффекта вращения */
+    border-radius: 50%;
+    animation: ai-spin 0.8s linear infinite;
+    vertical-align: middle;
+}
+
+@keyframes ai-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.pre-line-placeholder {
+  left: 0;
+  top: 20px;
+}

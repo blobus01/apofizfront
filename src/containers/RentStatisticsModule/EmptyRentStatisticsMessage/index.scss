@@ -1,0 +1,24 @@
+@import "../../../assets/styles/variables";
+
+.empty-rent-statistics-message {
+  padding: 3rem 0 0 0;
+
+  &__image {
+    width: 100%;
+    margin-bottom: 2rem;
+    max-height: 30vh;
+    height: 340px;
+  }
+
+  &__title {
+    font-size: 22px;
+    line-height: 20px;
+    margin-bottom: 0.9em;
+    text-align: center;
+  }
+
+  &__desc {
+    color: $c-grey-818c99;
+    text-align: center;
+  }
+}

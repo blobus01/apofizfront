@@ -1,0 +1,43 @@
+@import "../../assets/styles/variables";
+
+.organization-average-check {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  &__icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+    & svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &__label {
+    color: $textGrey;
+    margin-right: 4px;
+  }
+  &__sum {
+    padding-top: 1px;
+    color: $textOrange;
+    margin-right: 5px;
+  }
+  &__loading {
+    & svg {
+      width: 17px;
+      height: 17px;
+    }
+  }
+}
+.service-detail-page__avg-check {
+  svg {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    bottom: 0px;
+    left: 1px;
+  }
+  margin: 0;
+}

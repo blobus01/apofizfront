@@ -1,0 +1,15 @@
+@import "../../../../assets/styles/variables";
+
+.root {
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+
+  .tab-links__item {
+    display: inline-block;
+    width: calc(50% - 1rem);
+  }
+}

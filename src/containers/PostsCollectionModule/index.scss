@@ -1,0 +1,17 @@
+@import "../../assets/styles/variables";
+
+.posts-collection-module {
+  padding-bottom: calc(#{$navBottomPadding} + 1rem);
+
+  &__menu {
+    &-option {
+      &:not(:last-child) {
+        margin-bottom: 0.5rem;
+      }
+      &-icon {
+        display: inline-block;
+        margin-right: 20px;
+      }
+    }
+  }
+}

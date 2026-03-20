@@ -1,0 +1,18 @@
+.rent-subcategories-view {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-bottom: 83px;
+  &__fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 83px;
+    padding-top: 8px;
+    box-shadow: 0 2px 10px rgb(129 140 153 / 30%);
+    background-color: #fff;
+  }
+  &__option {
+    margin-bottom: 24px;
+  }
+}

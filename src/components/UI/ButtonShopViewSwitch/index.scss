@@ -1,0 +1,17 @@
+@import "../../../assets/styles/variables";
+
+.button-shop-view-switch {
+  width: 44px;
+  min-width: 44px;
+  height: 41px;
+  background: #007AFF;
+  border: 1px solid $c-blue-4285f4;
+  border-radius: 18px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.active {
+    background: #007AFF;
+  }
+}

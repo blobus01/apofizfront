@@ -1,0 +1,19 @@
+@import "../../assets/styles/mixins";
+
+.receipt-courier-detail-page {
+  &__content {
+    @include contentHeight;
+    padding: 20px 0;
+  }
+  &__ready {
+    color: #2F80ED;
+  }
+  &__temp {
+    &-success {
+      margin: 20px auto 0;
+      display: block;
+    }
+    &-info .empty-info__content {flex-direction: column-reverse;}
+    &-button {margin: 100px 0;}
+  }
+}

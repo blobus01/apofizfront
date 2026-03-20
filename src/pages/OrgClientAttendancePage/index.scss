@@ -1,0 +1,24 @@
+@import "../../assets/styles/variables";
+
+.org-client-attendance-page {
+  padding-bottom: 50px;
+  &__calendar {
+    border-radius: 0 0 25px 25px;
+    padding: 15px 0;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 0 96px rgba(0, 0, 0, 0.04);
+  }
+  &__user {
+    margin-top: 20px;
+  }
+  &__current-date {
+    color: #000;
+    margin-top: 45px;
+  }
+  & .mobile-top-header__title {
+    text-transform: capitalize;
+  }
+}
+
+.receipts-by-date-list {
+  margin-top: 30px;
+}

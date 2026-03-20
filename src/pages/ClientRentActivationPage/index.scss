@@ -1,0 +1,15 @@
+@import "../../assets/styles/variables";
+
+.client-rent-activation-page {
+  padding-bottom: calc(#{$navBottomPadding} + 2rem);
+
+  &__header {
+    margin-bottom: 1rem;
+  }
+  &__client-card {
+    margin-bottom: 1.6rem;
+  }
+  &__receipt {
+    margin-bottom: 2.2rem;
+  }
+}

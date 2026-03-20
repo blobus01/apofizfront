@@ -1,0 +1,60 @@
+.chat-select-check.checked svg circle {
+  fill: #007aff;
+}
+.chat-select-check {
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+.messenger-group-page {
+  & .messenger-search-page__result {
+    margin-bottom: 0;
+    padding: 0;
+  }
+  & .messenger-chat-list {
+    margin-top: 16px;
+  }
+}
+.messenger-group-page .messenger-chat-item:hover {
+  background: transparent;
+}
+.messenger-group-page__input-row {
+  display: flex;
+  align-items: center;
+  background: #f3f4f6;
+  border-radius: 8px;
+  height: 62px;
+  padding: 0 15px;
+  gap: 15px;
+}
+.messenger-group-page__photo-btn {
+  min-width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+}
+.messenger-group-page__input-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #868d98;
+  font-size: 18px;
+  font-weight: 500;
+  width: 100%;
+}
+.messenger-group-page__input {
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  outline: none;
+  width: 100%;
+  &:focus {
+    caret-color: #4285f4;
+  }
+}

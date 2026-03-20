@@ -1,0 +1,20 @@
+@import "../../assets/styles/variables";
+
+.activated-ticket-view {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  &__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+  }
+  &__label {
+    color: $c-green-27ae60;
+  }
+  &__receipt {
+    margin-bottom: 36px;
+  }
+}

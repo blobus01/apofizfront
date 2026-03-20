@@ -1,0 +1,92 @@
+@import "../../../assets/styles/variables";
+
+.cart-item-counter-card {
+  min-height: 88px;
+  padding: 10px 0;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+  &__avatar {
+    margin-right: 12px;
+  }
+  &__content {
+    flex-grow: 1;
+    overflow: hidden;
+  }
+  &__title {
+    color: $c-grey-818c99;
+  }
+  &__price {
+    color: $c-grey-818c99;
+    text-decoration: line-through;
+  }
+  &__size {
+    margin-top: 4px;
+  }
+  &__not-available {
+    margin-top: 4px;
+    color: #FF0000;
+  }
+  &__remove {
+    margin-left: 75px;
+    color: $primaryBlue;
+  }
+  &__confirm-title {
+    color: $offlineRed;
+  }
+  &__cancel-title {
+    color: $primaryBlue;
+  }
+  &__counter {
+    margin-left: 15px;
+    height: 32px;
+    max-height: 32px;
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04), 0 0 2px rgba(0, 0, 0, 0.06), 0 0 1px rgba(0, 0, 0, 0.04);
+    border-radius: 16px;
+    border: 1px solid #e6e8eb;
+    overflow: hidden;
+    & button[disabled] svg path {
+      fill: $c-grey-828282;
+    }
+    &-value {
+      color: $c-grey-818c99;
+      white-space: nowrap;
+    }
+    &-count {
+      flex-grow: 1;
+      & span {
+        position: absolute;
+        left: -9999px;
+        display: inline-block;
+        min-width: 20px;
+        padding: 0;
+      }
+    }
+    &-input {
+      width: 20px;
+      padding: 0;
+      color: #555;
+      outline: 0;
+      border: none;
+      text-align: center;
+      &:disabled {
+        color: #828282!important;
+        background: inherit;
+      }
+    }
+    & button {
+      width: 32px;
+      height: 32px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

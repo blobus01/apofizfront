@@ -1,0 +1,24 @@
+@import "../../../assets/styles/animations";
+
+.loader {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid #3172DD;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+
+  &--pos-static {
+    margin-left: 10px;
+    vertical-align: middle;
+  }
+  &--pos-absolute {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    translate: 0 -50%;
+  }
+}

@@ -1,0 +1,33 @@
+@import '../../assets/styles/variables.scss';
+
+$imageWidth: 44px;
+$imageMarginRight: 12px;
+
+$trashIconWidth: 37px;
+
+.link-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__content {
+    display: flex;
+    align-items: center;
+    max-width: calc(100% - #{$trashIconWidth});
+  }
+
+  &__image {
+    max-width: $imageWidth;
+    width: 44px;
+    height: 44px;
+    object-fit: cover;
+    border: 1px solid #e6e8eb;
+    border-radius: 7px;
+    margin-right: $imageMarginRight;
+  }
+
+  &__link {
+    color: $primaryBlue;
+    max-width: calc(100% - #{$imageWidth} + #{$imageMarginRight});
+  }
+}

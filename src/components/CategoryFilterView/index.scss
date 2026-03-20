@@ -1,0 +1,91 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.category-filter-view {
+  height: 100%;
+  &__content {
+    position: relative; // Важно для позиционирования ordering
+    height: 100%;
+    @include maxHeightWithHeader;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__ordering {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 5; // Поднимаем слой выше списка
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 5px;
+    border-radius: 0 0 16px 16px;
+    padding: 15px 15px;
+    margin: 0 auto;
+    width: 100%;
+
+    max-width: 1140px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    box-shadow: 0 6px 8px -6px rgba(0, 0, 0, 0.3);
+
+    &-item {
+      transition: 300ms;
+
+      &:hover {
+        color: #4286f4b9;
+        border: 1px solid #4286f4b9;
+      }
+
+      &.active {
+        border: 1px solid $primaryBlue;
+        color: $primaryBlue;
+      }
+      &:not(:last-child) {
+        margin-right: 7px;
+      }
+      height: 36px;
+      flex-grow: 1;
+      border: 1px solid $c-grey-e5e5e5;
+      border-radius: 14px;
+      color: $c-grey-818c99;
+    }
+  }
+  &__clear {
+    color: $c-red-d72c20;
+  }
+  &__list {
+    padding-top: 90px;
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-bottom: 50px;
+  }
+  &__option {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  &__button {
+    padding: 20px 0;
+  }
+}
+
+.category-filter__btn {
+  position: fixed;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 600px;
+  background: #007aff;
+  z-index: 10;
+  width: 95%;
+  margin: 12px auto;
+  max-width: 600px;
+  border-radius: 16px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 0px 1px,
+    rgba(0, 0, 0, 0.25) 0px 0px 8px;
+}

@@ -1,0 +1,36 @@
+.root {
+  &Title {
+    margin-bottom: 0.75rem;
+  }
+}
+
+.checkboxes {
+  width: 60%;
+  max-width: 400px;
+}
+
+.checkbox {
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.checkboxButton {
+  &Checked {
+    font-size: 14px;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+  }
+}
+
+.errorText {
+  color: #D72C20;
+}
+
+.gender {
+  margin: 0.4rem 0 1.25rem;
+}
+
+.fixedControls {
+  position: sticky;
+  bottom: 2rem;
+}

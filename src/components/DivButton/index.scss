@@ -1,0 +1,6 @@
+.div-button {
+  cursor: pointer;
+  &--disabled {
+    cursor: initial;
+  }
+}

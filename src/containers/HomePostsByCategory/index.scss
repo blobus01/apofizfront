@@ -1,0 +1,31 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+.home-posts-by-category {
+  & .mobile-top-header__wrap {
+    position: unset;
+  }
+  &__filters {
+    padding: 10px 0;
+  }
+  &__list {
+    max-width: 600px;
+    overflow: hidden;
+    margin: 0 auto;
+    &-card {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+  &__shop-controls {
+    padding-left: 15px;
+  }
+  &__content {
+    padding-top: 20px;
+    padding-bottom: $navbarBottomPadding;
+  }
+  &__regions {
+    padding-bottom: $navbarBottomPadding;
+  }
+}

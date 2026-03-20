@@ -1,0 +1,100 @@
+@import "../../assets/styles/variables";
+
+.org-followers-page {
+
+  min-height: 100vh;
+
+  &__header {
+    .mobile-search-header__main-search {
+      right: 35px;
+    }
+  }
+  &__content {
+    padding-top: 20px;
+    padding-bottom: $navbarBottomPadding;
+  }
+
+  &__card {
+    & svg {
+      min-width: 24px;
+      margin-left: 15px;
+    }
+    &:not(:last-child) {
+      min-height: 60px;
+      margin-bottom: 10px;
+    }
+    &-badge {
+      width: 6px;
+      height: 6px;
+      background-color: #D72C20;
+      border-radius: 50%;
+    }
+  }
+
+  &__confirm-btn {
+    color: #4285F4;
+  }
+
+  &__empty {
+    &-image {
+      display: block;
+      max-width: 100%;
+      margin: 30px auto 0;
+    }
+    &-title {
+      text-align: center;
+      margin-top: 15px;
+      color: $textGrey;
+    }
+    &-link {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+      color: $primaryBlue;
+    }
+  }
+  &__promo {
+    margin: 0 -15px;
+    padding: 0 15px;
+    background: $primaryBlue;
+    height: 42px;
+    color: #FFF;
+    &-left {
+      margin-right: 20px;
+      & svg {
+        margin-right: 6px;
+        min-width: 25px;
+      }
+    }
+    &-right {
+      & svg {
+        margin-left: 28px;
+      }
+    }
+  }
+  &__not-acceptable {
+    &-image {
+      display: block;
+      max-width: 100%;
+      margin: 30px auto 24px;
+    }
+    &-text {
+      text-align: center;
+      color: rgba(129, 140, 153, 1);
+    }
+  }
+  &__approve-all {
+    width: 24px;
+    margin-right: 20px;
+    & svg {
+      margin-right: 0 !important;
+    }
+  }
+}
+
+.org-followers-page {
+  &.dark {
+    background: #00193f;
+    color: #FFF;
+  }
+}

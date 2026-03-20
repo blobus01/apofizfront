@@ -1,0 +1,11 @@
+.post-category-list {
+
+  max-width: 600px;
+  margin: 0 auto;
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+}
